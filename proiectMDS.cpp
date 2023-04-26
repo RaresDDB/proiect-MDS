@@ -6,6 +6,16 @@ void titlu();
 void bunvenit();
 void prezentare();
 void meniuprincipal();
+void elembaza();
+void tabuni();
+void tabbi();
+void sircarac();
+void subprograme();
+void grafneori();
+void grafori();
+void backtracking();
+void greedy();
+void progdin();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
@@ -34,11 +44,72 @@ void prezentare(){
     system("cls");
 }
 
+void meniuprincipal(){
+    int a;
+    cout<<endl<<endl<<endl;
+    cout<<"                                                         MENIU PRINCIPAL"<<endl<<endl;
+    cout<<"   Mai jos va vom oferi lectiile pe care le puteti parcurge in aplicatia noastra"<<endl;
+    cout<<"   Ordinea in care sunt mai jos asezate este ordinea in care va recomandam sa le studiati"<<endl<<endl;
+    cout<<"                                     1.Elemente de baza.Algoritmi elementari."<<endl;
+    cout<<"                                     Grad dificultate:incepator"<<endl<<endl;
+    cout<<"                                     2.Tablouri unidimensionale"<<endl;
+    cout<<"                                     Grad dificultate:incepator"<<endl<<endl;
+    cout<<"                                     3.Tablouri bidimensionale"<<endl;
+    cout<<"                                     Grad dificultate:incepator"<<endl<<endl;
+    cout<<"                                     4.Siruri de caractere"<<endl;
+    cout<<"                                     Grad dificultate:mediu"<<endl<<endl;
+    cout<<"                                     5.Subprograme"<<endl;
+    cout<<"                                     Grad dificultate:mediu"<<endl<<endl;
+    cout<<"                                     6.Grafuri neorientate.Arbori"<<endl;
+    cout<<"                                     Grad dificultate:mediu"<<endl<<endl;
+    cout<<"                                     7.Grafuri orientate"<<endl;
+    cout<<"                                     Grad dificultate:mediu"<<endl<<endl;
+    cout<<"                                     8.Backtracking"<<endl;
+    cout<<"                                     Grad dificultate:avansat"<<endl<<endl;
+    cout<<"                                     9.Metoda Greedy"<<endl;
+    cout<<"                                     Grad dificultate:avansat"<<endl<<endl;
+    cout<<"                                     10.Programare dinamica"<<endl;
+    cout<<"                                     Grad dificultate:avansat"<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<"   Alegeti lectia pe care doriti sa o parcurgeti: ";cin>>a;
+    if(a==1){
+        elembaza();
+    }
+    else if(a==2){
+        tabuni();
+    }
+    else if(a==3){
+        tabbi();
+    }
+    else if(a==4){
+        sircarac();
+    }
+    else if(a==5){
+        subprograme();
+    }
+     else if(a==6){
+        grafneori();
+    }
+     else if(a==7){
+        grafori();
+    }
+     else if(a==8){
+        backtracking();
+    }
+     else if(a==9){
+        greedy();
+    }
+     else if(a==10){
+        progdin();
+    }
+    else
+        meniuprincipal();
+}
 int main()
 {
     titlu();
     bunvenit();
     prezentare();
-    //meniuprincipal();
+    meniuprincipal();
     return 0;
 }
