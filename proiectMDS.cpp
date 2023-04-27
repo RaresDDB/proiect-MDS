@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <mmsystem.h>
 using namespace std;
 
 void titlu();
@@ -40,8 +41,20 @@ void prezentare(){
     cout<<"   Trebuie sa tii cont de faptul ca nivelul de invatare si al testelor de la sfarsitul fiecarei lectii este unul mediu si trebuie sa acorzi importanta fiecarei informatii."<<endl<<endl;
     cout<<"   De asemenea,este important de stiut care este nivelul la care doresti sa ajungi in informatica.Daca doresti sa ajungi sa profesezi in acest domeniu trebuie sa stii ca aceste informatii sunt necesare,dar nu si suficiente pentru o cariera in IT.Daca scopul este strict pentru a invata pentru liceu,ai ajuns pe aplicatia perfecta!"<<endl<<endl;
     cout<<"   Mult succes pe parcursul lectiilor!"<<endl;
-    system("PAUSE");
-    system("cls");
+    cout<<endl<<endl<<endl<<endl<<endl;
+    cout<<"   In plus,aplicatia noastra va ofera posibilitatea ca pe parcursul parcurgerii lectiilor sa aveti parte de o muzica relaxanta in surdina";
+    cout<<"   Daca doriti sa aveti parte de muzica apasati tasta 1,daca nu apasati tasta 2"<<endl;
+    int b;
+    cin>>b;
+    if(b==1){
+        PlaySound(TEXT("file_example_WAV_10MG.wav"),NULL,SND_SYNC);
+        system("cls");
+        meniuprincipal();
+    }
+    else{
+        system("cls");
+        meniuprincipal();
+    }
 }
 
 void meniuprincipal(){
@@ -105,11 +118,51 @@ void meniuprincipal(){
     else
         meniuprincipal();
 }
+
+void elembaza(){
+    cout<<"...";
+}
+
+void tabuni(){
+    cout<<"...";
+}
+
+void tabbi(){
+    cout<<"...";
+}
+
+void sircarac(){
+    cout<<"...";
+}
+
+void subprograme(){
+    cout<<"...";
+}
+
+void grafneori(){
+    cout<<"...";
+}
+
+void grafori(){
+    cout<<"...";
+}
+
+void backtracking(){
+    cout<<"...";
+}
+
+void greedy(){
+    cout<<"...";
+}
+
+void progdin(){
+    cout<<"...";
+}
+
 int main()
 {
     titlu();
     bunvenit();
     prezentare();
-    meniuprincipal();
     return 0;
 }
