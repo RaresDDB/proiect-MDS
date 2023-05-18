@@ -68,6 +68,15 @@ void matriceaincidenta();
 void matriceadrumurilor();
 void succesorisipredecesori();
 void arcxy();
+void defsub();
+void strucsub();
+void transsub();
+void tipsub();
+void avansub();
+void aplicsub();
+void testsub();
+void prob1();
+void prob2();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
@@ -197,7 +206,206 @@ void sircarac(){
 }
 
 void subprograme(){
-    cout<<"...";
+    cout<<"                 1.Definitie"<<endl;
+    cout<<"                 2.Structura unui subprogram"<<endl;
+    cout<<"                 3.Transmiterea parametrilor"<<endl;
+    cout<<"                 4.Tipurile subprogramelor"<<endl;
+    cout<<"                 5.Avantajele utilitatii subprogramelor"<<endl;
+    cout<<"                 6.Aplicatii"<<endl;
+    cout<<"                 7.Test"<<endl;
+    cout<<"                 8.Iesire"<<endl;
+    char m;
+    cin>>m;
+    system("cls");
+    if(m=='1')
+        defsub();
+    else if(m=='2')
+        strucsub();
+    else if(m=='3')
+        transsub();
+    else if(m=='4')
+        tipsub();
+    else if(m=='5')
+        avansub();
+    else if(m=='6')
+        aplicsub();
+    else if(m=='7')
+        testsub();
+    else if(m=='8')
+        meniuprincipal();
+    else
+        subprograme();
+}
+
+void defsub(){
+    cout<<"  Subprogramele reprezinta functii definite de catre utilizator. Ele sunt identificate prin nume si pot fi apelate in interoriul unui program."<<endl;
+    cout<<"  Subprogramele se scriu inainte de functia int main()."<<endl;
+    cout<<"  Acestea sunt unitati de program care au algortim propriu,pot fi proiectate,scrise,compilate independent si se pot executa numai in cadrul unui program"<<endl;
+    system("PAUSE");
+    system("cls");
+    subprograme();
+}
+
+void strucsub(){
+    cout<<"  Un subprogram(o functie)are structura urmatoare:"<<endl<<endl;
+    cout<<"    tip_returnat nume_subprogram(parametri_formali) //acesta fiind si antetul programului "<<endl;
+    cout<<"      //instructiunea sau instructiunile subprogramului"<<endl<<endl;
+    cout<<"  tip_returnat = tipul rezultatului calculat si returnat de catre subprogram(int,char,float,void etc)"<<endl;
+    cout<<"  nume_subprogram = numele dat subprogramului de catre cel care il defineste(etse folosit la apelare)"<<endl;
+    cout<<"  parametri_formali = lista de declaratii de variabile separate prin virgula"<<endl;
+    system("PAUSE");
+    system("cls");
+    subprograme();
+}
+
+void transsub(){
+    cout<<"  Exista doua metode de transmitere a parametrilor:prin valoare si prin adresa"<<endl;
+    cout<<"  In cazul transmiterii prin valoare,orice modificare sufera variabila nu este permanenta.Se transmite un parametru prin valoare atunci cand in antet intre tipul datei si numele unui parametru formal nu se afla nimic."<<endl;
+    cout<<"  In cazul transmiterii prin valoare,orice modificare sufera variabila este permanenta si in fata variabilet se pune '&'."<<endl;
+    system("PAUSE");
+    system("cls");
+    subprograme();
+}
+
+void tipsub(){
+    cout<<"  Subprogramele pot fi de 2 tipuri:"<<endl;
+    cout<<"  -de tip operand"<<endl;
+    cout<<"  -de tip procedural"<<endl<<endl;
+    cout<<"  Subprogramele de tip operand determina un rezultat de la o anumita data de intrare.Valoarea este returnata de functie,iar aceasta va fi apelata intr-o expresie(de ex:cout<<subprogram(n);)"<<endl;
+    cout<<"  Subprogramele de tip procedural se folosesc in instructiuni de sine statatoare,nu in expresii.Au un efect,dar nu returneaza un rezultat."<<endl;
+    system("PAUSE");
+    system("cls");
+    subprograme();
+}
+
+void avansub(){
+    cout<<"  Subprogramele sunt foarte des folosite in industria IT deoarece acestea aduc anumite avantaje mari precum:"<<endl;
+    cout<<"  -reutilizarea codului:subprogramul poate fi apelat ori de cate ori este nevoie"<<endl;
+    cout<<"  -modularizarea programelor:subprogramele ne permit sa impartim problema in mai multe subprobleme mai simple"<<endl;
+    cout<<"  -reducerea numarului de erori intr-un program"<<endl;
+    cout<<"  -depistarea mai facila a erorilor:fiecare subprogram poate fi compilat pe rand"<<endl;
+    system("PAUSE");
+    system("cls");
+    subprograme();
+}
+
+void aplicsub(){
+    cout<<"  Mai jos veti avea de rezolvat 2 probleme din acest capitol"<<endl<<endl;
+    cout<<"  1.Sa se scrie un subprogram care returneaza suma cifrelor unui numar."<<endl<<endl;
+    cout<<"  2.Sa se scrie un subprogram care furnizeaza printr-un parametru de iesire oglinditul unui numar natural n."<<endl<<endl;
+    cout<<"  Apasati tasta 1 pentru a vedea rezolvarea primei probleme,tasta 2 pentru rezolvarea celei de-a doua probleme sau tasta 3 pentru a reveni la meniul anterior: ";
+    char n;
+    cin>>n;
+    system("cls");
+    if(n=='1')
+        prob1();
+    else if(n=='2')
+        prob2();
+    else if(n=='3')
+        subprograme();
+    else
+        aplicsub();
+}
+void prob1(){
+    cout<<" int sumcif(int n) {"<<endl;
+    cout<<"  int s = 0;"<<endl;
+    cout<<"  while (n != 0) {"<<endl;
+    cout<<"     s = s + (n % 10);"<<endl;
+    cout<<"     n /= 10;"<<endl;;
+    cout<<"  }"<<endl;
+    cout<<"  return s;"<<endl;
+    cout<<" }"<<endl;
+    system("PAUSE");
+    system("cls");
+    aplicsub();
+}
+
+void prob2(){
+    cout<<"  void oglindit(int n, int &inv) {"<<endl;
+    cout<<"    int c;"<<endl;
+    cout<<"    inv = 0;"<<endl;
+    cout<<"    while (n != 0) {"<<endl;
+    cout<<"      c = n % 10;"<<endl;
+    cout<<"      inv = inv * 10 + c;"<<endl;
+    cout<<"      n /= 10;"<<endl;;
+    cout<<"      }"<<endl;
+    cout<<"  }"<<endl;;
+    system("PAUSE");
+    system("cls");
+    aplicsub();
+}
+
+void testsub(){
+    int scor2=0;
+    cout<<"   1.Care tip de subprogram returneaza un rezultat?"<<endl;
+    cout<<"   a)operand b)procedural "<<endl;
+    char x;
+    cin>>x;
+    if(x=='a'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   2.Care tip de subprogram furnizeaza rezultatul printr-un parametru?"<<endl;
+    cout<<"   a)operand b)procedural "<<endl;
+    char y;
+    cin>>y;
+    if(y=='b'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   3.Cum se transmit parametrii subprogramelor?"<<endl;
+    cout<<"   a)valoare si adresa b)adresa c)valoare d)vector"<<endl;
+    char z;
+    cin>>z;
+    if(z=='a'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   4.Unde se definesc prima oara subprogramele?"<<endl;
+    cout<<"   a)in int main() b)dupa int main() c)unde dorim() d)inainte de int main()"<<endl;
+    char t;
+    cin>>t;
+    if(t=='d'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   5.Subprogramele au ca beneficiu reducerea numarului de erori?"<<endl;
+    cout<<"   a)fals b)adevarat"<<endl;
+    char s;
+    cin>>s;
+    if(s=='b'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   6.Care parte a unui subprogram este folosita la apelarea acestuia?"<<endl;
+    cout<<"   a)parametrii sai b)tipul sau c)numele sau"<<endl;
+    char a;
+    cin>>a;
+    if(a=='c'){
+        cout<<"   Raspuns corect!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit"<<endl;
+    cout<<"   7.Ce sunt subprogramele?"<<endl;
+    cout<<"   a)functii definite de utilizator b)functii predefinite c)biblioteci C++ d)instrcutiuni"<<endl;
+    char b;
+    cin>>b;
+    if(b=='a'){
+        cout<<"   Raspuns corect!"<<endl;
+        scor2++;}
+    else
+        cout<<"   Raspuns gresit"<<endl;
+    cout<<"   Ai ajuns la final!Ai obtinut ";
+    cout<<scor2;
+    cout<<" puncte"<<endl;
+    system("PAUSE");
+    system("cls");
+    subprograme();
 }
 
 void grafneori(){
@@ -1074,86 +1282,100 @@ void eulerianverificare()
 }
 void test()
 {
+    int scor1=0;
     cout<<"   1.care este gradul unui varf izolat?"<<endl;
     cout<<"   a)0 b)1 c)3 d)10"<<endl;
     char x;
     cin>>x;
-    if(x=='a')
+    if(x=='a'){
         cout<<"   Raspuns corect!!!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
     cout<<"   2.Care este gradul unui varf terminal?"<<endl;
     cout<<"   a)2 b)3 c)1 d)120"<<endl;
     char y;
     cin>>y;
-    if(y=='c')
+    if(y=='c'){
         cout<<"   Raspuns corect!!!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
     cout<<"   3.Graful hamiltonian contine un varf izolat?"<<endl;
     cout<<"   a)adevarat b)fals"<<endl;
     char z;
     cin>>z;
-    if(z=='b')
+    if(z=='b'){
         cout<<"   Raspuns corect!!!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
     cout<<"   4.Matricea de adiacenta este:"<<endl;
     cout<<"   a)patratica b)asimetrica fata de diagonala principala c)contine doar 1 si 2"<<endl;
     char t;
     cin>>t;
-    if(t=='a')
+    if(t=='a'){
         cout<<"   Raspuns corect!!!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
     cout<<"   5.Graful eulerian are gradul oricarui varf:"<<endl;
     cout<<"   a)numar impar b)numar par"<<endl;
     char s;
     cin>>s;
-    if(s=='b')
+    if(s=='b'){
         cout<<"   Raspuns corect!!!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
     cout<<"   6.Intr-un graf complet exista minim un varf izolat?"<<endl;
     cout<<"   a)adevarat b)fals"<<endl;
     char a;
     cin>>a;
-    if(a=='b')
+    if(a=='b'){
         cout<<"   Raspuns corect!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit"<<endl;
     cout<<"   7.Multimea varfurilor intr-un graf bipartit este compusa din:"<<endl;
     cout<<"   a)o submultime b)3 submultimi c)2 submultimi"<<endl;
     char b;
     cin>>b;
-    if(b=='c')
+    if(b=='c'){
         cout<<"   Raspuns corect!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit"<<endl;
     cout<<"   8.La parcurgerea in latime:"<<endl;
     cout<<"   a)se scrie pt fiecare varf toti vecinii nevizitati b)se scrie pt fiecare varf primul varf nevizitat"<<endl;
     char c;
     cin>>c;
-    if(c=='a')
+    if(c=='a'){
         cout<<"   Raspuns corect!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit"<<endl;
     cout<<"   9.La parcurgerea in adancime:"<<endl;
     cout<<"   a)se scrie pt fiecare varf toti vecinii nevizitati b)se scrie pt fiecare varf primul varf nevizitat"<<endl;
     char d;
     cin>>d;
-    if(d=='b')
+    if(d=='b'){
         cout<<"   Raspuns corect!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit"<<endl;
     cout<<"   10.Intr-un graf neorientat conteaza ordinea in care scriem extremiatiile unei muchii"<<endl;
     cout<<"   a)fals b)adevarat"<<endl;
     char e;
     cin>>e;
-    if(e=='a')
+    if(e=='a'){
         cout<<"   Raspuns corect!"<<endl;
+        scor1++;}
     else
         cout<<"   Raspuns gresit"<<endl;
+    cout<<"   Ai ajuns la final!Ai obtinut ";
+    cout<<scor1;
+    cout<<" puncte"<<endl;
     system("PAUSE");
     system("cls");
     grafneori();
