@@ -12,7 +12,7 @@ void meniuprincipal();
 void elembaza();
 void tabuni();
 void tabbi();
-void sircarac();
+void sircaract();
 void subprograme();
 void grafneori();
 void grafori();
@@ -113,7 +113,27 @@ void exemplu_sortsel();
 void exemplu_sortinter();
 void exemplu_sortfrecv();
 void elem_aplicatii();
-
+void tabbi_definitii();
+void tabbi_declarare();
+void tabbi_memorie();
+void tabbi_parcurgere();
+void tabbi_tab_p();
+void tabbi_aplicatii();
+void tabbi_test();
+void tabbi_dimensiuni();
+void tabbi_indexare();
+void tabbi_parcurgeri();
+void sir_definitie();
+void sir_declarare();
+void sir_initializare();
+void sir_citire();
+void sir_aplicatii();
+void sir_functii();
+void sir_parcurgere();
+void sir_test();
+void sir_tipulChar();
+void sir_apk1();
+void sir_apk2();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
@@ -196,7 +216,7 @@ void meniuprincipal(){
     }
     else if(a==4){
         system("cls");
-        sircarac();
+        sircaract();
     }
     else if(a==5){
         system("cls");
@@ -1138,10 +1158,327 @@ void uni_inter()
 }
 
 void tabbi(){
-    cout<<"...";
+    cout<<"                 0.Iesire"<<endl;
+    cout<<"                 1.Definitie"<<endl;
+    cout<<"                 2.Declararea matricilor"<<endl;
+    cout<<"                 3.Memorie"<<endl;
+    cout<<"                 4.Parcurgerea matricilor"<<endl;
+    cout<<"                 5.Tablouri patratice"<<endl;
+    cout<<"                 6.Aplicatii"<<endl;
+    cout<<"                 7.Test"<<endl;
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        tabbi_definitii();
+    else if(x=='2')
+        tabbi_declarare();
+    else if(x=='3')
+        tabbi_memorie();
+    else if(x=='4')
+        tabbi_parcurgere();
+    else if(x=='5')
+        tabbi_tab_p();
+    else if(x=='6')
+        tabbi_aplicatii();
+    else if(x=='7')
+        tabbi_test();
+    else if(x=='0')
+        meniuprincipal();
+    else
+        tabbi();
+
+}
+void tabbi_definitii()
+{
+
+    cout<<" Tablourile unidimensionale C/C++ au elemente de acelasi tip. Astfel, tipul elementelor poate fi chiar tablou (unidimensional);"<<endl;
+    cout<<" Elementele tabloului sunt la randul lor tablouri unidimensionale, care au elemente de un anumit tip. Aceste tablouri se numesc bidimensionale sau matrice"<<endl;
+    cout<<" \nDintr-o perspectiva usoar diferita, tablourile unidimensionale sunt structuri de date alcatuite din elemente de acelasi tip, organizate pe linii si pe coloane. Astfel, fiecare element are doi indici: un indice de linie si un indice de coloana."<<endl;    system("PAUSE");
+    system("cls");
+    tabbi();
 }
 
-void sircarac(){
+void tabbi_declarare()
+{
+    cout<<"Declararea tablourilor bidimensionale (matrice) face in C/C++ similar cu a tablourilor unidimensionale, dar trebuie precizate doua dimensiuni fizice, maximale: numarul maxim de linii si numarul maxim de coloane ale matricei:"<<endl;
+    cout<<"     tipDeBaza denumire[NumarLinii][NumarColoane];\n";
+    cout<<"De exemplu: int A[5][10];\n\n";
+    cout<<"\nReferirea elementelor se face prin intermediul operatorului C++ de indexare [], la fel ca in cazul vectorilor, dar trebuie precizati doi indici - cel de linie si cel de coloana. Astfel, A[2][4] reprezinta elementul matricei aflat pe linia 2 si pe coloana 4 - la intersectia dintre linia 2 si coloana 4. Astfel primul indice al unui element este cel de linie, iar al doilea indice este cel de coloana.\n";
+
+    cout<<"\nCade in sarcina programatorului (adica tu!) sa se asigure ca valorile indicilor folositi in expresiile de indexare fac parte din intervalul corect, conform declararii tabloului. Daca valorile indicilor nu sunt corecte, comportamentul programului este impredictibil: rezultatele obtinute vor fi eronate sau se vor produce erori la executia programului. \n";
+    cout<<"De exemplu, pentru matricea de mai sus, expresiile A[-1][7], A[2][20], A[7][7], A[7][30] sunt gresite. Rezultatele sunt impredictibile.\n\n";
+    system("PAUSE");
+    system("cls");
+    tabbi();
+}
+
+void tabbi_memorie()
+{
+    cout<<"Memoria ocupata de un tablou bidimensional in limbajul de programare C++ depinde de dimensiunile tabloului si de tipul de date al elementelor sale. Pentru a calcula memoria ocupata de un tablou bidimensional, putem folosi formula:\n";
+    cout<<"     memorie ocupata = numarul de randuri * numarul de coloane * dimensiunea tipului de date\n\n";
+    cout<<"Sa presupunem ca avem un tablou bidimensional de tip int cu 3 randuri si 4 coloane. In acest caz, memoria ocupata de tablou va fi:\n";
+    cout<<"     memorie ocupata = 3 * 4 * 4 = 48 octeti\n";
+    system("PAUSE");
+    system("cls");
+    tabbi();
+
+}
+
+void tabbi_parcurgere()
+{
+    cout<<"                 0.Inapoi"<<endl;
+    cout<<"                 1.Dimensiunile unei matrice"<<endl;
+    cout<<"                 2.Indexarea de la 0 si indexarea de la 1"<<endl;
+    cout<<"                 3.Parcurgerea"<<endl;
+
+
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        tabbi_dimensiuni();
+    else if(x=='2')
+        tabbi_indexare();
+    else if(x=='3')
+        tabbi_parcurgeri();
+    else if(x=='0')
+        tabbi();
+    else
+        tabbi_parcurgere();
+
+}
+
+void tabbi_dimensiuni()
+{
+    cout<<"La fel ca in cazul tablourilor unidimensionale, si tablourile bidimensionale au doua categorii de dimensiuni:\n";
+    cout<<"     -dimensiunile fizice, maxime – numarul maxim de linii, respectiv coloane pe care le poate avea tabloul; de regula se precizeaza in enuntul problemei\n";
+    cout<<"     -dimensiunile logice, curente – numarul de linii si de coloane pe care le are matricea la un moment dat, pe parcursul executiei programului. Nu pot sa depaseasca dimensiunile fizice.\n\n";
+    cout<<"Datorita existentei acestor dimensiuni logice, intr-un program C/C++ care foloseste tablouri bidimensionale, pe langa variabila care reprezinta tabloul propriu-zis este necesara prezenta a inca doua variabile, de regula notate cu n si m, care reprezinta numarul curent de linii, respectiv coloane ale tabloului.\n";    cout<<"     int A[100][100], n , m;\n";
+    system("PAUSE");
+    system("cls");
+    tabbi_parcurgere();
+}
+
+void tabbi_indexare()
+{
+    cout<<"Implicit, tablourile bidimensionale, la fel ca cele unidimensionale sunt indexate de la 0 (liniile sunt indexate de la 0 la n-1 si coloanele de la 0 la m-1).\n";
+    cout<<"Putem insa sa ignoram prima linie si prima coloana, si sa consideram tabloul indexat de la 1, adica liniile sunt indexate de la 1 la n, iar coloanele de la 1 la m. In aceasta situatie matricea trebuie declarata corespunzator.\n";
+    cout<<"\nDe exemplu, pentru o matrice cu 100 de linii si 100 de coloane indexata de la 0 declararea va fi:\n";
+    cout<<"     int A[100][100], n , m;\n";
+    cout<<"Iar pentru o matrice similara indexata de la 1 declararea va fi:\n";
+    cout<<"     int A[101][101], n , m;\n";
+
+    system("PAUSE");
+    system("cls");
+    tabbi_parcurgere();
+}
+
+void tabbi_parcurgeri()
+{
+    cout<<"Parcurgerea presupune accesarea elementelor curente ale matricei, intr-o anumita ordine - de regula aceasta se face pe linii, de sus in jos si de la stanga la dreapta:\n";
+    cout<<"int n, m, A[100][100];"<<endl;
+    cout<<"..."<<endl;
+    cout<<"for(int i = 0 ; i < n ; i++)"<<endl;
+    cout<<"{"<<endl;
+    cout<<"// linia i\n";
+    cout<<"     for(int j = 0 ; j < m ; j++)\n";
+    cout<<"     // A[i][j]\n";
+    cout<<"     // .....\n";
+    cout<<"}\n\n";
+
+    cout<<"Urmatoarea secventa realizeaza parcurgerea pe coloane:\n";
+    cout<<"int n, m, A[100][100];"<<endl;
+    cout<<"..."<<endl;
+    cout<<"for(int j = 0 ; j < m ; j++)"<<endl;
+    cout<<"{"<<endl;
+    cout<<"// linia i\n";
+    cout<<"     for(int i = 0 ; i < m ; i ++)\n";
+    cout<<"     // A[i][j]\n";
+    cout<<"     // .....\n";
+    cout<<"}\n\n";
+
+
+    cout<<"Citirea unei matrici:\n";
+    cout<<"cin>>n>>m;\n";
+    cout<<"for(i=0;i<n;i++)\n";
+    cout<<"     for(j=0;j<m;j++)\n;";
+    cout<<"         cin>>A[i][j];\n";
+
+    system("PAUSE");
+    system("cls");
+    tabbi_parcurgere();
+
+}
+
+void tabbi_tab_p ()
+{
+    cout<<"Un tablou bidimensional este tablou patratic sau matrice patratica daca numarul de linii este egal cu numarul de coloane.\n";
+    cout<<"In aceasta situatie folosim pentru ambele dimensiuni o singura variabila, de regula n:\n";
+    cout<<"     int n, A[100][100];\n\n";
+    cout<<"Intr-o matrice patratica se disting o categorie speciala de elemente, diagonalele. Un element al matricei apartine sau nu diagonalelor sau zonelor delimitate de acestea daca respecta anumite reguli, in care intervin indicii elementului, nu valoarea elementului. In cele ce urmeaza, pentru un element oarecare al matricei vom nota cu i indicele de linie si cu j indicele de coloana.\n\n";
+    cout<<"Elementele de pe diagonaa principala sunt de forma : A[i][i]\n";
+    cout<<"\nElemenetele de pe diagonala secundara sunt de forma:\n";
+    cout<<"      A[i][n - 1 - i]  ->pentru indexarea de la 0\n";
+    cout<<"      A[i][n + 1 - i]  ->pentru indexarea de la 1\n";
+    system("PAUSE");
+    system("cls");
+    tabbi();
+
+}
+void tabbi_aplicatii()
+{
+    cout<<"Calculul sumei elementelor unei matrici\n\n\n";
+
+    cout<<"#include <iostream>\n";
+
+    cout<<"using namespace std;\n";
+
+    cout<<"int main() {\n";
+    cout<<"    int rows, cols;\n";
+    cout<<"    cin >> rows;\n";
+    cout<<"    cin >> cols;\n";
+    cout<<"    int matrix[100][100];\n";
+    cout<<"    for (int i = 0; i < rows; i++) {\n";
+    cout<<"        for (int j = 0; j < cols; j++) {\n";
+    cout<<"            cin >> matrix[i][j];\n";
+    cout<<"        }\n";
+    cout<<"    }\n";
+
+    cout<<"    int sum = 0;\n";
+    cout<<"    for (int i = 0; i < rows; i++) {\n";
+    cout<<"        for (int j = 0; j < cols; j++) {\n";
+    cout<<"            sum += matrix[i][j];\n";
+    cout<<"        }\n";
+    cout<<"    }\n";
+
+    cout<<"    cout <<sum << endl;\n";
+
+    cout<<"    return 0;\n";
+    cout<<"}\n";
+
+    system("PAUSE");
+    system("cls");
+    tabbi();
+
+}
+void tabbi_test()
+{
+    cout << "Test grila - Tablouri bidimensionale" << endl;
+
+    int score = 0;
+
+    // Intrebarea 1
+    cout << "\n1. Care este definitia unui tablou bidimensional?\n";
+    cout << "   a) Un tablou cu elemente de acelasi tip organizate pe linii\n";
+    cout << "   b) Un tablou cu elemente de acelasi tip organizate pe coloane\n";
+    cout << "   c) Un tablou cu elemente de acelasi tip organizate intr-o structura rectangulara cu linii si coloane\n";
+
+    char answer1;
+    cout << "Raspuns: ";
+    cin >> answer1;
+
+    if (answer1 == 'c' || answer1 == 'C') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit :(";
+
+    // Intrebarea 2
+    cout << "\n2. Cum se realizeaza parcurgerea unui tablou bidimensional?\n";
+    cout << "   a) Prin intermediul unui singur indice\n";
+    cout << "   b) Prin intermediul a doi indici - indicele de linie si indicele de coloana\n";
+    cout << "   c) Prin intermediul unui pointer la adresa\n";
+
+    char answer2;
+    cout << "Raspuns: ";
+    cin >> answer2;
+
+    if (answer2 == 'b' || answer2 == 'B') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+     else
+        cout<<"Raspuns gresit :(";
+
+    // Intrebarea 3
+    cout << "\n3. Care este formula pentru calcularea memoriei ocupate de un tablou bidimensional?\n";
+    cout << "   a) dimensiunea tabloului * dimensiunea tipului de date\n";
+    cout << "   b) numarul de randuri * numarul de coloane * dimensiunea tipului de date\n";
+    cout << "   c) dimensiunea tipului de date / numarul de randuri * numarul de coloane\n";
+
+    char answer3;
+    cout << "Raspuns: ";
+    cin >> answer3;
+
+    if (answer3 == 'b' || answer3 == 'B') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+     else
+        cout<<"Raspuns gresit :(";
+
+    // Intrebarea 4
+    cout << "\n4. Ce reprezinta dimensiunile fizice ale unui tablou bidimensional?\n";
+    cout << "   a) Numarul de linii si coloane maxim pe care le poate avea tabloul\n";
+    cout << "   b) Numarul de linii si coloane curente pe care le are tabloul la un moment dat\n";
+    cout << "   c) Numarul total de elemente din tablou\n";
+
+    char answer4;
+    cout << "Raspuns: ";
+    cin >> answer4;
+
+    if (answer4 == 'a' || answer4 == 'A') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+     else
+        cout<<"Raspuns gresit :(";
+
+    // Intrebarea 5
+    cout << "\n5. Cum se indexeaza implicit elementele unui tablou bidimensional?\n";
+    cout << "   a) De la 1 la numarul de linii si de la 1 la numarul de coloane\n";
+    cout << "   b) De la 0 la numarul de linii si de la 0 la numarul de coloane\n";
+    cout << "   c) De la 1 la numarul de linii si de la 0 la numarul de coloane\n";
+
+    char answer5;
+    cout << "Raspuns: ";
+    cin >> answer5;
+
+    if (answer5 == 'b' || answer5 == 'B') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+     else
+        cout<<"Raspuns gresit :(";
+
+    // Intrebarea 6
+    cout << "\n6. Care este caracteristica speciala a unei matrice patratice?\n";
+    cout << "   a) Are un numar egal de linii si coloane\n";
+    cout << "   b) Are elemente de acelasi tip\n";
+    cout << "   c) Are elemente organizate intr-o structura dreptunghiulara\n";
+
+    char answer6;
+    cout << "Raspuns: ";
+    cin >> answer6;
+
+    if (answer6 == 'a' || answer6 == 'A') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+     else
+        cout<<"Raspuns gresit :(";
+
+    // Afisarea scorului final
+    cout << "\nScorul tau final: " << score << "/6\n";
+    system("PAUSE");
+    system("cls");
+    tabbi();
+
+}
+
+void sircaract(){
     cout<<"...";
 }
 
