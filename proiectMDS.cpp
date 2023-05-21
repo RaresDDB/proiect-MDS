@@ -77,6 +77,43 @@ void aplicsub();
 void testsub();
 void prob1();
 void prob2();
+void elem_introducere();
+void elem_scrcit();
+void elem_tipuri();
+void elem_operat();
+void elem_repet();
+void elem_cond();
+void elem_test();
+void exemplu_cincout();
+void exemplu_operatori();
+void teorie_while();
+void teorie_for();
+void teorie_dowhile();
+void exemplu_while();
+void aplicatie_while();
+void exemplu_for();
+void aplicatie_for();
+void exemplu_dowhile();
+void aplicatie_dowhile();
+void aplicatiabaza1();
+void aplicatiabaza2();
+void aplicatiabaza3();
+void uni_introducere();
+void uni_elementari();
+void uni_frecvente();
+void uni_sortare();
+void uni_binara();
+void uni_inter();
+void exemplu_suma();
+void exemplu_maxim();
+void exemplu_ak();
+void exemplu_frecvente();
+void fct_dowhile();
+void exemplu_sortsel();
+void exemplu_sortinter();
+void exemplu_sortfrecv();
+void elem_aplicatii();
+
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
@@ -190,7 +227,594 @@ void meniuprincipal(){
 }
 
 void elembaza(){
-    cout<<"...";
+    cout<<"                 0.Iesire"<<endl;
+    cout<<"                 1.Introducere"<<endl;
+    cout<<"                 2.Scriere si citire"<<endl;
+    cout<<"                 3.Tipuri de date"<<endl;
+    cout<<"                 4.Expresii. Operatori"<<endl;
+    cout<<"                 5.Structura conditionala"<<endl;
+    cout<<"                 6.Structuri repetitive"<<endl;
+    cout<<"                 7.Aplicatii"<<endl;
+    cout<<"                 8.Test"<<endl;
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        elem_introducere();
+    else if(x=='2')
+        elem_scrcit();
+    else if(x=='3')
+        elem_tipuri();
+    else if(x=='4')
+        elem_operat();
+    else if(x=='5')
+        elem_repet();
+    else if(x=='6')
+        elem_cond();
+    else if(x=='7')
+        elem_aplicatii();
+    else if(x=='8')
+        elem_test();
+    else if(x=='0')
+        meniuprincipal();
+    else
+        meniuprincipal();
+}
+void elem_introducere()
+{
+    cout<<"   SETUL DE CARACTERE reprezinta ansamblul de caractere cu ajutorul carora se poate realiza un program C++."<<endl;
+    cout<<"   Acesta este alcatuit:"<<endl;
+    cout<<"   -litere mari si mici ale alfabetului englez(A-Z, a-z);"<<endl;
+    cout<<"   -cifrele sistemului de numeratie in baza 10(0-9);"<<endl;
+    cout<<"   -caractere speciale(+,-,/,=,%,<,>,:,;,#,$,@,blank(spațiu))."<<endl;
+    cout<<"   IDENTIFICATORUL este o succesiune de litere, cifre sau caracterul special underscor(_) din care prima nu trebuie sa fie cifra."<<endl;
+    cout<<"   Cu ajutorul identificatorilor se asociaza nume constantelor, variabilelor, functiilor, etc."<<endl;
+    cout<<"   Exemple de identificatori: a, c1, contor_cifre, etc."<<endl;
+    cout<<"   Limbajul C++, ca orice limbaj de programare, este compus din cateva denumiri(identificatori) cu o semnificaţie bine stabilita, numite cuvinte cheie."<<endl;
+    cout<<"   Cand alegeti denumiri de variabile pentru programe sa nu utilizati aceste denumiri, cum ar fi:auto, break, char, case, for, float, this, cin, cout, etc."<<endl;
+    cout<<"   Un comentariu, incepe cu semnul // pentru a scrie un comentariu pe o singura linie sau cu semnul /* comentariu */ pentru a scrie un comentariu pe mai multe linii."<<endl;
+    cout<<"   Programatorul poate sa le foloseasca pentru a include explicatii scurte sau observatii asupra codului sursa, deoarece acestea nu au niciun efect asupra comportamentului programului."<<endl;
+    system("PAUSE");
+    system("cls");
+    elembaza();
+}
+void elem_scrcit()
+{
+    cout<<"   Pentru a realiza scrieri pe ecran se foloseste cout<<. Cuvantul cheie cout este acronimul de la console output. Forma generala este cout<<a<<b<<c<<….<<n."<<endl;
+    cout<<"   Pentru a realiza citiri de la tastatura se foloseste fluxul cin>>. Cuvantul cheie cin este acronimul de la console input.Forma generala este cin>>a>>b>>……>>n."<<endl;
+    char elem1;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu cu citiri si scrieri de la tastatura."<<endl;
+    cout<<"   Apasati tasta 2 pentru a reveni la meniul anterior."<<endl;
+    cin>>elem1;
+    system("cls");
+    if(elem1=='1')
+        exemplu_cincout();
+    else if(elem1=='2')
+        elembaza();
+    else
+        elem_scrcit();
+}
+
+void exemplu_cincout()
+{
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int x,y,z;"<<endl;
+    cout<<"   cout<<'Introduceti valoarea lui x:';"<<endl;
+    cout<<"   cin>>x;"<<endl;
+    cout<<"   cout<<'Introduceti valoarea lui y:';"<<endl;
+    cout<<"   cin>>y;"<<endl;
+    cout<<"   z=x+y;"<<endl;
+    cout<<"   cout<<'Suma celor doua numere este '<<z<<endl;"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_scrcit();
+}
+
+void elem_tipuri()
+{
+    cout<<"   Un TIP DE DATE specifica multimea de valori pe care variabila respectiva le poate lua."<<endl;
+    cout<<"   Exemple de tipuri de date:"<<endl;
+    cout<<"     -char(retine un singur caracter:'A','a','%','!');"<<endl;
+    cout<<"     -int(retine numere intregi cu semn: 23,-45,0);"<<endl;
+    cout<<"     -float(retine numere reale in format cu virgula mobila, in simpla precizie: 7.8965,-4.123,7.0);"<<endl;
+    cout<<"     -double(retine numere reale in format cu virgula mobila, in dubla precizie si se utilizeaza cand se prelucreaza numere foarte mari sau foarte mici: 7.8965, -4.123, 7.0):"<<endl;
+    cout<<"     -void(tip de date special care nu specifica un anumit set de valori initial, dar care poate fi specificat ulterior declararii)."<<endl;
+    cout<<"   Mai exista si MODIFICATORII DE TIP care schimba valorile pe care o variabila le poate pastra."<<endl;
+    cout<<"   Modificatorii de tip sunt unsigned, long, signed, register, short. Pentru a se modifica un tip de date, modificatorul se va plasa in fata tipului respectiv."<<endl;
+    system("PAUSE");
+    system("cls");
+    elembaza();
+}
+
+void elem_operat()
+{
+    cout<<"   Expresia este alcatuita dintr-unul sau mai multi operanzi legati intre ei prin operatori pentru a efectua anumite operatii"<<endl;
+    cout<<"   Cei mai importanti operatori ai limbajului C++ sunt:"<<endl;
+    cout<<"     -operatorii aritmetici(+,-,/,*)"<<endl;
+    cout<<"     -operatorii relationali(<, >, <= ,>=, ==, !=)"<<endl;
+    cout<<"     -operatorii de incrementare si decrementare(++, --)"<<endl;
+    cout<<"     -operatorii logici(!, &&, ||)"<<endl;
+    cout<<"     -operatorii de atribuire(=, +=, -=, *=, /=, %=)"<<endl;
+    cout<<"     -operatorul de conversie explicita(tip(expresie), unde tip este int, float, char, etc.)"<<endl;
+    cout<<"     -operatorul conditional(exp1 ? expr2 : exp3)"<<endl;
+    cout<<"     -operatorul dimensiune sizeof(sizeof(data))"<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu de folosire a operatorilor."<<endl;
+    cout<<"   Apasati tasta 2 pentru a reveni la meniul anterior."<<endl;
+    char operat1;
+    cin>>operat1;
+    system("cls");
+    if(operat1=='1')
+        exemplu_operatori();
+    else if(operat1=='2')
+        elembaza();
+    else
+        elem_operat();
+
+}
+void exemplu_operatori()
+{
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int a,b=8;"<<endl;
+    cout<<"   float x,y;"<<endl;
+    cout<<"   char c='a', d='b';"<<endl;
+    cout<<"   a=5"<<endl;
+    cout<<"   x=3.14; y=2;"<<endl;
+    cout<<"   cout<<a+b<<endl;//13"<<endl;
+    cout<<"   cout<<a-x<<endl;//1.86"<<endl;
+    cout<<"   cout<<b-y<<endl;//6"<<endl;
+    cout<<"   cout<<a/x<<endl;//1.59236"<<endl;
+    cout<<"   cout<<c<<d<<endl;//ab"<<endl;
+    cout<<"   cout<<c+d<<endl;//195"<<endl;
+    cout<<"   cout<<c-d<<endl;//-1"<<endl;
+    cout<<"   cout<<b%a<<endl;//3"<<endl;
+    cout<<"   cout<<a+c<<endl;//102"<<endl;
+    cout<<"   cout<<x-d<<endl;//-94.86"<<endl;
+    cout<<"   cout<<(a<b)<<endl;//1(TRUE);"<<endl;
+    cout<<"   cout<<(x==d)<<endl;//0(FALSE);"<<endl;
+    cout<<"   a++;"<<endl;
+    cout<<"   cout<<a<<endl;//6"<<endl;
+    cout<<"   cout<<((a>b)&&(a==b))<<endl;//0"<<endl;
+    cout<<"   a+=b;"<<endl;
+    cout<<"   cout<<a<<endl"<<endl;
+    cout<<"   a=5;"<<endl;
+    cout<<"   b=a>7 ? 15:20;// b=20"<<endl;
+    cout<<"   cout<<(int)c<<endl;//97"<<endl;
+    cout<<"   cout<<sizeof(c)<<octet<<endl;// 1 octet"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_operat();
+}
+void elem_cond()
+{
+    cout<<"   Sintaxa acestei instructiuni este: "<<endl;
+    cout<<"      if (conditie)"<<endl;
+    cout<<"      {"<<endl;
+    cout<<"         instructiune 1;"<<endl;
+    cout<<"         instructiune 2;"<<endl;
+    cout<<"         ..."<<endl;
+    cout<<"      }"<<endl;
+    cout<<"    Conditia este o expresie de tip bool si se considera a fi adevarata doar daca este adevarata(true)."<<endl;
+    system("PAUSE");
+    system("cls");
+    elembaza();
+
+}
+void elem_repet()
+{
+    cout<<"   Apasati tasta 1 pentru a afla cum se foloseste structura repetitiva 'while'."<<endl;
+    cout<<"   Apasati tasta 2 pentru a afla cum se foloseste structura repetitiva 'for'."<<endl;
+    cout<<"   Apasati tasta 3 pentru a afla cum se foloseste structura repetitiva 'do... while'."<<endl;
+    cout<<"   Apasati tasta 4 pentru a reveni la meniul anteriro"<<endl;
+    char repet;
+    cin>>repet;
+    system("cls");
+    if(repet=='1')
+        teorie_while();
+    else if(repet=='2')
+        teorie_for();
+    else if(repet=='3')
+        teorie_dowhile();
+    else if(repet=='4')
+        elembaza();
+
+}
+
+void teorie_while()
+{
+    cout<<"   Sintaxa acestei instructiuni este: "<<endl;
+    cout<<"      while (expresie)"<<endl;
+    cout<<"      {"<<endl;
+    cout<<"         instructiuni"<<endl;
+    cout<<"      }"<<endl;
+    cout<<"   Aceasta instructiune se executa astfel: "<<endl;
+    cout<<"    -PAS 1: se evalueaza expresia;"<<endl;
+    cout<<"    -PAS 2: daca rezultatul este diferit de 0, adica este TRUE,atunci se executa instructiunile si se revine la primul pas; altfel se trece la executia instructiunii care urmeaza instructiunii while."<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu pentru structura repetitiva 'while'."<<endl;
+    cout<<"   Apasati tasta 2 pentru a testa dumneavoastra un exemplu cu structura repetitiva 'while'."<<endl;
+    cout<<"   Apasati tasta 3 pentru a reveni la meniul anterior."<<endl;
+    char fct_while;
+    cin>>fct_while;
+    system("cls");
+    if(fct_while=='1')
+        exemplu_while();
+    if(fct_while=='2')
+        aplicatie_while();
+    else if(fct_while=='3')
+        elem_repet();
+    else elembaza();
+}
+
+void exemplu_while()
+{
+    cout<<"   Se citesc de la tastatura mai multe numere pana la intalnirea valorii 0. Sa se scrie un program C++ care calculeaza si afiseaza pe ecran suma numerelor pare si produsul numerelor impare."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int n,s,p;"<<endl;
+    cout<<"   cout<<'n=';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   s=0;p=1;"<<endl;
+    cout<<"   while(n>0)"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"       if(n%2==0)"<<endl;
+    cout<<"            s=s+n;"<<endl;
+    cout<<"       else"<<endl;
+    cout<<"            p=p*n;"<<endl;
+    cout<<"   cout<<'n= ';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   }"<<endl;
+    cout<<"   cout<<'Suma numerelor pare este '<<s<<endl;"<<endl;
+    cout<<"   cout<<'Produsul numerelor impare este '<<p;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_repet();
+}
+
+void aplicatie_while()
+{
+    cout<<"   Se citesc de la tastatura mai multe numere pana la intalnirea valorii 0. Sa se scrie un program C++ care determina valoarea maxima si de cate ori apare in sir."<<endl;
+    int n, maxi, contor;
+    cout<<"n= ";
+    cin>>n;
+    maxi=n;
+    contor=1;
+    while(n>0)
+    {
+        cout<<"n= ";
+        cin>>n;
+        if(maxi==n)
+            contor++;
+        else if(n>maxi)
+        {
+            maxi=n;
+            contor=1;
+        }
+    }
+    cout<<"Valoarea maxima din sir este "<<maxi;
+    cout<<" si apare de "<<contor<<" ori.";
+    system("PAUSE");
+    system("cls");
+    elem_repet();
+}
+
+void teorie_for()
+{
+    cout<<"   Sintaxa acestei instructiuni este: "<<endl;
+    cout<<"      for (exp1;exp2;exp3)"<<endl;
+    cout<<"      {"<<endl;
+    cout<<"         instructiuni"<<endl;
+    cout<<"      }"<<endl;
+    cout<<"      - exp1, pentru initializare, prin care se stabileste starea dinainte de prima executie a instructiunii;"<<endl;
+    cout<<"      - exp2, pentru testare, compara starea curenta cu starea care termina procesul de terminare si are rolul de a termina executarea repetata a instructiunilor;"<<endl;
+    cout<<"      - exp3, pentru modificare, prin schimbarea starii curente, astfel incat sa se avanseze catre starea finala."<<endl;
+    cout<<"   Aceasta instructiune se executa astfel: "<<endl;
+    cout<<"    -PAS 1: se evalueaza exp1;"<<endl;
+    cout<<"    -PAS 2: se evalueaza expresia expe2; daca rezultatul este TRUE, atunci se executa instructiunile; altfel se trece la executia instructiunii care urmeaza instructiunii for."<<endl;
+    cout<<"    -PAS 3: se evalueaza exp3 si se revina la PAS 2;"<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu pentru structura repetitiva 'for'."<<endl;
+    cout<<"   Apasati tasta 2 pentru a testa dumneavoastra un exemplu cu structura repetitiva 'for'."<<endl;
+    cout<<"   Apasati tasta 3 pentru a reveni la meniul anterior."<<endl;
+    char fct_for;
+    cin>>fct_for;
+    system("cls");
+    if(fct_for=='1')
+        exemplu_for();
+    if(fct_for=='2')
+        aplicatie_for();
+    else if(fct_for=='3')
+        elem_repet();
+    else elembaza();
+}
+
+void exemplu_for()
+{
+    cout<<"   Se citesc de la tastatura n numere intregi. Sa se scrie un program C++ care calculeaza si afiseaza pe ecran suma numerelor pare si produsul numerelor impare."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int n, s, p, i, a;"<<endl;
+    cout<<"   cout<<'n=';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   s=0;p=1;"<<endl;
+    cout<<"   for(i=1;i<=n;i++)"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"   cout<<'a= ';"<<endl;
+    cout<<"   cin>>a;"<<endl;
+    cout<<"       if(a%2==0)"<<endl;
+    cout<<"            s=s+a;"<<endl;
+    cout<<"       else"<<endl;
+    cout<<"            p=p*a;"<<endl;
+    cout<<"   }<<endl;"<<endl;
+    cout<<"   cout<<'Suma numerelor pare este '<<s<<endl;"<<endl;
+    cout<<"   cout<<'Produsul numerelor impare este '<<p;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_repet();
+}
+
+void aplicatie_for()
+{
+    cout<<"   Se citesc de la tastatura n numere intregi. Sa se scrie un program C++ care determina media aritmetica a numerelor impare."<<endl;
+    int n, s, i, a, contor;
+    cout<<"n= ";
+    cin>>n;
+    s=0;
+    contor=0;
+    for(i=1;i<=n;i++)
+    {
+        cout<<"a= ";
+        cin>>a;
+        if(a%2!=0)
+            {contor++;
+            s=s+a;
+            }
+
+    }
+    cout<<"Media aritmetica a numerelor ";
+    cout<<" impare este "<<(float)s/contor<<" .";
+    system("PAUSE");
+    system("cls");
+    elem_repet();
+}
+
+void teorie_dowhile()
+{
+    cout<<"   Sintaxa acestei instructiuni este: "<<endl;
+    cout<<"      do"<<endl;
+    cout<<"      {"<<endl;
+    cout<<"         instructiuni"<<endl;
+    cout<<"      }"<<endl;
+    cout<<"      while(expresie);"<<endl;
+    cout<<"   Aceasta instructiune se executa astfel: "<<endl;
+    cout<<"    -PAS 1: se executa instructiunile;"<<endl;
+    cout<<"    -PAS 2: se evalueaza expresia; daca rezultatul este TRUE, atunci se revine la primul pas; altfel trece la executia instructiunii care urmeaza instructiunii do...while."<<endl;
+    cout<<"    Spre deosebire de instructiunea WHILE instructiunea DO...WHILE se executa cel putin o data."<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu pentru structura repetitiva 'do...while'."<<endl;
+    cout<<"   Apasati tasta 2 pentru a testa dumneavoastra un exemplu cu structura repetitiva 'do...while'."<<endl;
+    cout<<"   Apasati tasta 3 pentru a reveni la meniul anterior."<<endl;
+    char fct_dowhile;
+    cin>>fct_dowhile;
+    system("cls");
+    if(fct_dowhile=='1')
+        exemplu_dowhile();
+    if(fct_dowhile=='2')
+        aplicatie_dowhile();
+    else if(fct_dowhile=='3')
+        elem_repet();
+    else elembaza();
+}
+
+void exemplu_dowhile()
+{
+    cout<<"   Se citesc cifrele unui numar incepand cu cifra cea mai semnificativa. Sa se afiseze numarul obtinut."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   long n"<<endl;
+    cout<<"   int cifra;"<<endl;
+    cout<<"   cout<<'cifra= ';"<<endl;
+    cout<<"   cin>>cifra;"<<endl;
+    cout<<"   n=0;"<<endl;
+    cout<<"   if(cifra>=0 && cifra<=9)"<<endl;
+    cout<<"   do"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"       n=n*10+cifra;"<<endl;
+    cout<<"       cout<<'Cifra';"<<endl;
+    cout<<"       cin>>cifra;"<<endl;
+    cout<<"   }"<<endl;
+    cout<<"   while(cifra>=0 && cifra<=9);"<<endl;
+    cout<<"   cout<<'Numarul obtinut este '<<n;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_repet();
+}
+
+void aplicatie_dowhile()
+{
+    cout<<"   Se citesc cifrele unui numar incepand cu cifra cea mai semnificativa. Sa se afiseze numarul obtinut."<<endl;
+    long n;
+    int cifra;
+    cout<<"Cifra:";
+    cin>>cifra;
+    n=0;
+    if(cifra>=0 && cifra<=9)
+    do
+    {
+        n=n*10+cifra;
+        cout<<"Cifra:";
+        cin>>cifra;
+    }
+    while(cifra>=0 && cifra<=9);
+    cout<<"Numarul obtinut este "<<n;
+    system("PAUSE");
+    system("cls");
+    elem_repet();
+}
+
+void elem_aplicatii()
+{
+    cout<<"                 1.Aplicatia 1"<<endl;
+    cout<<"                 2.Aplicatia 2"<<endl;
+    cout<<"                 3.Aplicatia 3"<<endl;
+    cout<<"                 4.Revenire"<<endl;
+    char aplic;
+    cin>>aplic;
+    system("cls");
+    if(aplic=='1')
+        aplicatiabaza1();
+    else if(aplic=='2')
+        aplicatiabaza2();
+    else if(aplic=='3')
+        aplicatiabaza3();
+    else if(aplic=='4')
+        elembaza();
+    else
+        elembaza();
+}
+
+void aplicatiabaza1()
+{
+    cout<<"   Determinarea celui mai mare divizor comun a doua numere naturale. Algoritmul lui Euclid."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int a,b,r;"<<endl;
+    cout<<"   cout<<'a=';"<<endl;
+    cout<<"   cin>>a;"<<endl;
+    cout<<"   cout<<'b=';"<<endl;
+    cout<<"   cin>>b;"<<endl;
+    cout<<"   while(b)"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"        r=a%b;"<<endl;
+    cout<<"        a=b;"<<endl;
+    cout<<"        b=r;"<<endl;
+    cout<<"   }<<endl;"<<endl;
+    cout<<"   cout<<'CMMDC este '<<a;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_aplicatii();
+}
+
+
+void aplicatiabaza2()
+{
+    cout<<"   Descompunerea in factori primi a unui numar natural."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"   int n, d=2, k;"<<endl;
+    cout<<"   cout<<'n=';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   while(n!=1)"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"      if(n%d==0)"<<endl;
+    cout<<"      {"<<endl;
+    cout<<"         k=0;"<<endl;
+    cout<<"         while(n%d==0)"<<endl;
+    cout<<"         {"<<endl;
+    cout<<"            k++;"<<endl;
+    cout<<"            n=n/d;"<<endl;
+    cout<<"         }"<<endl;
+    cout<<"         cout<<d<<'^'<<k<<endl;"<<endl;
+    cout<<"      }"<<endl;
+    cout<<"      d++;"<<endl;
+    cout<<"   }"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_aplicatii();
+
+}
+
+void aplicatiabaza3()
+{
+    cout<<"   Determinarea valorii minime dintr-un sir de numere."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int n,a,max,i;"<<endl;
+    cout<<"   cout<<'n=';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   cout<<'a=';"<<endl;
+    cout<<"   cin>>a;"<<endl;
+    cout<<"   max=a"<<endl;
+    cout<<"   for(i=2;i<=n;i++)"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"        cout<<'a= ';"<<endl;
+    cout<<"        cin>>a;"<<endl;
+    cout<<"        if(a>max)"<<endl;
+    cout<<"           max=a;"<<endl;
+    cout<<"   }<<endl;"<<endl;
+    cout<<"   cout<<max;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    elem_aplicatii();
+}
+
+void elem_test()
+{
+    int scor3=0;
+    cout<<"   1. Consideram ca variabila a are valoarea 'z'. Carui tip poate apartine aceasta variabila:"<<endl;
+    cout<<"   a)unsigned int b)long c)char d)double"<<endl;
+    char et1;
+    cin>>et1;
+    if(et1=='c'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor3++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   2.Care din urmatoarele declaratii este corecta: "<<endl;
+    cout<<"   a)int abc b)double nr prim c)long 2ab d)int m.n"<<endl;
+    char et2;
+    cin>>et2;
+    if(et2=='a'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor3++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   3.Care din urmatoarele expresii furnizeaza rezultatul 1 daca a si b sunt ambele pozitive:"<<endl;
+    cout<<"   a)(a > 0) && (a > b)  b)a*b > 0  c)(a > 0) || (b>0)  d)(a*b > 0) && (b > 0)"<<endl;
+    char et3;
+    cin>>et3;
+    if(et3=='c'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor3++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   4.Care din urmatoarele expresii au valoarea 1 :"<<endl;
+    cout<<"   a) (3 < 7) && (2 < 0) || (6 = = 4)  b) (3 < 7) || (2 < 0) || (6 = = 4)  c) ! (2 < 0) || (6 = = 4)"<<endl;
+    char et4;
+    cin>>et4;
+    if(et4=='b'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor3++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   5.Alegeti varianta corecta care verifica daca n (natural) este par:"<<endl;
+    cout<<"   a. if (n % 2) cout << “par” ;  b. if (n / 2) cout << “par” ;  c.  if (!(n % 2)) cout << “par” ;  d.  if (n / 2 = = 0) cout << “par” ;"<<endl;
+    char et5;
+    cin>>et5;
+    if(et5=='c'){
+        cout<<"   Raspuns corect!!!"<<endl;
+        scor3++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   Ai ajuns la final!Ai obtinut ";
+    cout<<scor3;
+    cout<<" puncte"<<endl;
+    system("PAUSE");
+    system("cls");
+    elembaza();
 }
 
 void tabuni(){
