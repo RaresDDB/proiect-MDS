@@ -1479,7 +1479,369 @@ void tabbi_test()
 }
 
 void sircaract(){
-    cout<<"...";
+    cout<<"                 0.Iesire"<<endl;
+    cout<<"                 1.Definitie"<<endl;
+    cout<<"                 2.Declararea sirurilor"<<endl;
+    cout<<"                 3.Initializarea sirurilor"<<endl;
+    cout<<"                 4.Citirea sirurilor"<<endl;
+    cout<<"                 5.Referirea unui caracter din sir. Parcurgerea unui sir"<<endl;
+    cout<<"                 6.Tipul char*"<<endl;
+    cout<<"                 7.Functii pentru caractere"<<endl;
+    cout<<"                 8.Aplicatii"<<endl;
+    cout<<"                 9.Test"<<endl;
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        sir_definitie();
+    else if(x=='2')
+        sir_declarare();
+    else if(x=='3')
+        sir_initializare();
+    else if(x=='4')
+        sir_citire();
+    else if(x=='5')
+        sir_parcurgere();
+    else if(x=='6')
+        sir_tipulChar();
+    else if(x=='7')
+        sir_functii();
+    else if(x=='8')
+        sir_aplicatii();
+    else if(x=='9')
+        sir_test();
+    else if(x=='0')
+        meniuprincipal();
+    else
+        sircaract();
+
+}
+
+void sir_definitie()
+{
+    cout<<"Sirurile de caractere in limbajul de programare C++ reprezinta secvente de caractere consecutive, unde un caracter este o valoare care reprezinta un simbol sau o litera. Caracterele pot fi litere, cifre, simboluri sau chiar caractere speciale, cum ar fi spatii sau caractere de control.\n\n";
+
+    cout<<"Un sir de caractere poate fi considerat ca o serie de elemente de tip char, fiecare element reprezentand un singur caracter. Aceste caractere sunt stocate intr-un buffer continuu in memorie, iar sfarsitul sirului este marcat cu un caracter special de terminare, denumit in mod obisnuit null terminator \0.\n";
+    cout<<"Acest caracter semnaleaza ca sirul s-a incheiat si este esential in lucrul cu sirurile de caractere in C++, deoarece permite functiilor sa determine lungimea sirului.\n\n";
+    system("PAUSE");
+    system("cls");
+    sircaract();
+}
+
+void sir_declarare()
+{
+    cout<<"In limbajul de programare C++, putem declara si defini siruri de caractere folosind tipul de date char si operatorul de atribuire (=). Declararea unui sir de caractere implica specificarea numelui sirului si alocarea spatiului necesar pentru a stoca caracterele. Definirea sirului consta in atribuirea valorii initiale sau atribuirea ulterioara a unui sir de caractere existent.\n";
+    cout<<" De exemplu:      char numeSir[numarElemente];\n";
+    cout<<"                  char sir[20];\n\n";
+    system("PAUSE");
+    system("cls");
+    sircaract();
+
+}
+void sir_initializare()
+{
+    cout<<"Exista mai multe moduri de a initializa un sir:\n\n";
+    cout<<"     1.Initializare la declarare:\n";
+    cout<<"         char numeSir[] = 'Valoare initiala';\n\n";
+    cout<<"     2.Initializare dupa declarare:\n";
+    cout<<"         char numeSir[20];\n";
+    cout<<"         strcpy(numeSir, 'Valoare initiala');\n";
+    cout<<"         //Aici, am declarat sirul numeSir cu o dimensiune de 20 de caractere si apoi am utilizat functia strcpy() pentru a atribui valoarea Valoare initiala dupa declarare \n\n";
+    cout<<"     3.Atribuirea caracter cu caracter:\n";
+    cout<<"         char numeSir[10];\n";
+    cout<<"         numeSir[0] = 'H';\n";
+    cout<<"         numeSir[1] = 'e';\n";
+    cout<<"         numeSir[2] = 'l';\n";
+    cout<<"         numeSir[3] = 'l';\n";
+    cout<<"         numeSir[4] = 'o';\n";
+    cout<<"         numeSir[5] = '\0';\n";
+    cout<<"Aici, am alocat spatiu pentru un sir de caractere cu 10 elemente si am atribuit manual caracterele pentru a forma cuvantul 'Hello'. Caracterul '\0' este adaugat pentru a marca sfarsitul sirului.\n\n";
+    system("PAUSE");
+    system("cls");
+    sircaract();
+
+
+}
+
+void sir_citire()
+{
+    cout<<"Pentru citirea de la tastatura am putea folosi operatorul >>, dar in acest mod se vor citi caracterele pana la primul spatiu\n";
+    cout<<"Pentru a citi siruri care contin spatii, putem folosi metoda getline: \n";
+    cout<<"     istream& getline (char* s, streamsize n );\n";
+    cout<<"     //Se vor citi in sirul s caracterele din stream-ul de intrare (de la tastatura) pana la aparitia caracterului sfarsit de linie '\n', dar nu mai mult de n-1 caractere.\n";
+    cout<<"De exemplu:  cin.getline(s , 11);\n\n";
+    system("PAUSE");
+    system("cls");
+    sircaract();
+
+}
+
+void sir_parcurgere()
+{
+    cout<<"Deoarece sirurile de caractere sunt de fapt tablouri, pentru referirea unui caracter din sir se foloseste operatorul [], ca in exemplul urmator:\n";
+    cout<<"     char s[]=abac; // sirul consta din 5 caractere: cele 4 litere si caracterul nul '\0' \n";
+    cout<<"     cout << s[3]; // c      \n";
+    cout<<"     s[1] = 'r'; \n";
+    cout<<"     cout << s; // arac  \n";
+    cout<<"     cout << s[10]; // ??? comportament impredictibil: nu exista in sir caracter cu indice 10  \n\n";
+
+    cout<<"In numeroase situatii este necesara analizarea fiecarui caracter din sir. Pentru aceasta este necesara o parcurgere a sirului; aceasta se face similar cu parcurgerea unui tablou oarecare. Diferenta consta in faptul ca, pentru sirul de caractere nu se cunoaste explicit lungimea. Ea poate fi determinata cu functia strlen (vezi mai jos), dar putem controla parcurgerea sirului stiind ca dupa ultimul caracter valid din sir apare caracterul nul '\0'.\n";
+    cout<<"Urmatoarele exemple parcurg un sir de caractere si afiseaza caracterele separate prin spatii:\n";
+
+    cout<<"     char s[11]; \n";
+    cout<<"     cin >> s; // se citeste un cuvant , fara spatii\n";
+    cout<<"     for(int i = 0 ; s[i] ; i ++)\n";
+    cout<<"         cout << s[i] << " ";    \n";
+
+    system("PAUSE");
+    system("cls");
+    sircaract();
+
+}
+
+
+void sir_tipulChar()
+{
+    cout<<"Consideram declaratia:\n";
+    cout<<"     char * p , s[31] = pbinfo;\n";
+    cout<<"Ce este p? Este un pointer la char, adica o variabila a carei valoare este adresa unei date de tip char.\n";
+    cout<<"Ce este s? Spunem ca este un sir de caractere, dar practic s este tot un pointer. Valoarea sa este adresa primului element din sir, adica adresa lui s[0]. Observam ca de fapt, variabilele p si s sunt de acelasi tip, pointer la char. Diferenta dintre cele doua variabile este ca s memoreaza o adresa de memorie unde incepe un sir de caractere (la acea adresa exista o data de tip char) in timp ce p memoreaza o adresa aleatorie.\n\n";
+
+    cout<<"Cu ce putem initializa pointer-ul p? Cu adresa unei date de tip char. O asemenea data este orice element al unui sir de caractere, de exemplu orice element din s. Daca p reprezinta adresa unui caracter dintr-un sir, atunci cu p se pot face toate operatiile care se pot face cu acel sir.\n";
+    cout<<"Iata un exemplu:\n";
+    cout<<"     #include <iostream>\n";
+    cout<<"     using namespace std;\n";
+    cout<<"     int main(){\n";
+    cout<<"         char * p , s[]=pbinfo;\n";
+    cout<<"         cout << s << endl; // pbinfo\n";
+    cout<<"         p = s;\n";
+    cout<<"         cout << p << endl; // pbinfo\n";
+    cout<<"         p ++;\n";
+    cout<<"         cout << p << endl; // binfo\n";
+    cout<<"         return 0;\n";
+    cout<<"}\n\n";
+    system("PAUSE");
+    system("cls");
+    sircaract();
+}
+
+void sir_functii()
+{
+    cout << "In limbajul de programare C++, exista o serie de functii predefinite care sunt utile in manipularea sirurilor de caractere. Iata cateva dintre cele mai importante functii aplicate sirurilor de caractere:\n\n";
+
+    cout << "\nstrlen(const char* str): Aceasta functie calculeaza si returneaza lungimea unui sir de caractere, adica numarul de caractere pana la caracterul nul de sfarsit '\\0'.\n";
+    cout << "\nstrcpy(char* dest, const char* src): Functia copiaza continutul unui sir de caractere sursa (src) intr-un sir de caractere destinatie (dest). Este important ca dest sa aiba suficient spatiu alocat pentru a primi continutul lui src.\n";
+    cout << "\nstrcat(char* dest, const char* src): Aceasta functie concateneaza (adauga) continutul sirului src la sfarsitul sirului dest. Iar aici, dest trebuie sa aiba suficient spatiu alocat pentru a putea primi noul continut.\n";
+    cout << "\nstrcmp(const char* str1, const char* str2): Functia compara doua siruri de caractere str1 si str2 si returneaza rezultatul comparatiei. Daca str1 este mai mic decat str2, rezultatul va fi negativ. Daca str1 este mai mare decat str2, rezultatul va fi pozitiv. Daca cele doua siruri sunt identice, rezultatul va fi zero.\n";
+    cout << "\nstrchr(const char* str, int c): Functia cauta prima aparitie a caracterului c in sirul de caractere str. Daca se gaseste caracterul, functia returneaza un pointer catre acea pozitie in sir. In caz contrar, functia returneaza NULL.\n";
+    system("PAUSE");
+    system("cls");
+    sircaract();
+
+}
+
+
+void sir_aplicatii()
+{
+
+    cout<<"Pentru aplicatia 1 ->Apasati tasta 1\n";
+    cout<<"Pentru aplicatia 2 ->Apasati tasta 2\n";
+    cout<<"Pentru a ne intoarce la pagina anterioara, apasati 3\n";
+    int i;
+    cin>>i;
+    system("cls");
+    if (i==1)
+        sir_apk1();
+    else if (i==2)
+        sir_apk2();
+        else sircaract();
+
+    system("PAUSE");
+
+}
+
+void sir_apk1()
+{
+    cout<<"Aplicatie de conversie a textului la majuscule sau minuscule\n\n";
+    cout<<"Aceasta aplicatie primeste un text de la utilizator si il convertește in litere majuscule sau litere minuscule, in functie de optiunea selectata. Utilizatorul poate alege sa converteasca un singur cuvant sau un intreg sir de caractere.";
+    cout<<" Aplicatia utilizeaza functiile toupper() si tolower() pentru conversia literelor.\n\n";
+    cout<<"     #include <iostream>\n";
+    cout<<"     #include <cstring>\n";
+    cout<<"     #include <cctype>\n";
+
+    cout<<"     using namespace std;\n";
+
+    cout<<"     int main() {\n";
+        cout<<"     char text[100];\n";
+        cout<<"     cin.getline(text, 100);\n";
+
+        cout<<"     int optiune;\n";
+        cout<<"     cout << Selectati optiunea:\n";
+        cout<<"     cout << 1. Conversie la majuscule\n";
+        cout<<"     cout << 2. Conversie la minuscule\n";
+        cout<<"     cin >> optiune;\n";
+
+        cout<<"     if (optiune == 1) {\n";
+            cout<<"     for (int i = 0; i < strlen(text); i++) {\n";
+                cout<<"     text[i] = toupper(text[i]);\n";
+            cout<<"     }\n";
+        cout<<"     } else if (optiune == 2) {\n";
+            cout<<"     for (int i = 0; i < strlen(text); i++) {\n";
+                cout<<"     text[i] = tolower(text[i]);\n";
+            cout<<"     }\n";
+        cout<<"     }\n";
+
+        cout<<"     cout << Textul convertit:  << text << endl;\n";
+
+       cout<<"      return 0;\n";
+    cout<<"     }\n";
+    system("PAUSE");
+    system("cls");
+    sir_aplicatii();
+
+
+}
+
+void sir_apk2()
+
+{
+       cout<<"Aplicatie de conversie a textului la majuscule sau minuscule\n\n";
+    cout<<"Aceasta aplicatie primeste un text de la utilizator si il converteste in litere majuscule sau litere minuscule, in funcție de optiunea selectata. Utilizatorul poate alege sa converteasca un singur cuvant sau un intreg sir de caractere.";
+    cout<<" Aplicatia utilizeaza funcțiile toupper() și tolower() pentru conversia literelor.\n";
+    cout<<"     #include <iostream>\n";
+    cout<<"     #include <cstring>\n";
+    cout<<"     #include <cctype>\n";
+
+    cout<<"     using namespace std;\n";
+
+    cout<<"     int main() {\n";
+        cout<<"     char text[100];\n";
+        cout<<"     cin.getline(text, 100);\n";
+
+        cout<<"     int optiune;\n";
+        cout<<"     cout << Selectati optiunea:\n";
+        cout<<"     cout << 1. Conversie la majuscule\n";
+        cout<<"     cout << 2. Conversie la minuscule\n";
+        cout<<"     cin >> optiune;\n";
+
+        cout<<"     if (optiune == 1) {\n";
+            cout<<"     for (int i = 0; i < strlen(text); i++) {\n";
+                cout<<"     text[i] = toupper(text[i]);\n";
+            cout<<"     }\n";
+        cout<<"     } else if (optiune == 2) {\n";
+            cout<<"     for (int i = 0; i < strlen(text); i++) {\n";
+                cout<<"     text[i] = tolower(text[i]);\n";
+            cout<<"     }\n";
+        cout<<"     }\n";
+
+        cout<<"     cout << Textul convertit:  << text << endl;\n";
+
+       cout<<"      return 0;\n";
+    cout<<"     }\n";
+
+    system("PAUSE");
+    system("cls");
+    sir_aplicatii();
+
+
+}
+void sir_test()
+{
+
+    int score = 0;
+
+    // Intrebarea 1
+    cout << "1. Ce reprezinta un sir de caractere in limbajul de programare C++?\n";
+    cout << "   a) Un tip de date ce stocheaza o valoare numerica.\n";
+    cout << "   b) Un tablou de caractere terminate cu caracterul nul.\n";
+    cout << "   c) Un tip de date utilizat exclusiv pentru afisarea textului pe ecran.\n";
+    char raspuns1;
+    cin >> raspuns1;
+    if (raspuns1 == 'b') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit:(";
+
+    // Intrebarea 2
+    cout << "\n2. Cum se parcurge un sir de caractere in C++?\n";
+    cout << "   a) Prin utilizarea unui pointer catre primul caracter al sirului si incrementarea acestuia.\n";
+    cout << "   b) Prin utilizarea functiei `for` cu un contor si accesarea elementelor folosind operatorul `[]`.\n";
+    cout << "   c) Nu se poate parcurge un sir de caractere in C++.\n";
+    char raspuns2;
+    cin >> raspuns2;
+    if (raspuns2 == 'a') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit:(";
+
+    // Intrebarea 3
+    cout << "\n3. Cum se determina lungimea unui sir de caractere in C++?\n";
+    cout << "   a) Prin utilizarea functiei `strlength(str)`.\n";
+    cout << "   b) Prin numararea manuala a caracterelor pana la intalnirea caracterului nul.\n";
+    cout << "   c) Prin accesarea valorii proprietatii `length` a sirului.\n";
+    char raspuns3;
+    cin >> raspuns3;
+    if (raspuns3 == 'b') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit:(";
+
+    // Intrebarea 4
+    cout << "\n4. Care este caracterul nul in sirurile de caractere?\n";
+    cout << "   a) '\\0'\n";
+    cout << "   b) ' '\n";
+    cout << "   c) '\\n'\n";
+    char raspuns4;
+    cin >> raspuns4;
+    if (raspuns4 == 'a') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit:(";
+
+    // Intrebarea 5
+    cout << "\n5. Ce functie se utilizeaza pentru concatenarea a doua siruri de caractere in C++?\n";
+    cout << "   a) `strcat(str1, str2)`\n";
+    cout << "   b) `concat(str1, str2)`\n";
+    cout << "   c) `append(str1, str2)`\n";
+    char raspuns5;
+    cin >> raspuns5;
+    if (raspuns5 == 'a') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit:(";
+
+    // Intrebarea 6
+    cout << "\n6. Care este dimensiunea ocupata in memorie de un sir de caractere de tip `char s[20]`?\n";
+    cout << "   a) 20 bytes\n";
+    cout << "   b) 21 bytes\n";
+    cout << "   c) 22 bytes\n";
+    char raspuns6;
+    cin >> raspuns6;
+    if (raspuns6 == 'b') {
+        cout<<"Raspuns corect!";
+        score++;
+    }
+    else
+        cout<<"Raspuns gresit:(";
+
+    // Afisarea scorului final
+    cout<<"   Ai ajuns la final!Ai obtinut ";
+    cout<<score;
+    cout<<" puncte"<<endl;
+
+    system("PAUSE");
+    system("cls");
+    sircaract();
 }
 
 void subprograme(){
