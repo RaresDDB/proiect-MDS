@@ -818,7 +818,323 @@ void elem_test()
 }
 
 void tabuni(){
-    cout<<"...";
+    cout<<"                 0.Iesire"<<endl;
+    cout<<"                 1.Introducere"<<endl;
+    cout<<"                 2.Algoritmi elementari cu vectori"<<endl;
+    cout<<"                 3.Vector de frecvente"<<endl;
+    cout<<"                 4.Sortarea vectorilor"<<endl;
+    cout<<"                 5.Cautare binara"<<endl;
+    cout<<"                 6.Interclasarea vectorilor"<<endl;
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        uni_introducere();
+    else if(x=='2')
+        uni_elementari();
+    else if(x=='3')
+        uni_frecvente();
+    else if(x=='4')
+        uni_sortare();
+    else if(x=='5')
+        uni_binara();
+    else if(x=='6')
+        uni_inter();
+    else if(x=='0')
+        meniuprincipal();
+    else
+        meniuprincipal();
+}
+
+void uni_introducere()
+{
+    cout<<"   Vectorii sau tablourile unidimensionale sunt structuri de date bine definite si organizate in memorie."<<endl;
+    cout<<"   Cu ajutorul acestora, se pot pastra in memorie si accesa ulterior mai multe variabile, fara a fi nevoie de retinerea explicita a fiecareia dintre ele."<<endl;
+    cout<<"   Cu alte cuvinte, un vector retine sub acelasi nume mai multe valori de acelasi tip. Fiecare valoare poate fi accesata folosind poziția sa in vector."<<endl;
+    cout<<"         Declararea vectorilor"<<endl;
+    cout<<"   Sintaxa este: tip elemente vector ; nume vector [dimensiune maxima vector];"<<endl;
+    cout<<"   Exemple: "<<endl;
+    cout<<"     int x[100];// tipul elementelor vectorului este int iar dimensiunea maxima 100"<<endl;
+    cout<<"     double a[50];"<<endl;
+    cout<<"     char s[1000];"<<endl;
+    cout<<"          Initializarea vectorilor"<<endl;
+    cout<<"   Fiecare element al vectorului este o variabila separata, care poate fi atribuita, citita sau scrisa intocmai ca o variabila de tipul vectorului."<<endl;
+    cout<<"   Exemple: "<<endl;
+    cout<<"     int v[4]={5, 6, 10, 21}; // inițializarea la declarare"<<endl;
+    cout<<"     int numere[50];"<<endl;
+    cout<<"     for(i=0;i<numar-numere;i++)"<<endl;
+    cout<<"     { numere[i]=i; } // inițializarea la atribuire"<<endl;
+    cout<<"      v[3] = 30; // atribuirea"<<endl;
+    cout<<"      v[i] = v[i] + 1; // atribuirea"<<endl;
+    cout<<"            Citirea vectorilor"<<endl;
+    cout<<"   Citirea mai multor valori dintr-un fisier si introducerea lor intr-un vector se face similar cu citirea unei secvente: vom citi mai intai numarul de elemente, n si apoi cele n elemente, de la 0 la n-1 sau de la 1 la n."<<endl;
+    cout<<"   int a[100];//un vector de maxim 100 elemente"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"   { int n,i;"<<endl;
+    cout<<"     cout<<n= ; cin>>n; //n este lungimea vectorului"<<endl;
+    cout<<"     for(i=0;i<n;i++) "<<endl;
+    cout<<"    {  cout<<a[ <<i<<]= ; /*se afiseaza numarul de ordine al elementului, careeste cu 1 mai mare decat indicele */"<<endl;
+    cout<<"       cin>>a[i];} "<<endl;
+    cout<<"   return 0;}"<<endl;
+    cout<<"              Afisarea vectorilor"<<endl;
+    cout<<"   Afiaarea valorilor vectorului este similara cu citirea. Vom scrie in fișierul de iesire fiecare valoare, pe rand: de la 0 la n-1 sau de la 1 la n."<<endl;
+    cout<<"   int a[100];//un vector de maxim 100 elemente"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"   { int n,i;"<<endl;
+    cout<<"     cout<<n= ; cin>>n; //n este lungimea vectorului"<<endl;
+    cout<<"     for(i=0;i<n;i++) "<<endl;
+    cout<<"    {  cout<<a[i]<<' '; ; /*se afiseaza numarul de ordine al elementului, careeste cu 1 mai mare decat indicele */"<<endl;
+    cout<<"   return 0;}"<<endl;
+    system("PAUSE");
+    system("cls");
+    tabuni();
+
+}
+
+void uni_elementari()
+{
+    cout<<"   Apasati tasta 1 pentru a vedea cum se afla suma elementelor unui vector"<<endl;
+    cout<<"   Apasati tasta 2 pentru a vedea cum se afla maximul dintr-un vector"<<endl;
+    cout<<"   Apasati tasta 3 pentru a vedea cum se elimina elementul a[k] aflat pe pozitia k dintr-un vector"<<endl;
+    cout<<"   Apasati tasta 4 pentru a reveni la meniul anterior"<<endl;
+    char fct_unielem;
+    cin>>fct_unielem;
+    system("cls");
+    if(fct_unielem=='1')
+        exemplu_suma();
+    if(fct_unielem=='2')
+        exemplu_maxim();
+    else if(fct_unielem=='3')
+        exemplu_ak();
+    else if(fct_unielem=='4')
+        tabuni();
+    else
+        uni_elementari();
+}
+
+void exemplu_suma()
+{
+    cout<<"   #include<iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int v[100];"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int i,n,s=0;"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   for(i=1;i<=n;i++)"<<endl;
+    cout<<"      {cin>>v[i];"<<endl;
+    cout<<"        s=s+v[i];}"<<endl;
+    cout<<"   cout<<s;"<<endl;
+    cout<<"   return 0;}"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_elementari();
+}
+
+void exemplu_maxim()
+{
+    cout<<"   #include<iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int v[101];"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int i, vmax, n;"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   for(i=1;i<=n;i++)"<<endl;
+    cout<<"      {cin>>v[i];}"<<endl;
+    cout<<"   vmax=v[1];"<<endl;
+    cout<<"   for(i=2;i<=n;i++){"<<endl;
+    cout<<"   if(v[i]>vmax)"<<endl;
+    cout<<"   vmax=v[i];}"<<endl;
+    cout<<"   cout<<vmax;"<<endl;
+    cout<<"   return 0;}"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_elementari();
+}
+
+void exemplu_ak()
+{
+    cout<<"   for(i=k; i<=n-1; i++)"<<endl;
+    cout<<"   a[i]=a[i+1];"<<endl;
+    cout<<"   n--;"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_elementari();
+}
+
+void uni_frecvente()
+{
+    cout<<"   Vectorii de frecventa sunt vectori ale caror elemente au o semnificatie speciala: valoarea de pe pozitia i arata numarul de aparitii a lui i intr-o alta entitate, de obicei o secventa de numere, sau un numar."<<endl;
+    cout<<"   In orice multime elementele sunt unice, iar vectorul frecventelor are doar valori 0 sau 1. Acest vector este numit vectorul caracteristic al unei multimi."<<endl;
+    cout<<"   Vectorul de frecvente poate fi folosit pentru a obtine rapid multimea asociata ca un vector caracteristic astfel:"<<endl;
+    cout<<"     -0 inseamna ca elementul nu apartine multimii;"<<endl;
+    cout<<"     -1 (o valoare diferita de 0) inseamna ca elementul apartine multimii."<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu pentru structura repetitiva 'do...while'."<<endl;
+    cout<<"   Apasati tasta 2 pentru a reveni la meniul anterior."<<endl;
+    char fct_frecvente;
+    cin>>fct_frecvente;
+    system("cls");
+    if(fct_frecvente=='1')
+        exemplu_frecvente();
+    if(fct_frecvente=='2')
+        tabuni();
+    else tabuni();
+}
+
+void exemplu_frecvente()
+{
+    cout<<"   Fiind dat un numar natural n, sa se afiseze cifrele numarului si numarul de aparitii ale fiecarei cifre in numar. "<<endl;
+    cout<<"   #include<iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int v[10];"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int n,c;"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   while(n>0){"<<endl;
+    cout<<"      c=n%10;"<<endl;
+    cout<<"      v[c]++;"<<endl;
+    cout<<"      n=n/10;}"<<endl;
+    cout<<"   for(c=0;c<10;c++){"<<endl;
+    cout<<"      if(v[c]!=0)"<<endl;
+    cout<<"      cout<<c<<' '<<v[c]<<endl;}"<<endl;
+    cout<<"   return 0;}"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_frecvente();
+}
+
+void uni_sortare()
+{
+    cout<<"   Prin sortare se intelege aranjarea elementelor unui vector in ordine crescatoare sau descrescatoare. "<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu pentru sortarea prin selectie'."<<endl;
+    cout<<"   Apasati tasta 2 pentru a vedea un exemplu pentru sortarea prin interclasare."<<endl;
+    cout<<"   Apasati tasta 3 pentru a vedea un exemplu pentru sortarea folosind vectorul de frecventa"<<endl;
+    cout<<"   Apasati tasta 4 pentru a reveni la meniul anterior"<<endl;
+    char fct_sortare;
+    cin>>fct_sortare;
+    system("cls");
+    if(fct_sortare=='1')
+        exemplu_sortsel();
+    if(fct_sortare=='2')
+        exemplu_sortinter();
+    else if(fct_sortare=='3')
+        exemplu_sortfrecv();
+    else if(fct_sortare=='4')
+        tabuni();
+    else
+        uni_sortare();
+
+}
+
+void exemplu_sortsel()
+{
+    cout<<"   for ( i = 1; i <= n ; i++ ) {"<<endl;
+    cout<<"   mini = v[i]; "<<endl;
+    cout<<"   p = i;"<<endl;
+    cout<<"   for ( j = i + 1; j < n; j++ )"<<endl;
+    cout<<"     if ( v[j] < mini ) "<<endl;
+    cout<<"        { mini = v[j]; "<<endl;
+    cout<<"           p = j; }"<<endl;
+    cout<<"   v[p] = v[i];"<<endl;
+    cout<<"   v[i] = mini; } "<<endl;
+    cout<<"   "<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_sortare();
+}
+
+void exemplu_sortinter()
+{
+    cout<<"   for ( i = 1; i < n ; i++ ) "<<endl;
+    cout<<"       for ( j = i + 1; j <= n; j++ ) "<<endl;
+    cout<<"           if ( v[j] < v[j] )"<<endl;
+    cout<<"              { aux = v[i];"<<endl;
+    cout<<"                v[i] = v[j]; "<<endl;
+    cout<<"                v[j] = aux; } "<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_sortare();
+}
+
+void exemplu_sortfrecv()
+{
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   for (i=1;i<=n;i++){ "<<endl;
+    cout<<"       cin >> x; "<<endl;
+    cout<<"       fr[x]++; } "<<endl;
+    cout<<"   for (x=0;x<=100;x++)"<<endl;
+    cout<<"   for (i=1;i<=fr[x];i++) "<<endl;
+    cout<<"   cout<<x<<” ”;"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_sortare();
+
+}
+
+
+void uni_binara()
+{
+    cout<<"   Cautarea unei valori intr-un vector se poate face in doua moduri:"<<endl;
+    cout<<"      -secvential : presupune analizarea fiecarui element al vectorului intr-o anumita ordine. Cand se gaseste valoarea cautata parcurgerea vectorului se poate opri. In cel mai rau caz, pentru un vector cu n elemente parcurgerea face n pasi, complexitatea timp a cautarii secventiale este O(n)."<<endl;
+    cout<<"      -binar. Cautarea binara se poate face intr-un vector numai daca elementele acestuia sunt in ordine dupa un anumit criteriu. Cautarea binara presupune impartirea vectorului in secvente din ce in ce mai mici, injumatatindu-le si continuand cu jumatatea in care se poate afla valoarea dorita."<<endl;
+    cout<<"   Algoritmul cautarii binare este urmatorul:"<<endl;
+    cout<<"   #include<iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int a[1001], n,x,st,dr,poz,i;"<<endl;
+    cout<<"   cin>>n>>x;"<<endl;
+    cout<<"   for(i=1;i<=n;i++){"<<endl;
+    cout<<"       cin>>a[i];}"<<endl;
+    cout<<"   st=1; dr=n; poz=0;"<<endl;
+    cout<<"   while(st<=dr && poz==0){"<<endl;
+    cout<<"       int mij=(st+dr)/2;"<<endl;
+    cout<<"       if(a[mij]==x)  poz=mij;"<<endl;
+    cout<<"          else if(a[mij]<x)  st=mij+1;"<<endl;
+    cout<<"            else dr=mij-1;}"<<endl;
+    cout<<"   if(poz!=0)"<<endl;
+    cout<<"      cout<<'Valoarea '<< x <<' se afla pe pozitia '<< poz;"<<endl;
+    cout<<"   else cout<<'Valoarea '<< x <<' nu exista in vector"<<endl;
+    cout<<"   return 0;}"<<endl;
+    system("PAUSE");
+    system("cls");
+    tabuni();
+
+}
+
+void uni_inter()
+{
+    cout<<"      Interclasarea"<<endl;
+    cout<<"   -consideram doua tablouri, cu n, respectiv m elemente, ordonate crescator "<<endl;
+    cout<<"   -cele doua tablouri se parcurg concomitent;"<<endl;
+    cout<<"   -se alege valoarea mai mica dintre cele doua elemente curente"<<endl;
+    cout<<"   -se adauga in al treilea tablou"<<endl;
+    cout<<"   -se avanseaza numai in tabloul din care am ales valoarea de adaugat"<<endl;
+    cout<<"   -parcurgerea unuia dintre cele doua tablouri se incheie"<<endl;
+    cout<<"   -toate elementele din celalalt tablou, neparcurse inca, sunt adaugate in tabloul destinatie"<<endl;
+    cout<<"   -tabloul destinatie are k = n + m elemente"<<endl;
+    cout<<"     Exemplu:"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"   {int a[100001],b[100001], c[200002], i, j, k, n, m ;"<<endl;
+    cout<<"   i=1;j=1;k=0; "<<endl;
+    cout<<"   while(i<=n && j<=m) "<<endl;
+    cout<<"     if (a[i]<b[j]){"<<endl;
+    cout<<"        k++; "<<endl;
+    cout<<"        c[k]=a[i]; "<<endl;
+    cout<<"        i++;}"<<endl;
+    cout<<"     else{ k++;"<<endl;
+    cout<<"           c[k]=b[j]; "<<endl;
+    cout<<"            j++;}"<<endl;
+    cout<<"   while(i<=n){"<<endl;
+    cout<<"        k++;"<<endl;
+    cout<<"        c[k]=a[i]; "<<endl;
+    cout<<"        i++;}"<<endl;
+    cout<<"   while (j<=m){ "<<endl;
+    cout<<"        k++;"<<endl;
+    cout<<"        c[k]=b[j]; "<<endl;
+    cout<<"        j++;}}"<<endl;
+    system("PAUSE");
+    system("cls");
+    tabuni();
+
 }
 
 void tabbi(){
