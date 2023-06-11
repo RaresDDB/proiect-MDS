@@ -143,6 +143,9 @@ void aplicback2();
 void testback();
 void aplicback1rez();
 void aplicback2rez();
+void prezentareit();
+void facultati();
+void iesire();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
@@ -168,19 +171,36 @@ void prezentare(){
     cout<<"   De asemenea,este important de stiut care este nivelul la care doresti sa ajungi in informatica.Daca doresti sa ajungi sa profesezi in acest domeniu trebuie sa stii ca aceste informatii sunt necesare,dar nu si suficiente pentru o cariera in IT.Daca scopul este strict pentru a invata pentru liceu,ai ajuns pe aplicatia perfecta!"<<endl<<endl;
     cout<<"   Mult succes pe parcursul lectiilor!"<<endl;
     cout<<endl<<endl<<endl<<endl<<endl;
-    cout<<"   In plus,aplicatia noastra va ofera posibilitatea ca pe parcursul parcurgerii lectiilor sa aveti parte de o muzica relaxanta in surdina";
-    cout<<"   Daca doriti sa aveti parte de muzica apasati tasta 1,daca nu apasati tasta 2"<<endl;
-    int b;
-    cin>>b;
-    if(b==1){
-        PlaySound(TEXT("file_example_WAV_10MG.wav"),NULL,SND_SYNC);
-        system("cls");
-        meniuprincipal();
-    }
-    else{
-        system("cls");
-        meniuprincipal();
-    }
+    system("PAUSE");
+    system("cls");
+    prezentareit();
+}
+void prezentareit(){
+    cout<<endl<<endl;
+    cout<<"   Information Technology (IT) sau Tehnologia Informatiei in limba romana este o industrie extrem de complexa care are la baza utilizarea computerelor pentru a stoca, crea, prelua, procesa si schimba o varietate de informatii si date pretioase. Practic, IT face parte din „tehnologia informatiei și comunicatiilor”, pe scurt (TIC). Information Technology este special conceputa pentru afaceri si raspunde unei nevoi mari pe piata internationala."<<endl;
+    cout<<"   Sistemele informatice de acest gen exista dintotdeauna, insa nu la acest nivel atat de avansat. Aceste sisteme sunt inter-informationale, adica transmit date unele catre celelalte si sunt controlate de specialisti în domeniu."<<endl;
+    cout<<"   Oamenii sunt obisnuiti sa adune informatii si sa le manipuleze inca de cand scrisul a fost inventat. Totusi, nu se putea vorbi atunci de tehnologie, pentru ca acest termen a aparut de abia in secolul XX si a fost inventat de catre Thomas L. Whisler si Harold J. Leavitt. Despre industria IT nu au existat decat vorbe de lauda, pentru ca ea a stat la baza dezvoltarii vietii oamenilor, mai ales in ultimii zeci de ani. Tehnologia informatiei poate fi considerata o ramura definita a informaticii, pentru ca are la baza procesarea de date, indiferent de natura lor."<<endl;
+    cout<<"   Astazi, acest termen este folosit atat pentru calculatoare si rețele, cat si pentru tehnologii care au la baza distribuirea informatiilor, asa cum sunt smartphone-urile si televizoarele. Servicii sau produse de tipul hardware de calculator, internet, telecomunicatii si alte electronice sunt considerate ca si componente ale aceleiasi industrii."<<endl<<endl;
+    cout<<"   Avantajele domeniului IT:"<<endl;
+    cout<<"   -daca iti gestionezi timpul corect,poti avea mult timp liber"<<endl;
+    cout<<"   -poti lucra de acasa"<<endl;
+    cout<<"   -salarii bune"<<endl;
+    cout<<"   -gasirea cu usurinta a unui job in acest domeniu"<<endl<<endl;
+    cout<<"   Dezavantajele domeniului IT:"<<endl;
+    cout<<"   -sedentarismul"<<endl;
+    cout<<"   -aparitia lipsei entuziasmului"<<endl;
+    cout<<"   -colaboararea cu oameni mai putini priceputi"<<endl<<endl;
+    cout<<"   Printre cele mai cautate posturi in domeniul IT sunt:"<<endl;
+    cout<<"   -SQL Develeoper"<<endl;
+    cout<<"   -Full-Stack Developer"<<endl;
+    cout<<"   -Data Analyst"<<endl;
+    cout<<"   -Java Developer"<<endl;
+    cout<<"   -Software Developer"<<endl;
+    cout<<"   -Machine Learning Engineer"<<endl;
+    cout<<"   -Database Administrator"<<endl;
+    system("PAUSE");
+    system("cls");
+    meniuprincipal();
 }
 
 void meniuprincipal(){
@@ -209,6 +229,8 @@ void meniuprincipal(){
     cout<<"                                     Grad dificultate:avansat"<<endl<<endl;
     cout<<"                                     10.Programare dinamica"<<endl;
     cout<<"                                     Grad dificultate:avansat"<<endl<<endl;
+    cout<<"                                     11.Facultati de informatica"<<endl<<endl;
+    cout<<"                                     12.Iesire"<<endl<<endl;
     cout<<endl<<endl;
     cout<<"   Alegeti lectia pe care doriti sa o parcurgeti: ";cin>>a;
     if(a==1){
@@ -250,6 +272,14 @@ void meniuprincipal(){
      else if(a==10){
         system("cls");
         progdin();
+    }
+    else if(a==11){
+        system("cls");
+        facultati();
+    }
+    else if(a==12){
+        system("cls");
+        iesire();
     }
     else
         meniuprincipal();
@@ -4293,6 +4323,56 @@ void greedy(){
 
 void progdin(){
     cout<<"...";
+}
+
+void facultati(){
+    cout<<endl<<endl;
+    cout<<"   Mai jos,va vom prezenta,in opinia noastra,topul celor mai bune facultati de informatica din Romania:"<<endl;
+    cout<<"   1.Facultatea de Matematica si Informatica-Universitatea din Bucuresti : Bucuresti,taxa de 4400 lei/an"<<endl;
+    cout<<"   2.Facultatea de Automatica si Calculatoare-Universitatea Politehnica Bucuresti : Bucuresti,taxa de 5000 lei/an"<<endl;
+    cout<<"   3.Facultatea de Matematica si Informatica-Universitatea Babes-Bolyai : Cluj-Napoca,taxa de 4000 lei/an"<<endl;
+    cout<<"   4.Facultatea de Informatica-Universitatea Alexandru Ioan Cuza : Iasi,taxa de 3600 lei/an"<<endl;
+    cout<<"   5.Facultatea de Cibernetica,Statistica si Informatica Economica-Academia de Studii Economice : Bucuresti,taxa de 4000 lei/an"<<endl<<endl;
+    cout<<"   Facultatea de Matematica si Informatica-Universitatea din Bucuresti este,in opinia noastra,cea mai buna facultate pentru o cariera in IT,deoarece materiile se concentreaza pe domenii foarte cautate in aceasta industrie(Python,Java,IA etc.).De asemenea,profesorii sunt foarte deschisi in privinta invatarii studentilor si reusesc sa ii faca pe studenti sa asimileze rapid informatiile.Insa,admiterea este una grea si va trebui sa inveti pe masura pentru a fi admis.Aceasta facultate se bazeaza pe partea de software."<<endl<<endl;
+    cout<<"   Facultatea de Automatica si Calculatoare-Universitatea Politehnica Bucuresti este o facultate in care vei invata o multime de lucruri noi,atat pe partea de software cat se pe partea de hardware,insa trebuie sa tii cont ca este o facultate grea si stresanta cu multe teme si proiecte.Profesorii sunt un pic mai exigenti si trebuie sa ai grija cum gestionezi relatia cu fiecare in parte.Admiterea este baza de examen,iar concurenta una foarte mare"<<endl<<endl;
+    cout<<"   Facultatea de Matematica si Informatica-Universitatea Babes-Bolyai este asemanatoare cu FMI ca materii si admitere,doar ca aici concurenta este ceva mai mica datorita pozitie geografice.La admitere poti alege fie matemtaica,fie informatica,media de la bac contand 20%.Gestionarea timpului este un factor decisiv pentru cum te vei descurca pe parcursul anilor."<<endl<<endl;
+    cout<<"   Facultatea de Informatica-Universitatea Alexandru Ioan Cuza este o facultate apreciata in partea Moldovei.In primul an matematica este destul de multa si grea,insa cu un minim de interes te vei descurca.Pe partea de informatica vei invata si materii foarte utile pentruu viitor,insa si materii care ti se vor parea irelevante.Profesorii sunt deschisi si chiar este recomandat sa apelezi la ajutorul lor cand nu te descurci"<<endl<<endl;
+    cout<<"   Facultatea de Cibernetica,Statistica si Informatica Economica este o facultate ceva mai usoara fata de cele mentionate mai sus.La materiile de informatica vei invata chestii de software si hardware,insa nu se va intra prea mult in detalii.Vei invata,de asemenea,multe chestii legate de economie.Partea buna este ca daca acorzi un timp relevant facultatii nu vei intampina dificultati pe parcursul ei.Recomandam ca aceasta facultate sa fie o varianta de rezerva pentru optiunea principala."<<endl<<endl;
+    system("PAUSE");
+    system("cls");
+    meniuprincipal();
+}
+void iesire(){
+    char s[256],c[256];
+    int d1,d2,d3,d4,d5;
+    cout<<endl<<endl;
+    cout<<"   FELICITARI!Ai ajuns la sfarsit.Pentru ca parerea ta conteaza foarte mult,am vrea sa ne raspunzi la cateva intrebari:"<<endl;
+    cout<<"   Am vrea sa ne oferi,in primul rand,un review pentru aplicatia noastra:";
+    cin>>s;
+    cout<<endl;
+    cout<<"   Acum dori sa ne acorzi o nota de 1 la 10 pentru unele aspecte ale aplicatiei noastre"<<endl;
+    cout<<"   1.prezentarea informatiilor:";
+    cin>>d1;
+    cout<<endl;
+    cout<<"   2.organizarea in pagina a informatiilor:";
+    cin>>d2;
+    cout<<endl;
+    cout<<"   3.problemele propuse pt. fiecare capitol:";
+    cin>>d3;
+    cout<<endl;
+    cout<<"   4.testele grila de la fiecare capitol:";
+    cin>>d4;
+    cout<<endl;
+    cout<<"   5.prezentarea facultatilor:";
+    cin>>d5;
+    cout<<endl<<endl;
+    cout<<"   Si nu in ultimul rand am vrea sa ne spui la ce consideri ca ar trebui sa mai lucram pt.a imbunatati aplicatia:"<<endl;
+    cin>>c;
+    cout<<endl;
+    cout<<"   Multumim!!!";
+    system("PAUSE");
+    system("cls");
+    exit(0);
 }
 
 int main()
