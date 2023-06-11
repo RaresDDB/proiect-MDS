@@ -134,6 +134,15 @@ void sir_test();
 void sir_tipulChar();
 void sir_apk1();
 void sir_apk2();
+void defback();
+void formback();
+void utilback();
+void aplicback();
+void aplicback1();
+void aplicback2();
+void testback();
+void aplicback1rez();
+void aplicback2rez();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
@@ -4038,9 +4047,246 @@ void test2(){
 }
 
 void backtracking(){
-    cout<<"...";
+    cout<<"                     1.Definitie"<<endl;
+    cout<<"                     2.Forma generala"<<endl;
+    cout<<"                     3.Utilitate"<<endl;
+    cout<<"                     4.Aplicatii"<<endl;
+    cout<<"                     5.Test"<<endl;
+    cout<<"                     6.Iesire"<<endl;
+    char f;
+    cin>>f;
+    system("cls");
+    if(f=='1')
+        defback();
+    else if(f=='2')
+        formback();
+    else if(f=='3')
+        utilback();
+    else if(f=='4')
+        aplicback();
+    else if(f=='5')
+        testback();
+    else if(f=='6')
+        meniuprincipal();
+    else
+        backtracking();
 }
-
+void defback(){
+    cout<<"   Backtracking este o metoda de parcurgere sistematica a spatiului solutiilor posibile al unei probleme."<<endl;
+    cout<<"   Este o metoda generala de programare, si poate fi adaptata pentru orice problema pentru care dorim sa obtinem toate solutiile posibile, sau sa selectam o solutie optima, din multimea solutiilor posibile"<<endl;
+    cout<<"   Backtracking este insa si cea mai costisitoare metoda din punct de vedere al timpului de executie."<<endl;
+    system("PAUSE");
+    system("cls");
+    backtracking();
+}
+void formback(){
+    cout<<"   Algoritmul de implementare al backtracking-ului arata in felul urmator:"<<endl;
+    cout<<"   void BK(int k) //k-pozitia din vector care se completeaza"<<endl;
+    cout<<"   {int i;"<<endl;
+    cout<<"    for (i=1; i<=nr_elemente_Sk; i++) //parcurge elementele multimii Sk"<<endl;
+    cout<<"      { v[k]=i; //selecteaza un element din multime"<<endl;
+    cout<<"        if (validare(k)==1) //valideaza conditiile de continuare ale problemei"<<endl;
+    cout<<"          { if (solutie(k)==1) //verifica daca s-a obtinut o solutie"<<endl;
+    cout<<"               afisare(k); //afiseaza solutia"<<endl;
+    cout<<"             else"<<endl;
+    cout<<"               BK(k+1); //reapeleaza functia pentru pozitia k+1"<<endl;
+    cout<<"          }"<<endl;
+    cout<<"      } //daca nu mai exista nici un element neselectat in multimea Sk"<<endl;
+    cout<<"    } //se inchide nivelul de stiva si astfel se revine pe pozitia k-1 a vectorului"<<endl;
+    cout<<"// executia functiei se incheie, dupa ce s-au inchis toate nivelurile stivei, inseamna ca în vectorul v nu mai poate fi selectat niciun element din multimile Sk"<<endl;
+    system("PAUSE");
+    system("cls");
+    backtracking();
+}
+void utilback(){
+    cout<<"   Backtracking-ul poate implementa anumite probleme din matematica:"<<endl;
+    cout<<"   1.Permutare"<<endl;
+    cout<<"   2.Produs cartezian"<<endl;
+    cout<<"   3.Aranjamente"<<endl;
+    cout<<"   4.Combinari"<<endl;
+    cout<<"   5.Submultimi"<<endl;
+    system("PAUSE");
+    system("cls");
+    backtracking();
+}
+void aplicback(){
+    cout<<"   1.Aplicatia 1"<<endl;
+    cout<<"   2.Aplicatia 2"<<endl;
+    cout<<"   3.Revenire"<<endl;
+    char g;
+    cin>>g;
+    system("cls");
+    if(g=='1')
+        aplicback1();
+    else if(g=='2')
+        aplicback2();
+    else if(g=='3')
+        backtracking();
+    else
+        aplicback();
+}
+void aplicback1(){
+    cout<<"   Fie n un numar natural nenul. Sa se genereze permutarile de n elemente"<<endl;
+    cout<<endl<<endl<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea rezolvarea problemei."<<endl;
+    cout<<"   Apasati tasta 2 pentru a reveni la meniul anterior"<<endl;
+    char h;
+    cin>>h;
+    system("cls");
+    if(h=='1')
+        aplicback1rez();
+    else if(h=='2')
+        aplicback();
+    else
+        aplicback1();
+}
+void aplicback1rez(){
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int n,st[20];"<<endl;
+    cout<<"   void afiseaza() {"<<endl;
+    cout<<"     for (int j=1;j<=n;j++)"<<endl;
+    cout<<"       cout<<st[j]<<' ';"<<endl;
+    cout<<"     cout<<endl; }"<<endl;
+    cout<<"   int valid(int k) {"<<endl;
+    cout<<"     int sw=1;"<<endl;
+    cout<<"     for(int j=1;j<k;j++)"<<endl;
+    cout<<"        if (st[j]==st[k])"<<endl;
+    cout<<"           sw=0;"<<endl;
+    cout<<"     return sw; }"<<endl;
+    cout<<"   void back(int k) {"<<endl;
+    cout<<"     int i;"<<endl;
+    cout<<"     for(i=1;i<=n;i++) {"<<endl;
+    cout<<"        st[k]=i;"<<endl;
+    cout<<"        if (valid(k))"<<endl;
+    cout<<"            if (k==n)"<<endl;
+    cout<<"               afiseaza();"<<endl;
+    cout<<"         else back(k+1) };"<<endl;
+    cout<<"    }"<<endl;
+    cout<<"   int main() {"<<endl;
+    cout<<"     cin>>n;"<<endl;
+    cout<<"     back(1);"<<endl;
+    cout<<"     return 0; }"<<endl;
+    system("PAUSE");
+    system("cls");
+    aplicback1();
+}
+void aplicback2(){
+    cout<<"   Fie n si m doua numere naturale nenule, m<=n. Sa se genereze aranjamentele de n elemente luate cate m."<<endl;
+    cout<<endl<<endl<<endl;
+    cout<<"   Apasati tasta 1 pentru a vedea rezolvarea problemei."<<endl;
+    cout<<"   Apasati tasta 2 pentru a reveni la meniul anterior"<<endl;
+    char i;
+    cin>>i;
+    system("cls");
+    if(i=='1')
+        aplicback2rez();
+    else if(i=='2')
+        aplicback();
+    else
+        aplicback2();
+}
+void aplicback2rez(){
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int n,m,st[20];"<<endl;
+    cout<<"   void afiseaza() {"<<endl;
+    cout<<"     for (int j=1;j<=m;j++)"<<endl;
+    cout<<"       cout<<st[j]<<' ';"<<endl;
+    cout<<"     cout<<endl; }"<<endl;
+    cout<<"   int valid(int k) {"<<endl;
+    cout<<"     int sw=1;"<<endl;
+    cout<<"     for(int j=1;j<k;j++)"<<endl;
+    cout<<"        if (st[j]==st[k])"<<endl;
+    cout<<"           sw=0;"<<endl;
+    cout<<"     return sw; }"<<endl;
+    cout<<"   void back(int k) {"<<endl;
+    cout<<"     int i;"<<endl;
+    cout<<"     for(i=1;i<=n;i++) {"<<endl;
+    cout<<"        st[k]=i;"<<endl;
+    cout<<"        if (valid(k))"<<endl;
+    cout<<"            if (k==m)"<<endl;
+    cout<<"               afiseaza();"<<endl;
+    cout<<"         else back(k+1) };"<<endl;
+    cout<<"    }"<<endl;
+    cout<<"   int main() {"<<endl;
+    cout<<"     cin>>n; cin>>m;"<<endl;
+    cout<<"     back(1);"<<endl;
+    cout<<"     return 0; }"<<endl;
+    system("PAUSE");
+    system("cls");
+    aplicback2();
+}
+void testback(){
+    int scor=0;
+    cout<<"   1.Ne propunem sa generam toate submultimile multimii {1, 2, 4, 6, 8}. Cate solutii care obligatoriu contin elementul 2 si nu contin elementul 8 putem genera?"<<endl;
+    cout<<"   a)8 b)6 c)16 d)7"<<endl;
+    char a;
+    cin>>a;
+    if(a=='a' || a=='A'){
+        scor++;
+        cout<<"   Raspuns corect!"<<endl;}
+    else
+        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+    cout<<"   2.Utilizand metoda backtracking, se genereaza toate parfumurile formate prin amestecarea a cate 3 esente distincte din multimea {agar, geranium, iasomie, paciuli, tuberoze}. Primele patru solutii obtinute sunt, in aceasta ordine: (agar, geranium, iasomie), (agar, geranium, paciuli), (agar, geranium, tuberoze) si (agar, iasomie, paciuli). Indicati solutia generata imediat inainte de (geranium, iasomie, paciuli)."<<endl;
+    cout<<"   a)(agar, iasomie, paciuli)"<<endl;
+    cout<<"   b)(agar, paciuli, tuberoze)"<<endl;
+    cout<<"   c)(geranium, paciuli, iasomie)"<<endl;
+    cout<<"   d)(geranium, agar, iasomie)"<<endl;
+    char b;
+    cin>>b;
+    if(b=='b'|| b=='B'){
+        scor++;
+        cout<<"   Raspuns corect!"<<endl;
+    }
+    else
+        cout<<"   Raspuns gresit!Raspunsul corect era b"<<endl;
+    cout<<"   3.Utilizand metoda backtracking, se genereaza numerele naturale formate din exact 3 cifre si care au suma cifrelor egala cu 4, in aceasta ordine: 103, 112, 121,130, 202, 211, 220, 301, 310, 400. Daca utilizam acelasi algoritm pentru a genera toate numerele de 4 cifre care au suma cifrelor egala cu 7, precizati care este numarul generat imediat dupa 1222."<<endl;
+    cout<<"   a)1231"<<endl;
+    cout<<"   b)1223"<<endl;
+    cout<<"   c)1213"<<endl;
+    cout<<"   d)1321"<<endl;
+    char c;
+    cin>>c;
+    if(c=='a' || c=='A'){
+        scor++;
+        cout<<"   Raspuns corect!"<<endl;
+    }
+    else
+        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+    cout<<"   4.Utilizand metoda backtracking se genereaza toate permutarile multimii {1,2,3,4}. Daca primele trei permutari generate sunt, in acesta ordine: 1234, 1243,1324 precizati care este permutarea generata imediat după 3412."<<endl;
+    cout<<"   a)3413"<<endl;
+    cout<<"   b)4123"<<endl;
+    cout<<"   c)3421"<<endl;
+    cout<<"   d)3214"<<endl;
+    char x;
+    cin>>x;
+    if(x=='c'|| x=='C'){
+        scor++;
+        cout<<"   Raspuns corect!"<<endl;
+    }
+    else
+        cout<<"   Raspuns gresit!Raspunsul corect era c"<<endl;
+    cout<<"   5.Utilizand metoda backtracking se genereaza numerele formate din cate 3 cifre distincte din multimea {1,3,5,7}. Daca primele trei numere generate sunt, in acesta ordine: 135, 137, 153 care este cel de-al patrulea numar generat."<<endl;
+    cout<<"   a)157"<<endl;
+    cout<<"   b)173"<<endl;
+    cout<<"   c)315"<<endl;
+    cout<<"   d)357"<<endl;
+    char y;
+    cin>>y;
+    if(y=='a' || y=='A'){
+        scor++;
+        cout<<"   Raspuns corect!"<<endl;
+    }
+    else
+        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+    cout<<"   Ai ajuns la final!Ai obtinut ";
+    cout<<scor;
+    cout<<" puncte"<<endl;
+    system("PAUSE");
+    system("cls");
+    backtracking();
+}
 void greedy(){
     cout<<"...";
 }
