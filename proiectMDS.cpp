@@ -12,7 +12,25 @@ int OK1,OK2,OK3,OK4,OK5,OK6,OK7,OK8,OK9,OK10;
 float scortotal;
 float nr;
 void titlu();
+void aplicatia1neori();
+void aplicatia2neori();
+void uni_aplicatii();
+void tabbi_aplicatii1();
+void tabbi_aplicatii2();
+void uni_test();
+void aplicatiauni1();
+void aplicatiauni2();
+void aplicatia3neori();
 void bunvenit();
+void gre_introducere();
+void gre_cand();
+void gre_pasi();
+void gre_exemple();
+void gre_aplicatii();
+void aplicatiagre1();
+void gre_test();
+void exemplu1_greedy();
+void exemplu2_greedy();
 void ies();
 void prezentare();
 void meniuprincipal();
@@ -156,6 +174,7 @@ void iesire();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
+    system("Color 0A");
     cout<<"                                      INVATA INFORMATICA DE LICEU IN 10 PASI SIMPLI!"<<endl;
     system("PAUSE");
     system("cls");
@@ -184,10 +203,10 @@ void prezentare(){
 }
 void prezentareit(){
     cout<<endl<<endl;
-    cout<<"   Information Technology (IT) sau Tehnologia Informatiei in limba romana este o industrie extrem de complexa care are la baza utilizarea computerelor pentru a stoca, crea, prelua, procesa si schimba o varietate de informatii si date pretioase. Practic, IT face parte din „tehnologia informatiei și comunicatiilor”, pe scurt (TIC). Information Technology este special conceputa pentru afaceri si raspunde unei nevoi mari pe piata internationala."<<endl;
-    cout<<"   Sistemele informatice de acest gen exista dintotdeauna, insa nu la acest nivel atat de avansat. Aceste sisteme sunt inter-informationale, adica transmit date unele catre celelalte si sunt controlate de specialisti în domeniu."<<endl;
+    cout<<"   Information Technology (IT) sau Tehnologia Informatiei in limba romana este o industrie extrem de complexa care are la baza utilizarea computerelor pentru a stoca, crea, prelua, procesa si schimba o varietate de informatii si date pretioase. Practic, IT face parte din tehnologia informatiei si comunicatiilor, pe scurt (TIC). Information Technology este special conceputa pentru afaceri si raspunde unei nevoi mari pe piata internationala."<<endl;
+    cout<<"   Sistemele informatice de acest gen exista dintotdeauna, insa nu la acest nivel atat de avansat. Aceste sisteme sunt inter-informationale, adica transmit date unele catre celelalte si sunt controlate de specialisti in domeniu."<<endl;
     cout<<"   Oamenii sunt obisnuiti sa adune informatii si sa le manipuleze inca de cand scrisul a fost inventat. Totusi, nu se putea vorbi atunci de tehnologie, pentru ca acest termen a aparut de abia in secolul XX si a fost inventat de catre Thomas L. Whisler si Harold J. Leavitt. Despre industria IT nu au existat decat vorbe de lauda, pentru ca ea a stat la baza dezvoltarii vietii oamenilor, mai ales in ultimii zeci de ani. Tehnologia informatiei poate fi considerata o ramura definita a informaticii, pentru ca are la baza procesarea de date, indiferent de natura lor."<<endl;
-    cout<<"   Astazi, acest termen este folosit atat pentru calculatoare si rețele, cat si pentru tehnologii care au la baza distribuirea informatiilor, asa cum sunt smartphone-urile si televizoarele. Servicii sau produse de tipul hardware de calculator, internet, telecomunicatii si alte electronice sunt considerate ca si componente ale aceleiasi industrii."<<endl<<endl;
+    cout<<"   Astazi, acest termen este folosit atat pentru calculatoare si retele, cat si pentru tehnologii care au la baza distribuirea informatiilor, asa cum sunt smartphone-urile si televizoarele. Servicii sau produse de tipul hardware de calculator, internet, telecomunicatii si alte electronice sunt considerate ca si componente ale aceleiasi industrii."<<endl<<endl;
     cout<<"   Avantajele domeniului IT:"<<endl;
     cout<<"   -daca iti gestionezi timpul corect,poti avea mult timp liber"<<endl;
     cout<<"   -poti lucra de acasa"<<endl;
@@ -350,8 +369,8 @@ void elem_introducere()
 }
 void elem_scrcit()
 {
-    cout<<"   Pentru a realiza scrieri pe ecran se foloseste cout<<. Cuvantul cheie cout este acronimul de la console output. Forma generala este cout<<a<<b<<c<<….<<n."<<endl;
-    cout<<"   Pentru a realiza citiri de la tastatura se foloseste fluxul cin>>. Cuvantul cheie cin este acronimul de la console input.Forma generala este cin>>a>>b>>……>>n."<<endl;
+    cout<<"   Pentru a realiza scrieri pe ecran se foloseste cout<<. Cuvantul cheie cout este acronimul de la console output. Forma generala este cout<<a<<b<<c<<n."<<endl;
+    cout<<"   Pentru a realiza citiri de la tastatura se foloseste fluxul cin>>. Cuvantul cheie cin este acronimul de la console input.Forma generala este cin>>a>>b>>n."<<endl;
     char elem1;
     cout<<"   Apasati tasta 1 pentru a vedea un exemplu cu citiri si scrieri de la tastatura."<<endl;
     cout<<"   Apasati tasta 2 pentru a reveni la meniul anterior."<<endl;
@@ -730,10 +749,12 @@ void aplicatie_dowhile()
 
 void elem_aplicatii()
 {
-    cout<<"                 1.Aplicatia 1"<<endl;
-    cout<<"                 2.Aplicatia 2"<<endl;
-    cout<<"                 3.Aplicatia 3"<<endl;
-    cout<<"                 4.Revenire"<<endl;
+    cout<<"   1.Determinarea celui mai mare divizor comun a doua numere naturale. Algoritmul lui Euclid."<<endl;
+    cout<<"   2.Descompunerea in factori primi a unui numar natural."<<endl;
+    cout<<"   3.Determinarea valorii minime dintr-un sir de numere."<<endl;
+    cout<<"   4.Revenire"<<endl;
+    cout<<endl<<endl;
+    cout<<"   Apasati tasta corepunzatoare fiecarei probleme pentru a-i vedea rezolvarea"<<endl;
     char aplic;
     cin>>aplic;
     system("cls");
@@ -746,12 +767,11 @@ void elem_aplicatii()
     else if(aplic=='4')
         elembaza();
     else
-        elembaza();
+        elem_aplicatii();
 }
 
 void aplicatiabaza1()
 {
-    cout<<"   Determinarea celui mai mare divizor comun a doua numere naturale. Algoritmul lui Euclid."<<endl;
     cout<<"   #include <iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int main(){"<<endl;
@@ -773,10 +793,8 @@ void aplicatiabaza1()
     elem_aplicatii();
 }
 
-
 void aplicatiabaza2()
 {
-    cout<<"   Descompunerea in factori primi a unui numar natural."<<endl;
     cout<<"   #include <iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int main()"<<endl;
@@ -802,12 +820,10 @@ void aplicatiabaza2()
     system("PAUSE");
     system("cls");
     elem_aplicatii();
-
 }
 
 void aplicatiabaza3()
 {
-    cout<<"   Determinarea valorii minime dintr-un sir de numere."<<endl;
     cout<<"   #include <iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int main(){"<<endl;
@@ -840,7 +856,7 @@ void elem_test()
     char et1;
     cin>>et1;
     if(et1=='c'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor3++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -849,7 +865,7 @@ void elem_test()
     char et2;
     cin>>et2;
     if(et2=='a'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor3++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -858,7 +874,7 @@ void elem_test()
     char et3;
     cin>>et3;
     if(et3=='c'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor3++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -867,7 +883,7 @@ void elem_test()
     char et4;
     cin>>et4;
     if(et4=='b'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor3++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -876,13 +892,11 @@ void elem_test()
     char et5;
     cin>>et5;
     if(et5=='c'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor3++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
-    cout<<"   Ai ajuns la final!Ai obtinut ";
-    cout<<scor3;
-    cout<<" puncte"<<endl;
+    cout << "\nScorul tau final: " << scor3 << "/5\n";
     scortotal=scortotal+scor3;
     system("PAUSE");
     system("cls");
@@ -901,6 +915,8 @@ void tabuni(){
     cout<<"                 4.Sortarea vectorilor"<<endl;
     cout<<"                 5.Cautare binara"<<endl;
     cout<<"                 6.Interclasarea vectorilor"<<endl;
+    cout<<"                 7.Aplicatii"<<endl;
+    cout<<"                 8.Test"<<endl;
     char x;
     cin>>x;
     system("cls");
@@ -916,6 +932,10 @@ void tabuni(){
         uni_binara();
     else if(x=='6')
         uni_inter();
+    else if(x=='7')
+        uni_aplicatii();
+    else if(x=='8')
+        uni_test();
     else if(x=='0')
         meniuprincipal();
     else
@@ -1212,6 +1232,131 @@ void uni_inter()
     tabuni();
 
 }
+void uni_aplicatii()
+{
+    cout<<"  Mai jos veti avea de rezolvat 2 probleme din acest capitol"<<endl<<endl;
+    cout<<"  1.Sa se determine numarul de elemente din vector care sunt multipli de k."<<endl;
+    cout<<"  2.Sa se verifice daca toate elementele vectorului sunt egale."<<endl;
+    cout<<"  Apasati tasta 1 pentru a vedea rezolvarea primei probleme,tasta 2 pentru rezolvarea celei de-a doua probleme, tasta 3 pentru a reveni la meniul anterior: ";
+    char uni_aplic;
+    cin>>uni_aplic;
+    system("cls");
+    if(uni_aplic=='1')
+        aplicatiauni1();
+    else if(uni_aplic=='2')
+        aplicatiauni2();
+    else if(uni_aplic=='3')
+        tabuni();
+    else
+        tabuni();
+}
+
+void aplicatiauni1()
+{
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int nr=0,k,n,v[100];"<<endl;
+    cout<<"   cout<<'n=';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   cout<<'k=';"<<endl;
+    cout<<"   cin>>k;"<<endl;
+    cout<<"   for (int i = 0; i < n; i++)"<<endl;
+    cout<<"   cin>>v[i];"<<endl;
+    cout<<"   for (int i = 0; i < n; i++)"<<endl;
+    cout<<"      if (v[i] % k == 0)"<<endl;
+    cout<<"        nr++;"<<endl;
+    cout<<"   cout<<'Numarul este '<<nr;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_aplicatii();
+}
+
+
+void aplicatiauni2()
+{
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"   {"<<endl;
+    cout<<"   int n,v[100];"<<endl;
+    cout<<"   bool ok=false;"<<endl;
+    cout<<"   cout<<'n=';"<<endl;
+    cout<<"   cin>>n;"<<endl;
+    cout<<"   for (int i = 0; i < n; i++)"<<endl;
+    cout<<"      cin>>v[i];"<<endl;
+    cout<<"   for (int i = 0; i < n; i++)"<<endl;
+    cout<<"      if (v[i] % 2) {"<<endl;
+    cout<<"         ok=true;"<<endl;
+    cout<<"         break;"<<endl;
+    cout<<"         }"<<endl;
+    cout<<"   if(ok)"<<endl;
+    cout<<"       cout<<'DA\n'"<<endl;
+    cout<<"   else"<<endl;
+    cout<<"        cout<<'NU\n'"<<endl;
+    cout<<"    }"<<endl;
+    system("PAUSE");
+    system("cls");
+    uni_aplicatii();
+
+}
+
+void uni_test()
+{
+    nr++;
+    int scor_uni=0;
+    cout<<"   1. Puteti sa aflati informatii dintr-un tablou unidimensional, prin operatia de:"<<endl;
+    cout<<"   a)actualizare b)sortare c)consultare"<<endl;
+    char ttabuni1;
+    cin>>ttabuni1;
+    if(ttabuni1=='c'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_uni++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   2.Cate comparatii se executa pentru sortarea unui vector cu n componente folosind metoda selectarii directe? "<<endl;
+    cout<<"   a)n comparatii b)(n-1)*n/2 comparatii c)n+i comparatii"<<endl;
+    char ttabuni2;
+    cin>>ttabuni2;
+    if(ttabuni2=='b'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_uni++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   3.Care dintre variantele de mai jos reprezinta o declaratie corecta a unui vector cu 20 de elemente, numere reale ? "<<endl;
+    cout<<"   a)real v[15];  b)float v[10];  c)int v[20];  d)double v[20]"<<endl;
+    char ttabuni3;
+    cin>>ttabuni3;
+    if(ttabuni3=='d'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_uni++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   4.Fie declararea int vector[10]; care dintre urmatoarele operatii este incorecta ?"<<endl;
+    cout<<"   a)vector=10; b)vector[5]=6.7;  c)vector[0]=10;"<<endl;
+    char ttabuni4;
+    cin>>ttabuni4;
+    if(ttabuni4=='a'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_uni++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   5.Care dintre urmatoarele acceseaza corect primul element al unui vector din vectorul cu 100 de elemente f ?"<<endl;
+    cout<<"   a) f  ;   b) f[first];   c) f[0];  d) F[1]"<<endl;
+    char ttabuni5;
+    cin>>ttabuni5;
+    if(ttabuni5=='c'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_uni++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout << "\nScorul tau final: " << scor_uni << "/5\n";
+    scortotal=scortotal+scor_uni;
+    system("PAUSE");
+    system("cls");
+    tabuni();
+}
 
 void tabbi(){
     if(OK3==0){
@@ -1254,7 +1399,8 @@ void tabbi_definitii()
 
     cout<<" Tablourile unidimensionale C/C++ au elemente de acelasi tip. Astfel, tipul elementelor poate fi chiar tablou (unidimensional);"<<endl;
     cout<<" Elementele tabloului sunt la randul lor tablouri unidimensionale, care au elemente de un anumit tip. Aceste tablouri se numesc bidimensionale sau matrice"<<endl;
-    cout<<" \nDintr-o perspectiva usoar diferita, tablourile unidimensionale sunt structuri de date alcatuite din elemente de acelasi tip, organizate pe linii si pe coloane. Astfel, fiecare element are doi indici: un indice de linie si un indice de coloana."<<endl;    system("PAUSE");
+    cout<<" \nDintr-o perspectiva usoar diferita, tablourile unidimensionale sunt structuri de date alcatuite din elemente de acelasi tip, organizate pe linii si pe coloane. Astfel, fiecare element are doi indici: un indice de linie si un indice de coloana."<<endl;
+    system("PAUSE");
     system("cls");
     tabbi();
 }
@@ -1388,8 +1534,21 @@ void tabbi_tab_p ()
 }
 void tabbi_aplicatii()
 {
-    cout<<"Calculul sumei elementelor unei matrici\n\n\n";
-
+    int n;
+    cout<<"   1.Calculul sumei elementelor unei matrici"<<endl;
+    cout<<"   2.Se da o matrice cu n linii si n coloane si elemente numere naturale. Calculati diferenta in valoare absoluta dintre sumele elementelor de pe cele două diagonale."<<endl;
+    cout<<endl<<endl;
+    cout<<"   Apasati tasta corespunzatoare fiecarei probleme pentru a vedea rezolvarea ei sau 3 pt. a reveni la meniul anterior"<<endl;
+    cin>>n;
+    system("cls");
+    if(n==1)
+        tabbi_aplicatii1();
+    else if(n==2)
+        tabbi_aplicatii2();
+    else if(n==3)
+        tabbi();
+    else
+        tabbi_aplicatii();
     cout<<"#include <iostream>\n";
 
     cout<<"using namespace std;\n";
@@ -1416,12 +1575,63 @@ void tabbi_aplicatii()
 
     cout<<"    return 0;\n";
     cout<<"}\n";
+}
 
+void tabbi_aplicatii1(){
+    cout<<"#include <iostream>\n";
+
+    cout<<"using namespace std;\n";
+
+    cout<<"int main() {\n";
+    cout<<"    int rows, cols;\n";
+    cout<<"    cin >> rows;\n";
+    cout<<"    cin >> cols;\n";
+    cout<<"    int matrix[100][100];\n";
+    cout<<"    for (int i = 0; i < rows; i++) {\n";
+    cout<<"        for (int j = 0; j < cols; j++) {\n";
+    cout<<"            cin >> matrix[i][j];\n";
+    cout<<"        }\n";
+    cout<<"    }\n";
+
+    cout<<"    int sum = 0;\n";
+    cout<<"    for (int i = 0; i < rows; i++) {\n";
+    cout<<"        for (int j = 0; j < cols; j++) {\n";
+    cout<<"            sum += matrix[i][j];\n";
+    cout<<"        }\n";
+    cout<<"    }\n";
+
+    cout<<"    cout <<sum << endl;\n";
+
+    cout<<"    return 0;\n";
+    cout<<"}\n";
     system("PAUSE");
     system("cls");
-    tabbi();
-
+    tabbi_aplicatii();
 }
+
+void tabbi_aplicatii2(){
+    cout<<"   #include<iostream>"<<endl;
+    cout<<"   #include<math.h>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main() {"<<endl;
+    cout<<"      int a[21][21], n, sp=0, ss=0, i, j;"<<endl;
+    cout<<"      cin >> n;"<<endl;
+    cout<<"      for (i = 1; i <= n; i++)"<<endl;
+    cout<<"         for (j = 1; j <= n; j++)"<<endl;
+    cout<<"            cin >> a[i][j];"<<endl;
+    cout<<"      for(i=1;i<=n;i++)"<<endl;
+    cout<<"         for (j = 1; j <= n; j++) {"<<endl;
+    cout<<"             if (i == j)"<<endl;
+    cout<<"                sp = sp + a[i][j];"<<endl;
+    cout<<"             if (i + j == n + 1)"<<endl;
+    cout<<"                ss = ss + a[i][j]; }"<<endl;
+    cout<<"      cout << abs(sp - ss);"<<endl;
+    cout<<"      return 0;"<<endl;
+    system("PAUSE");
+    system("cls");
+    tabbi_aplicatii();
+}
+
 void tabbi_test()
 {
     nr++;
@@ -1440,7 +1650,7 @@ void tabbi_test()
     cin >> answer1;
 
     if (answer1 == 'c' || answer1 == 'C') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
@@ -1457,7 +1667,7 @@ void tabbi_test()
     cin >> answer2;
 
     if (answer2 == 'b' || answer2 == 'B') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
      else
@@ -1474,7 +1684,7 @@ void tabbi_test()
     cin >> answer3;
 
     if (answer3 == 'b' || answer3 == 'B') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
      else
@@ -1491,7 +1701,7 @@ void tabbi_test()
     cin >> answer4;
 
     if (answer4 == 'a' || answer4 == 'A') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
      else
@@ -1508,7 +1718,7 @@ void tabbi_test()
     cin >> answer5;
 
     if (answer5 == 'b' || answer5 == 'B') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
      else
@@ -1525,7 +1735,7 @@ void tabbi_test()
     cin >> answer6;
 
     if (answer6 == 'a' || answer6 == 'A') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
      else
@@ -1710,9 +1920,10 @@ void sir_functii()
 void sir_aplicatii()
 {
 
-    cout<<"Pentru aplicatia 1 ->Apasati tasta 1\n";
-    cout<<"Pentru aplicatia 2 ->Apasati tasta 2\n";
-    cout<<"Pentru a ne intoarce la pagina anterioara, apasati 3\n";
+    cout<<"1.Aceasta aplicatie primeste un text de la utilizator si il convertește in litere majuscule sau litere minuscule, in functie de optiunea selectata. Utilizatorul poate alege sa converteasca un singur cuvant sau un intreg sir de caractere."<<endl;
+    cout<<"2.Se citeste un sir de la tastatura.Sa se afiseze prima litera din fiecare cuvant"<<endl;
+    cout<<"Pentru a ne intoarce la pagina anterioara, apasati 3\n"<<endl;
+    cout<<"Apasati tasta corespunzatoare fiecarei probleme pentru a vedea rezolvarea ei"<<endl;
     int i;
     cin>>i;
     system("cls");
@@ -1720,17 +1931,14 @@ void sir_aplicatii()
         sir_apk1();
     else if (i==2)
         sir_apk2();
-        else sircaract();
-
-    system("PAUSE");
+    else if(i==3)
+        sircaract();
+    else sir_aplicatii();
 
 }
 
 void sir_apk1()
 {
-    cout<<"Aplicatie de conversie a textului la majuscule sau minuscule\n\n";
-    cout<<"Aceasta aplicatie primeste un text de la utilizator si il convertește in litere majuscule sau litere minuscule, in functie de optiunea selectata. Utilizatorul poate alege sa converteasca un singur cuvant sau un intreg sir de caractere.";
-    cout<<" Aplicatia utilizeaza functiile toupper() si tolower() pentru conversia literelor.\n\n";
     cout<<"     #include <iostream>\n";
     cout<<"     #include <cstring>\n";
     cout<<"     #include <cctype>\n";
@@ -1771,46 +1979,22 @@ void sir_apk1()
 void sir_apk2()
 
 {
-       cout<<"Aplicatie de conversie a textului la majuscule sau minuscule\n\n";
-    cout<<"Aceasta aplicatie primeste un text de la utilizator si il converteste in litere majuscule sau litere minuscule, in funcție de optiunea selectata. Utilizatorul poate alege sa converteasca un singur cuvant sau un intreg sir de caractere.";
-    cout<<" Aplicatia utilizeaza funcțiile toupper() și tolower() pentru conversia literelor.\n";
-    cout<<"     #include <iostream>\n";
-    cout<<"     #include <cstring>\n";
-    cout<<"     #include <cctype>\n";
-
-    cout<<"     using namespace std;\n";
-
-    cout<<"     int main() {\n";
-        cout<<"     char text[100];\n";
-        cout<<"     cin.getline(text, 100);\n";
-
-        cout<<"     int optiune;\n";
-        cout<<"     cout << Selectati optiunea:\n";
-        cout<<"     cout << 1. Conversie la majuscule\n";
-        cout<<"     cout << 2. Conversie la minuscule\n";
-        cout<<"     cin >> optiune;\n";
-
-        cout<<"     if (optiune == 1) {\n";
-            cout<<"     for (int i = 0; i < strlen(text); i++) {\n";
-                cout<<"     text[i] = toupper(text[i]);\n";
-            cout<<"     }\n";
-        cout<<"     } else if (optiune == 2) {\n";
-            cout<<"     for (int i = 0; i < strlen(text); i++) {\n";
-                cout<<"     text[i] = tolower(text[i]);\n";
-            cout<<"     }\n";
-        cout<<"     }\n";
-
-        cout<<"     cout << Textul convertit:  << text << endl;\n";
-
-       cout<<"      return 0;\n";
-    cout<<"     }\n";
+    cout<<"     #include <iostream>"<<endl;
+    cout<<"     using namespace std;"<<endl;
+    cout<<"     int main() {"<<endl;
+    cout<<"       char propozitie[128];"<<endl;
+    cout<<"       cin.get(propozitie,128);"<<endl;
+    cout<<"       char *cuvant = strtok(propozitie, ' ');"<<endl;
+    cout<<"          while(cuvant) {"<<endl;
+    cout<<"            cout << cuvant << '-> prima litera: '<< cuvant[0] << '\n';"<<endl;
+    cout<<"            cuvant = strtok(NULL, " ");}"<<endl;
+    cout<<"       return 0;}"<<endl;
 
     system("PAUSE");
     system("cls");
     sir_aplicatii();
-
-
 }
+
 void sir_test()
 {
     nr++;
@@ -1824,7 +2008,7 @@ void sir_test()
     char raspuns1;
     cin >> raspuns1;
     if (raspuns1 == 'b') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
@@ -1838,7 +2022,7 @@ void sir_test()
     char raspuns2;
     cin >> raspuns2;
     if (raspuns2 == 'a') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
@@ -1852,7 +2036,7 @@ void sir_test()
     char raspuns3;
     cin >> raspuns3;
     if (raspuns3 == 'b') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
@@ -1866,7 +2050,7 @@ void sir_test()
     char raspuns4;
     cin >> raspuns4;
     if (raspuns4 == 'a') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
@@ -1880,7 +2064,7 @@ void sir_test()
     char raspuns5;
     cin >> raspuns5;
     if (raspuns5 == 'a') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
@@ -1894,16 +2078,14 @@ void sir_test()
     char raspuns6;
     cin >> raspuns6;
     if (raspuns6 == 'b') {
-        cout<<"Raspuns corect!";
+        cout<<"Raspuns corect!!!:)";
         score++;
     }
     else
         cout<<"Raspuns gresit:(";
 
     // Afisarea scorului final
-    cout<<"   Ai ajuns la final!Ai obtinut ";
-    cout<<score;
-    cout<<" puncte"<<endl;
+    cout << "\nScorul tau final: " << score << "/6\n";
     scortotal=scortotal+score;
 
     system("PAUSE");
@@ -2053,7 +2235,7 @@ void testsub(){
     char x;
     cin>>x;
     if(x=='a'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -2062,7 +2244,7 @@ void testsub(){
     char y;
     cin>>y;
     if(y=='b'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -2071,7 +2253,7 @@ void testsub(){
     char z;
     cin>>z;
     if(z=='a'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -2080,7 +2262,7 @@ void testsub(){
     char t;
     cin>>t;
     if(t=='d'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -2089,7 +2271,7 @@ void testsub(){
     char s;
     cin>>s;
     if(s=='b'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -2098,7 +2280,7 @@ void testsub(){
     char a;
     cin>>a;
     if(a=='c'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit"<<endl;
@@ -2107,13 +2289,11 @@ void testsub(){
     char b;
     cin>>b;
     if(b=='a'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor2++;}
     else
         cout<<"   Raspuns gresit"<<endl;
-    cout<<"   Ai ajuns la final!Ai obtinut ";
-    cout<<scor2;
-    cout<<" puncte"<<endl;
+    cout << "\nScorul tau final: " << scor2 << "/7\n";
     scortotal=scortotal+scor2;
     system("PAUSE");
     system("cls");
@@ -3005,7 +3185,7 @@ void test()
     char x;
     cin>>x;
     if(x=='a'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -3014,7 +3194,7 @@ void test()
     char y;
     cin>>y;
     if(y=='c'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -3023,7 +3203,7 @@ void test()
     char z;
     cin>>z;
     if(z=='b'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -3032,7 +3212,7 @@ void test()
     char t;
     cin>>t;
     if(t=='a'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -3041,7 +3221,7 @@ void test()
     char s;
     cin>>s;
     if(s=='b'){
-        cout<<"   Raspuns corect!!!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
@@ -3050,49 +3230,47 @@ void test()
     char a;
     cin>>a;
     if(a=='b'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
-        cout<<"   Raspuns gresit"<<endl;
+        cout<<"   Raspuns gresit:("<<endl;
     cout<<"   7.Multimea varfurilor intr-un graf bipartit este compusa din:"<<endl;
     cout<<"   a)o submultime b)3 submultimi c)2 submultimi"<<endl;
     char b;
     cin>>b;
     if(b=='c'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
-        cout<<"   Raspuns gresit"<<endl;
+        cout<<"   Raspuns gresit:("<<endl;
     cout<<"   8.La parcurgerea in latime:"<<endl;
     cout<<"   a)se scrie pt fiecare varf toti vecinii nevizitati b)se scrie pt fiecare varf primul varf nevizitat"<<endl;
     char c;
     cin>>c;
     if(c=='a'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
-        cout<<"   Raspuns gresit"<<endl;
+        cout<<"   Raspuns gresit:("<<endl;
     cout<<"   9.La parcurgerea in adancime:"<<endl;
     cout<<"   a)se scrie pt fiecare varf toti vecinii nevizitati b)se scrie pt fiecare varf primul varf nevizitat"<<endl;
     char d;
     cin>>d;
     if(d=='b'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
-        cout<<"   Raspuns gresit"<<endl;
+        cout<<"   Raspuns gresit:("<<endl;
     cout<<"   10.Intr-un graf neorientat conteaza ordinea in care scriem extremiatiile unei muchii"<<endl;
     cout<<"   a)fals b)adevarat"<<endl;
     char e;
     cin>>e;
     if(e=='a'){
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
         scor1++;}
     else
-        cout<<"   Raspuns gresit"<<endl;
-    cout<<"   Ai ajuns la final!Ai obtinut ";
-    cout<<scor1;
-    cout<<" puncte"<<endl;
+        cout<<"   Raspuns gresit:("<<endl;
+    cout << "\nScorul tau final: " << scor1 << "/10\n";
     scortotal=scortotal+scor1;
     system("PAUSE");
     system("cls");
@@ -3100,7 +3278,33 @@ void test()
 }
 void aplicatii()
 {
+    int a;
     cout<<"   1.Se citeste de la tastatura o matrice cu n linii si n coloane.Sa se verifice daca poate fi matrice de adiacenta"<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<"   2.Se da lista muchiilor unui graf neorientat. Sa se afiseze varfurile de grad maxim."<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<"   3.Se da lista muchiilor unui graf neorientat cu n vârfuri, etichetate de la 1 la n. Din acest graf se elimina toate muchiile cu proprietatea ca ambele extremitați au aceeasi paritate. Sa se determine cate muchii va avea graful partial obtinut."<<endl;
+    cout<<endl<<endl;
+    cout<<"   Apasati tasta corespunzatoare numarului problemei pe care vreti s-o vedeti rezolvata sau tasta 4 pt a reveni la meniul anterior";
+    cin>>a;
+    system("cls");
+    if(a==1)
+        aplicatia1neori();
+    else if(a==2)
+        aplicatia2neori();
+    else if(a==3)
+        aplicatia3neori();
+    else if(a==4)
+        grafneori();
+    else
+        aplicatii();
+    system("PAUSE");
+    system("cls");
+    grafneori();
+}
+void aplicatia1neori(){
     cout<<"   #include<iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int main() {"<<endl;
@@ -3127,9 +3331,11 @@ void aplicatii()
     cout<<"   else"<<endl;
     cout<<"       cout << NU;"<<endl;
     cout<<"   return 0;}"<<endl;
-    cout<<endl;
-    cout<<endl;
-    cout<<"   2.Se dă lista muchiilor unui graf neorientat. Să se afișeze vârfurile de grad maxim."<<endl;
+    system("PAUSE");
+    system("cls");
+    aplicatii();
+}
+void aplicatia2neori(){
     cout<<"   #include<iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int A[101][101];"<<endl;
@@ -3152,9 +3358,11 @@ void aplicatii()
     cout<<"       if (s == smax)"<<endl;
     cout<<"          cout << i <<  ;"<<endl;
     cout<<"   return 0;"<<endl;
-    cout<<endl;
-    cout<<endl;
-    cout<<"   3.Se dă lista muchiilor unui graf neorientat cu n vârfuri, etichetate de la 1 la n. Din acest graf se elimină toate muchiile cu proprietatea că ambele extremități au aceeași paritate. Să se determine câte muchii va avea graful parțial obținut."<<endl;
+    system("PAUSE");
+    system("cls");
+    aplicatii();
+}
+void aplicatia3neori(){
     cout<<"   #include<iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int A[101][101];"<<endl;
@@ -3176,7 +3384,7 @@ void aplicatii()
     cout<<"   return 0;"<<endl;
     system("PAUSE");
     system("cls");
-    grafneori();
+    aplicatii();
 }
 
 void grafori(){
@@ -3822,10 +4030,10 @@ void tareconexitate()
 }
 void aplicatii2()
 {
-    cout<<"                 1.Aplicatia 1"<<endl;
-    cout<<"                 2.Aplicatia 2"<<endl;
-    cout<<"                 3.Aplicatia 3"<<endl;
-    cout<<"                 4.Revenire"<<endl;
+    cout<<"   1.Se citeste de la tastatura numarul de varfuri ale unui graf orientat si numarul de arce,iar apoi m arce.Sa se determine cate varfuri au gradul interior nul."<<endl;
+    cout<<"   2.Se citeste de la tastatura n-numarul de varfuri ale unui graf orientat si m-numarul de arce,iar apoi m arce.Sa se determine cate varfuri au gradul exterior egal cu cel interior."<<endl;
+    cout<<"   3.Se citeste de la tastatura o matrice cu n linii si m coloane.Sa se verifice daca poate fi de adiacenta pt un graf orientat"<<endl;
+    cout<<"   Apasati tasta corespunzatoare fiecarei probleme pentru a vedea rezolvarea sau 4 pt. a reveni la meniul anteiror"<<endl;
     int a;
     cin>>a;
     system("cls");
@@ -3842,8 +4050,6 @@ void aplicatii2()
 }
 void aplicatia4()
 {
-    cout<<"   1.Se citeste de la tastatura numarul de varfuri ale unui graf orientat si numarul de arce,iar apoi m arce.Sa se determine cate varfuri au gradul interior nul."<<endl;
-    cout<<"   #include<iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   unsigned v[101],A[101][101];"<<endl;
     cout<<"   int main() {"<<endl;
@@ -3863,42 +4069,12 @@ void aplicatia4()
     cout<<"          contor++;"<<endl;
     cout<<"   cout<<contor;"<<endl;
     cout<<"   return 0; }"<<endl;
-    unsigned x,y,i,contor=0,n,m,v[100],A[101][101],j;
-    for(i=1; i<=100; i++)
-        v[i]=0;
-    for(i=1;i<=100;i++)
-        for(j=1;j<=100;j++)
-            A[i][j]=0;
-    cout<<"   Introduceti nr de varfuri:";
-    cin>>n;
-    do
-    {
-        cout<<"   Introduceti numarul de arce:";
-        cin>>m;
-    }
-    while(m>n*(n-1));
-    for(i=1; i<=m; i++)
-    {
-        do
-        {
-            cout<<"   Introduceti arcul "<<i<<":";
-            cin>>x>>y;
-        }
-        while(x==y || x>n || y>n ||A[x][y]==1);
-        v[y]++;
-        A[x][y]=1;
-    }
-    for(i=1; i<=n; i++)
-        if(v[i]==0)
-            contor++;
-    cout<<contor;
     system("PAUSE");
     system("cls");
     aplicatii2();
 }
 void aplicatia5()
 {
-    cout<<"   2.Se citeste de la tastatura n-numarul de varfuri ale unui graf orientat si m-numarul de arce,iar apoi m arce.Sa se determine cate varfuri au gradul exterior egal cu cel interior."<<endl;
     cout<<"   #include<iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   unsigned vplus[101],vminus[101],A[101][101];"<<endl;
@@ -3920,45 +4096,12 @@ void aplicatia5()
     cout<<"          contor++;"<<endl;
     cout<<"   cout<<contor;"<<endl;
     cout<<"   return 0; }"<<endl;
-    unsigned x,y,i,contor=0,n,m,vplus[100],vminus[100],A[101][101],j;
-    for(i=1; i<=100; i++)
-        vplus[i]=0;
-    for(i=1; i<=100; i++)
-        vminus[i]=0;
-    for(i=1;i<=100;i++)
-        for(j=1;j<=100;j++)
-            A[i][j]=0;
-    cout<<"   Introduceti nr de varfuri:";
-    cin>>n;
-    do
-    {
-        cout<<"   Introduceti numarul de arce:";
-        cin>>m;
-    }
-    while(m>n*(n-1));
-    for(i=1; i<=m; i++)
-    {
-        do
-        {
-            cout<<"   Introduceti arcul "<<i<<":";
-            cin>>x>>y;
-        }
-        while(x==y || x>n || y>n || A[x][y]==1);
-        vplus[x]++;
-        vminus[y]++;
-        A[x][y]=1;
-    }
-    for(i=1; i<=n; i++)
-        if(vplus[i]==vminus[i])
-            contor++;
-    cout<<contor;
     system("PAUSE");
     system("cls");
     aplicatii2();
 }
 void aplicatia6()
 {
-    cout<<"   3.Se citeste de la tastatura o matrice cu n linii si m coloane.Sa se verifice daca poate fi de adiacenta pt un graf orientat"<<endl;
     cout<<"   #include<iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int main() {"<<endl;
@@ -3983,30 +4126,6 @@ void aplicatia6()
     cout<<"   else"<<endl;
     cout<<"     cout << NU poate fi de adiacenta;"<<endl;
     cout<<"   return 0; }"<<endl;
-    unsigned n, i, j, OK = 1, A[101][101],m;
-    cout<<"   Introduceti numarul de linii:";
-    cin >> n;
-    cout<<"   Introduceti numarul de coloane:";
-    cin>>m;
-    cout<<"   Introduceti matricea:";
-    for (i = 1; i <= n; i++)
-        for (j = 1; j <= m; j++)
-            cin >> A[i][j];
-    if(n!=m)
-        OK=0;
-    for (i = 1; i <= n; i++)
-        for (j = 1; j <= n; j++)
-            if (A[i][j] != 0 && A[i][j] != 1)
-                OK = 0;
-    for (i = 1; i <= n; i++)
-        for (j = 1; j <= n; j++)
-            if (i == j)
-                if (A[i][j] != 0)
-                    OK = 0;
-    if (OK == 1)
-        cout << "   Matricea poate fi de adiacenta"<<endl;
-    else
-        cout << "   Matricea nu poate fi de adiacenta"<<endl;
     system("PAUSE");
     system("cls");
     aplicatii2();
@@ -4020,102 +4139,100 @@ void test2(){
     cin>>a;
     if(a=='a' || a=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;}
+        cout<<"   Raspuns corect!!!:)"<<endl;}
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   2.Varful izolat are gradul exterior egal cu 0"<<endl;
     cout<<"   a)adevarat b)fals c)depinde de graf d)nu are grad exterior"<<endl;
     char b;
     cin>>b;
     if(b=='a'|| b=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   3.Un graf orientat are 8 varfuri, numerotate de la 1 la 8, si arcele (1,7), (1,8), (3,5), (3,7), (4,3), (4,7), (6,3), (6,5), (6,7), (6,8), (8,5), (8,7). Numarul varfurilor care au gradul exterior nul este:"<<endl;
     cout<<"   a)1 b)2 c)3 d)4"<<endl;
     char c;
     cin>>c;
     if(c=='c' || c=='C'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era c"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   4.Intr-un graf orientat cu 7 noduri suma gradelor interioare ale tuturor nodurilor este egala cu 10. Care este valoarea sumei gradelor exterioare ale tuturor nodurilor?"<<endl;
     cout<<"   a)5 b)3 c)20 d)10"<<endl;
     char x;
     cin>>x;
     if(x=='d'|| x=='D'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era d"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   5.Care dintre variantele de mai jos este o metoda de reprezentare?"<<endl;
     cout<<"   a)vectorul arcelor b)lant c)drum d)subgraf"<<endl;
     char y;
     cin>>y;
     if(y=='a' || y=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   6.Un graf orientat contine muchii?"<<endl;
     cout<<"   a}fals b)adevarat c)depinde de graf d)nu exista muchii"<<endl;
     char z;
     cin>>z;
     if(z=='a' || z=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   7.Cate noduri ale grafului orientat cu sase noduri numerotate de la 1 la 6 si urmatoarele arce: (1,5), (1,6), (2,1), (2,3), (3,1), (3,4), (4,3), (4,5), (5,4), (6,5) au gradul interior egal cu gradul exterior?"<<endl;
     cout<<"   a)5 b)7 c)4 d)0"<<endl;
     char t;
     cin>>t;
     if(t=='c' || t=='C'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era c"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   8.Se considera graful orientat cu varfurile numerotate de la 1 la 7 si arcele (1,2), (1,7), (2,3), (3,2), (3,4), (4,3), (5,4), (5,6), (6,4), (7,6). Cate varfuri din graful dat au gradul exterior impar?"<<endl;
     cout<<"   a)0 b)2 c)1 d)4"<<endl;
     char s;
     cin>>s;
     if(s=='d' || s=='D'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era d"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   9.Matricea de incidenta:"<<endl;
     cout<<"   a)nu este patratica b)contine doar 1 si -1 c)este patratica d)este simetrica"<<endl;
     char r;
     cin>>r;
     if(r=='a'|| r=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   10.Gradul exterior al unui varf este egal cu:"<<endl;
     cout<<"   a)gradul interior al acestuia b)numarul de varfuri c)numarul de arce d)numarul de arce in care acesta este extremitate initiala"<<endl;
     char o;
     cin>>o;
     if(o=='d' || o=='D'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era d"<<endl;
-    cout<<"   Ai ajuns la final!Ai obtinut ";
-    cout<<scor;
-    cout<<" puncte"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
+    cout << "\nScorul tau final: " << scor << "/10\n";
     scortotal=scortotal+scor;
     system("PAUSE");
     system("cls");
@@ -4306,9 +4423,9 @@ void testback(){
     cin>>a;
     if(a=='a' || a=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;}
+        cout<<"   Raspuns corect!!!:)"<<endl;}
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   2.Utilizand metoda backtracking, se genereaza toate parfumurile formate prin amestecarea a cate 3 esente distincte din multimea {agar, geranium, iasomie, paciuli, tuberoze}. Primele patru solutii obtinute sunt, in aceasta ordine: (agar, geranium, iasomie), (agar, geranium, paciuli), (agar, geranium, tuberoze) si (agar, iasomie, paciuli). Indicati solutia generata imediat inainte de (geranium, iasomie, paciuli)."<<endl;
     cout<<"   a)(agar, iasomie, paciuli)"<<endl;
     cout<<"   b)(agar, paciuli, tuberoze)"<<endl;
@@ -4318,10 +4435,10 @@ void testback(){
     cin>>b;
     if(b=='b'|| b=='B'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era b"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   3.Utilizand metoda backtracking, se genereaza numerele naturale formate din exact 3 cifre si care au suma cifrelor egala cu 4, in aceasta ordine: 103, 112, 121,130, 202, 211, 220, 301, 310, 400. Daca utilizam acelasi algoritm pentru a genera toate numerele de 4 cifre care au suma cifrelor egala cu 7, precizati care este numarul generat imediat dupa 1222."<<endl;
     cout<<"   a)1231"<<endl;
     cout<<"   b)1223"<<endl;
@@ -4331,10 +4448,10 @@ void testback(){
     cin>>c;
     if(c=='a' || c=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   4.Utilizand metoda backtracking se genereaza toate permutarile multimii {1,2,3,4}. Daca primele trei permutari generate sunt, in acesta ordine: 1234, 1243,1324 precizati care este permutarea generata imediat după 3412."<<endl;
     cout<<"   a)3413"<<endl;
     cout<<"   b)4123"<<endl;
@@ -4344,10 +4461,10 @@ void testback(){
     cin>>x;
     if(x=='c'|| x=='C'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era c"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
     cout<<"   5.Utilizand metoda backtracking se genereaza numerele formate din cate 3 cifre distincte din multimea {1,3,5,7}. Daca primele trei numere generate sunt, in acesta ordine: 135, 137, 153 care este cel de-al patrulea numar generat."<<endl;
     cout<<"   a)157"<<endl;
     cout<<"   b)173"<<endl;
@@ -4357,21 +4474,254 @@ void testback(){
     cin>>y;
     if(y=='a' || y=='A'){
         scor++;
-        cout<<"   Raspuns corect!"<<endl;
+        cout<<"   Raspuns corect!!!:)"<<endl;
     }
     else
-        cout<<"   Raspuns gresit!Raspunsul corect era a"<<endl;
-    cout<<"   Ai ajuns la final!Ai obtinut ";
-    cout<<scor;
-    cout<<" puncte"<<endl;
+        cout<<"   Raspuns gresit!:("<<endl;
+    cout << "\nScorul tau final: " << scor << "/5\n";
     scortotal=scortotal+scor;
     system("PAUSE");
     system("cls");
     backtracking();
 }
 void greedy(){
-    cout<<"...";
+    if(OK9==0){
+        OK9=1;
+        p++;
+    }
+    cout<<"                 0.Iesire"<<endl;
+    cout<<"                 1.Introducere"<<endl;
+    cout<<"                 2.Cand folosim metoda Greedy?"<<endl;
+    cout<<"                 3.Pasii algoritmului"<<endl;
+    cout<<"                 4.Exemple de probleme"<<endl;
+    cout<<"                 5.Aplicatii"<<endl;
+    cout<<"                 6.Test"<<endl;
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        gre_introducere();
+    else if(x=='2')
+        gre_cand();
+    else if(x=='3')
+        gre_pasi();
+    else if(x=='4')
+        gre_exemple();
+    else if(x=='5')
+        gre_aplicatii();
+    else if(x=='6')
+        gre_test();
+    else if(x=='0')
+        meniuprincipal();
+    else
+        meniuprincipal();
 }
+void gre_introducere()
+{
+    cout<<"   Metoda Greedy (greedy = lacom), denumita si metoda optimului local, reprezinta o metoda de programare utilizata in probleme de optimizare si care furnizeaza o singura solutie (optimul global) care este obtinuta prin alegeri succesive ale optimului local. "<<endl;
+    cout<<"   Algoritmii de tip greedy, asemenea algoritmilor backtracking si de programare dinamica se utilizeaza pentru rezolvarea unor probleme a caror solutie se poate exprima sub forma unui vector de numere intregi."<<endl;
+    cout<<"   In comparatie cu metoda backtracking, metoda Greedy nu va determina toate solutiile problemei. Metoda va gasi doar o singura solutie si, in general solutia gasita este solutia optima. "<<endl;
+    system("PAUSE");
+    system("cls");
+    greedy();
+}
+void gre_cand()
+{
+    cout<<"   Metoda se aplica problemelor in care se da o multime A cu n elemente si trebuie determinata o submulţime a sa, S cu m elemente, care indeplinesc anumite conditii."<<endl;
+    cout<<"   Algoritmul va  determina la fiecare pas k o componenta x[k] a vectorului solutie si spre deosebire de algoritmul backtracking, nu mai revine ulterior la aceasta alegere."<<endl;
+    cout<<"   Pentru ca elementele care se selecteaza sa apartina solutiei optime, la pasul k se va alege candidatul care este optim pentru elementul x[k] al solutiei deci un optim local. "<<endl;
+    system("PAUSE");
+    system("cls");
+    greedy();
+
+}
+
+void gre_pasi()
+{
+    cout<<"   Pasii metodei greedy sunt: "<<endl;
+    cout<<"   1.se initializeaza multimea solutiilor S cu multimea vida; "<<endl;
+    cout<<"   2.la fiecare pas se alege un anumit element x apartine A, candidatul optim la momentul respectiv,  care poate conduce la o solutie optima;  "<<endl;
+    cout<<"   3.se verifica daca elementul ales poate fi adaugat la multimea solutiilor:  "<<endl;
+    cout<<"     -daca se poate adauga, atunci va fi adaugat si multimea solutiilor devine S=S ∪ {x} - un element introdus in multimea S nu va mai putea fi eliminat;"<<endl;
+    cout<<"     -daca nu se poate adauga, el nu se mai testeaza ulterior.  "<<endl;
+    cout<<"   4.procedeul continua, pana cand au fost determinate toate elementele din multimea solutiilor."<<endl;
+    cout<<"   De regula metoda greedy are o complexitate de O (n^k). "<<endl;
+    cout<<"   Exista destul de putine probleme pentru care se poate aplica această metoda. "<<endl;
+    cout<<"   Metoda greedy se aplica atunci cand stim ca se ajunge la solutia dorita. "<<endl;
+    system("PAUSE");
+    system("cls");
+    greedy();
+
+}
+
+void gre_exemple()
+{
+    cout<<"   Apasati tasta 1 pentru a vedea un exemplu de rezolvare cu metoda greedy."<<endl;
+    cout<<"   Apasati tasta 2 pentru a vedea un alt exemplu de rezolvare pentru metoda greedy"<<endl;
+    cout<<"   Apasati orice tasta pentru a reveni la meniul anterior."<<endl;
+    char exemplu_greedy;
+    cin>>exemplu_greedy;
+    system("cls");
+    if(exemplu_greedy=='1')
+        exemplu1_greedy();
+    if(exemplu_greedy=='2')
+        exemplu2_greedy();
+    else greedy();
+
+}
+void exemplu1_greedy()
+{
+    cout<<"   Se da o multime A={a1, a2, . . ., an} cu elemente reale. Sa se determine o submultime a lui S astfel incat suma elementelor submultimii sa fie maxima."<<endl;
+    cout<<"   Idee de rezolvare: Se vor cauta intre elementele vectorului A doar elementele mai mari sau egale cu 0. Se va utiliza un subprogram greedy ( ) pentru implementarea algoritmului."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int n,i,m;"<<endl;
+    cout<<"   float A[100], S[100];"<<endl;
+    cout<<"   void greedy  ( )"<<endl;
+    cout<<"   { for(i = 1; i <= n; i ++  )"<<endl;
+    cout<<"       if ( A[ i ] >= 0 );"<<endl;
+    cout<<"          { m ++ ;"<<endl;
+    cout<<"              S[ m ] = A[ i ]; } }"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"       {  cout << ' Numarul de elemente n = ' ; cin >> n ;"<<endl;
+    cout<<"          cout << endl <<' Elementele vectorului ' << endl ;"<<endl;
+    cout<<"       for  ( i = 1 ;  i <= n  ; i++  )"<<endl;
+    cout<<"      { cout <<'A[' <<i<<]' = '; cin >> A[ i ] ;}"<<endl;
+    cout<<"   greedy();"<<endl;
+    cout<<"   cout << 'Submultimea este formata din: ';"<<endl;
+    cout<<"   for ( i= 1; i <= m ;i ++ ) cout << S [ i ] <<' ';"<<endl;
+    cout<<"   return 0;"<<endl;
+    system("PAUSE");
+    system("cls");
+    gre_exemple();
+}
+
+void exemplu2_greedy()
+{
+    cout<<"   Se da o multime A={a1, a2, . . ., an} cu elemente intregi. Sa se determine cele mai mari doua elemente ale multimii."<<endl;
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int n,i,a,maxi1,maxi2,aux;"<<endl;
+    cout<<"   int main()"<<endl;
+    cout<<"   {  cout << ' Numarul de elemente n = '' ; cin >> n ;"<<endl;
+    cout<<"       for  ( i = 1 ;  i <= n  ; i++  )"<<endl;
+    cout<<"      {     cin>>a;"<<endl;
+    cout<<"            if(a>maxi1)    maxi1=a;"<<endl;
+    cout<<"            if(maxi2<maxi1) {aux=maxi1; maxi1=maxi2; maxi2=aux;}}"<<endl;
+    cout<<"   cout << maxi1<<maxi2;"<<endl;
+    cout<<"   return 0;"<<endl;
+    system("PAUSE");
+    system("cls");
+    gre_exemple();
+}
+
+void gre_aplicatii()
+{
+    cout<<"  Mai jos veti avea de rezolvato problema din acest capitol"<<endl;
+    cout<<"  1.Se citesc 3 numere naturale S, n si e cu urmatoarele semnificatii: S este o suma de bani care trebuie platita folosind bancnote care au valori puterile lui e de la 1 la e la n. Se se afiseze modalitatea de plata folosind un numar minim de bancnote de tipurile precizate. Sa se afiseze la final numarul de bancnote folosite."<<endl;
+    cout<<"  Apasati tasta 1 pentru a vedea rezolvarea primei probleme sau orice tasta pentru a reveni la meniul anterior: "<<endl;
+    char gre_aplic;
+    cin>>gre_aplic;
+    system("cls");
+    if(gre_aplic=='1')
+        aplicatiagre1();
+    else greedy();
+}
+
+void aplicatiagre1()
+{
+    cout<<"   #include <iostream>"<<endl;
+    cout<<"   using namespace std;"<<endl;
+    cout<<"   int main(){"<<endl;
+    cout<<"   int s,n,e,t=0,p=1,k=0;"<<endl;
+    cout<<"   cin>>s>>n>>e;"<<endl;
+    cout<<"   while(p*e<=s && k<n)"<<endl;
+    cout<<"   { p=p*e;"<<endl;
+    cout<<"   k++;}"<<endl;
+    cout<<"   while(s>0){"<<endl;
+    cout<<"   if(s>=p}  cout<<s/p<<:'bancnote de valoarea'<<p<<endl;"<<endl;
+    cout<<"      t=t+s/p;  s=s%p;  p=p/e;}<<endl;"<<endl;
+    cout<<"   cout<<t;"<<endl;
+    cout<<"   return 0;;"<<endl;
+    cout<<"   }"<<endl;
+    system("PAUSE");
+    system("cls");
+    gre_aplicatii();
+}
+
+void gre_test()
+{
+    nr++;
+    int scor_gre=0;
+    cout<<"   1. Ce este metoda Greedy?"<<endl;
+    cout<<"   a) O metoda de rezolvare a problemelor care se bazeaza pe selectia aleatoare a solutiilor"<<endl;
+    cout<<"   b) O metoda de rezolvare a problemelor care alege mereu cea mai buna optiune la fiecare pas"<<endl;
+    cout<<"   c) O metoda de rezolvare a problemelor care combina mai multe tehnici algoritmice"<<endl;
+    cout<<"   d) O metoda de rezolvare a problemelor bazata pe analiza in profunzime a tuturor optiunilor"<<endl;
+    char gre1;
+    cin>>gre1;
+    if(gre1=='b'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_gre++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   2. Care dintre următoarele este o caracteristica a algoritmilor Greedy?"<<endl;
+    cout<<"   a) Ofera intotdeauna solutii optime globale"<<endl;
+    cout<<"   b) Funcționeaza eficient pentru orice tip de problema"<<endl;
+    cout<<"   c) Realizeaza alegeri locale optime in speranta de a ajunge la o solutie globala optima"<<endl;
+    cout<<"   d) Se bazeaza pe metode brute-force pentru a explora toate posibilitatile"<<endl;
+    char gre2;
+    cin>>gre2;
+    if(gre2=='c'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_gre++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   3. Ce este solutia locala in contextul metodei Greedy?"<<endl;
+    cout<<"   a) O solutie care satisface doar o mica parte din cerintele problemei"<<endl;
+    cout<<"   b) O solutie care este optima in raport cu o anumita subproblema"<<endl;
+    cout<<"   c) O solutie care ofera intotdeauna rezultatul optim global"<<endl;
+    cout<<"   d) O solutie care se obtine prin aplicarea unui algoritm Greedy într-un singur pas"<<endl;
+    char gre3;
+    cin>>gre3;
+    if(gre3=='b'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_gre++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   4. Care dintre următoarele este un exemplu de problema care poate fi rezolvata folosind metoda Greedy?"<<endl;
+    cout<<"   a) Sortarea unei liste de numere in ordine descrescatoare"<<endl;
+    cout<<"   b) Gasirea caii minime intre doua noduri intr-un graf ponderat"<<endl;
+    cout<<"   c) Impartirea unui sir de caractere in subsiruri de lungime egala"<<endl;
+    cout<<"   d) Determinarea daca un graf este aciclic sau nu"<<endl;
+    char gre4;
+    cin>>gre4;
+    if(gre4=='b'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_gre++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout<<"   5. Care este principalul avantaj al metodei Greedy?"<<endl;
+    cout<<"   a) Ofera intotdeauna solutii optime globale"<<endl;
+    cout<<"   b) Functioneaza eficient pentru orice tip de problema"<<endl;
+    cout<<"   c) Este usor de implementat si inteles"<<endl;
+    cout<<"   d) Garanteaza ca va gasi intotdeauna solutia optima intr-un timp finit"<<endl;
+    char gre5;
+    cin>>gre5;
+    if(gre5=='c'){
+        cout<<"   Raspuns corect!!!:)"<<endl;
+        scor_gre++;}
+    else
+        cout<<"   Raspuns gresit :("<<endl;
+    cout << "\nScorul tau final: " << scor_gre << "/5\n";
+    scortotal=scortotal+scor_gre;
+    system("PAUSE");
+    system("cls");
+    greedy();
+}
+
 
 void progdin(){
     cout<<"...";
