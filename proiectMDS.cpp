@@ -1,12 +1,19 @@
 #include <iostream>
+#include <iomanip>
 #include <string.h>
 #include <queue>
 #include <windows.h>
 #include <mmsystem.h>
+#include <chrono>
+using namespace std::chrono;
 using namespace std;
-
+int p;
+int OK1,OK2,OK3,OK4,OK5,OK6,OK7,OK8,OK9,OK10;
+float scortotal;
+float nr;
 void titlu();
 void bunvenit();
+void ies();
 void prezentare();
 void meniuprincipal();
 void elembaza();
@@ -286,6 +293,10 @@ void meniuprincipal(){
 }
 
 void elembaza(){
+    if(OK1==0){
+        OK1=1;
+        p++;
+    }
     cout<<"                 0.Iesire"<<endl;
     cout<<"                 1.Introducere"<<endl;
     cout<<"                 2.Scriere si citire"<<endl;
@@ -822,6 +833,7 @@ void aplicatiabaza3()
 
 void elem_test()
 {
+    nr++;
     int scor3=0;
     cout<<"   1. Consideram ca variabila a are valoarea 'z'. Carui tip poate apartine aceasta variabila:"<<endl;
     cout<<"   a)unsigned int b)long c)char d)double"<<endl;
@@ -871,12 +883,17 @@ void elem_test()
     cout<<"   Ai ajuns la final!Ai obtinut ";
     cout<<scor3;
     cout<<" puncte"<<endl;
+    scortotal=scortotal+scor3;
     system("PAUSE");
     system("cls");
     elembaza();
 }
 
 void tabuni(){
+    if(OK2==0){
+        OK2=1;
+        p++;
+    }
     cout<<"                 0.Iesire"<<endl;
     cout<<"                 1.Introducere"<<endl;
     cout<<"                 2.Algoritmi elementari cu vectori"<<endl;
@@ -1197,6 +1214,10 @@ void uni_inter()
 }
 
 void tabbi(){
+    if(OK3==0){
+        OK3=1;
+        p++;
+    }
     cout<<"                 0.Iesire"<<endl;
     cout<<"                 1.Definitie"<<endl;
     cout<<"                 2.Declararea matricilor"<<endl;
@@ -1403,6 +1424,7 @@ void tabbi_aplicatii()
 }
 void tabbi_test()
 {
+    nr++;
     cout << "Test grila - Tablouri bidimensionale" << endl;
 
     int score = 0;
@@ -1511,6 +1533,7 @@ void tabbi_test()
 
     // Afisarea scorului final
     cout << "\nScorul tau final: " << score << "/6\n";
+    scortotal=scortotal+score;
     system("PAUSE");
     system("cls");
     tabbi();
@@ -1518,6 +1541,10 @@ void tabbi_test()
 }
 
 void sircaract(){
+    if(OK4==0){
+        OK4=1;
+        p++;
+    }
     cout<<"                 0.Iesire"<<endl;
     cout<<"                 1.Definitie"<<endl;
     cout<<"                 2.Declararea sirurilor"<<endl;
@@ -1786,7 +1813,7 @@ void sir_apk2()
 }
 void sir_test()
 {
-
+    nr++;
     int score = 0;
 
     // Intrebarea 1
@@ -1877,6 +1904,7 @@ void sir_test()
     cout<<"   Ai ajuns la final!Ai obtinut ";
     cout<<score;
     cout<<" puncte"<<endl;
+    scortotal=scortotal+score;
 
     system("PAUSE");
     system("cls");
@@ -1884,6 +1912,10 @@ void sir_test()
 }
 
 void subprograme(){
+    if(OK5==0){
+        OK5=1;
+        p++;
+    }
     cout<<"                 1.Definitie"<<endl;
     cout<<"                 2.Structura unui subprogram"<<endl;
     cout<<"                 3.Transmiterea parametrilor"<<endl;
@@ -2014,6 +2046,7 @@ void prob2(){
 }
 
 void testsub(){
+    nr++;
     int scor2=0;
     cout<<"   1.Care tip de subprogram returneaza un rezultat?"<<endl;
     cout<<"   a)operand b)procedural "<<endl;
@@ -2081,12 +2114,17 @@ void testsub(){
     cout<<"   Ai ajuns la final!Ai obtinut ";
     cout<<scor2;
     cout<<" puncte"<<endl;
+    scortotal=scortotal+scor2;
     system("PAUSE");
     system("cls");
     subprograme();
 }
 
 void grafneori(){
+    if(OK6==0){
+        OK6=1;
+        p++;
+    }
     cout<<"                 0.Iesire"<<endl;
     cout<<"                 1.Definitii"<<endl;
     cout<<"                 2.Gradul unui varf"<<endl;
@@ -2960,6 +2998,7 @@ void eulerianverificare()
 }
 void test()
 {
+    nr++;
     int scor1=0;
     cout<<"   1.care este gradul unui varf izolat?"<<endl;
     cout<<"   a)0 b)1 c)3 d)10"<<endl;
@@ -3054,6 +3093,7 @@ void test()
     cout<<"   Ai ajuns la final!Ai obtinut ";
     cout<<scor1;
     cout<<" puncte"<<endl;
+    scortotal=scortotal+scor1;
     system("PAUSE");
     system("cls");
     grafneori();
@@ -3140,6 +3180,10 @@ void aplicatii()
 }
 
 void grafori(){
+    if(OK7==0){
+        OK7=1;
+        p++;
+    }
     cout<<"                 1.Definitii"<<endl;
     cout<<"                 2.Gradul unui varf"<<endl;
     cout<<"                 3.Metode de reprezentare"<<endl;
@@ -3968,6 +4012,7 @@ void aplicatia6()
     aplicatii2();
 }
 void test2(){
+    nr++;
     int scor=0;
     cout<<"   1.Matricea de adiacenta:"<<endl;
     cout<<"   a)este patratica b)contine 1 si 3 c)este simetrica d)are pe diagonala secundara numai 0"<<endl;
@@ -4071,12 +4116,17 @@ void test2(){
     cout<<"   Ai ajuns la final!Ai obtinut ";
     cout<<scor;
     cout<<" puncte"<<endl;
+    scortotal=scortotal+scor;
     system("PAUSE");
     system("cls");
     grafori();
 }
 
 void backtracking(){
+    if(OK8==0){
+        OK8=1;
+        p++;
+    }
     cout<<"                     1.Definitie"<<endl;
     cout<<"                     2.Forma generala"<<endl;
     cout<<"                     3.Utilitate"<<endl;
@@ -4248,6 +4298,7 @@ void aplicback2rez(){
     aplicback2();
 }
 void testback(){
+    nr++;
     int scor=0;
     cout<<"   1.Ne propunem sa generam toate submultimile multimii {1, 2, 4, 6, 8}. Cate solutii care obligatoriu contin elementul 2 si nu contin elementul 8 putem genera?"<<endl;
     cout<<"   a)8 b)6 c)16 d)7"<<endl;
@@ -4313,6 +4364,7 @@ void testback(){
     cout<<"   Ai ajuns la final!Ai obtinut ";
     cout<<scor;
     cout<<" puncte"<<endl;
+    scortotal=scortotal+scor;
     system("PAUSE");
     system("cls");
     backtracking();
@@ -4370,6 +4422,9 @@ void iesire(){
     cin>>c;
     cout<<endl;
     cout<<"   Multumim!!!";
+    cout<<"  Ai parcurs "<<p<<" lectii din totalul de 10.";
+    cout<<endl<<endl<<endl;
+    cout<<"   Media rezultatelor tale de la testele grila este:"<<fixed<<setprecision(2)<<(scortotal/nr)<<endl;
     system("PAUSE");
     system("cls");
     exit(0);
