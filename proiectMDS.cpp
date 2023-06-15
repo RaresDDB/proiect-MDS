@@ -11,7 +11,7 @@ int p;
 int OK1,OK2,OK3,OK4,OK5,OK6,OK7,OK8,OK9,OK10;
 float scortotal;
 float nr;
-void titlu();
+//definirea claselor utilizate
 void aplicatia1neori();
 void aplicatia2neori();
 void uni_aplicatii();
@@ -185,6 +185,7 @@ void iesire();
 
 void titlu(){
     cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
+    // folosim functia system pentru a seta scrisul in culoarea verde
     system("Color 0A");
     cout<<"                                      INVATA INFORMATICA DE LICEU IN 10 PASI SIMPLI!"<<endl;
     system("PAUSE");
@@ -241,6 +242,7 @@ void prezentareit(){
 }
 
 void meniuprincipal(){
+    //prezentarea meniului principal de unde utilizatorul va parcurge lectiile
     int a;
     cout<<endl<<endl<<endl;
     cout<<"                                                         MENIU PRINCIPAL"<<endl<<endl;
@@ -323,6 +325,7 @@ void meniuprincipal(){
 }
 
 void elembaza(){
+    //p-folosit pt a contoriza cate lectii au fost parcurse din cele 10
     if(OK1==0){
         OK1=1;
         p++;
@@ -860,6 +863,7 @@ void aplicatiabaza3()
 
 void elem_test()
 {
+    //nr-cate teste au fost facute
     nr++;
     int scor3=0;
     cout<<"   1. Consideram ca variabila a are valoarea 'z'. Carui tip poate apartine aceasta variabila:"<<endl;
@@ -907,7 +911,9 @@ void elem_test()
         scor3++;}
     else
         cout<<"   Raspuns gresit :("<<endl;
+    //afisare scor final
     cout << "\nScorul tau final: " << scor3 << "/5\n";
+    //scortotal-suma tuturor scorurilor facute in aplicatie
     scortotal=scortotal+scor3;
     system("PAUSE");
     system("cls");
@@ -1762,6 +1768,7 @@ void tabbi_test()
 }
 
 void sircaract(){
+    //pt a contoriza cate lectii au fost parcurse
     if(OK4==0){
         OK4=1;
         p++;
@@ -2097,6 +2104,7 @@ void sir_test()
 
     // Afisarea scorului final
     cout << "\nScorul tau final: " << score << "/6\n";
+    //suma scorurilor
     scortotal=scortotal+score;
 
     system("PAUSE");
@@ -2210,6 +2218,7 @@ void aplicsub(){
         aplicsub();
 }
 void prob1(){
+    //rezolvare problema 1
     cout<<" int sumcif(int n) {"<<endl;
     cout<<"  int s = 0;"<<endl;
     cout<<"  while (n != 0) {"<<endl;
@@ -2224,6 +2233,7 @@ void prob1(){
 }
 
 void prob2(){
+    //rezolvare aplicatia 2
     cout<<"  void oglindit(int n, int &inv) {"<<endl;
     cout<<"    int c;"<<endl;
     cout<<"    inv = 0;"<<endl;
@@ -2239,8 +2249,10 @@ void prob2(){
 }
 
 void testsub(){
+    //contorizam cate teste parcurgem
     nr++;
     int scor2=0;
+    //daca rasp este corect afisam un mesaj,daca nu alt mesaj
     cout<<"   1.Care tip de subprogram returneaza un rezultat?"<<endl;
     cout<<"   a)operand b)procedural "<<endl;
     char x;
@@ -2305,6 +2317,7 @@ void testsub(){
     else
         cout<<"   Raspuns gresit"<<endl;
     cout << "\nScorul tau final: " << scor2 << "/7\n";
+    //suma tutror scorurilor
     scortotal=scortotal+scor2;
     system("PAUSE");
     system("cls");
@@ -4349,6 +4362,7 @@ void aplicback1(){
         aplicback1();
 }
 void aplicback1rez(){
+    //rezolvarea aplicatiei 1
     cout<<"   #include <iostream>"<<endl;
     cout<<"   using namespace std;"<<endl;
     cout<<"   int n,st[20];"<<endl;
@@ -4426,6 +4440,7 @@ void aplicback2rez(){
     aplicback2();
 }
 void testback(){
+    //cate teste parcurgem
     nr++;
     int scor=0;
     cout<<"   1.Ne propunem sa generam toate submultimile multimii {1, 2, 4, 6, 8}. Cate solutii care obligatoriu contin elementul 2 si nu contin elementul 8 putem genera?"<<endl;
@@ -4490,12 +4505,14 @@ void testback(){
     else
         cout<<"   Raspuns gresit!:("<<endl;
     cout << "\nScorul tau final: " << scor << "/5\n";
+    //suma scorurilor
     scortotal=scortotal+scor;
     system("PAUSE");
     system("cls");
     backtracking();
 }
 void greedy(){
+    //cate lectii am parcurs
     if(OK9==0){
         OK9=1;
         p++;
@@ -4959,6 +4976,7 @@ void pd_apk1()
 void pd_apk2()
 
 {
+    //rezolvarea aplicatiei 2
     cout<<"     2. Generarea primelor n numere din sirul Fibonacci\n";
 
     cout << "#include<iostream>" << endl;
@@ -5156,6 +5174,7 @@ void pd_test()
 }
 
 void facultati(){
+    //prezentarea facultatilor de informatica
     cout<<endl<<endl;
     cout<<"   Mai jos,va vom prezenta,in opinia noastra,topul celor mai bune facultati de informatica din Romania:"<<endl;
     cout<<"   1.Facultatea de Matematica si Informatica-Universitatea din Bucuresti : Bucuresti,taxa de 4400 lei/an"<<endl;
@@ -5176,6 +5195,7 @@ void iesire(){
     char s[256],c[256];
     int d1,d2,d3,d4,d5;
     cout<<endl<<endl;
+    //review-ul pe care il vrem de la utilizator
     cout<<"   FELICITARI!Ai ajuns la sfarsit.Pentru ca parerea ta conteaza foarte mult,am vrea sa ne raspunzi la cateva intrebari:"<<endl;
     cout<<"   Am vrea sa ne oferi,in primul rand,un review pentru aplicatia noastra:";
     cin>>s;
@@ -5200,8 +5220,10 @@ void iesire(){
     cin>>c;
     cout<<endl;
     cout<<"   Multumim!!!";
+    //afisarea a cate lectii ai parcurs din aplicatie
     cout<<"  Ai parcurs "<<p<<" lectii din totalul de 10.";
     cout<<endl<<endl<<endl;
+    //media scorurilor obtinute la teste in aplicatie
     cout<<"   Media rezultatelor tale de la testele grila este:"<<fixed<<setprecision(2)<<(scortotal/nr)<<endl;
     system("PAUSE");
     system("cls");
@@ -5210,6 +5232,7 @@ void iesire(){
 
 int main()
 {
+    //apelarea primelor functii din main,dupa aceea se apeleaza dintr-o functie in alta
     titlu();
     bunvenit();
     prezentare();
