@@ -14,6 +14,8 @@ Diagrama flow:
 
 ![pozaDIAGRAMA](https://github.com/RaresDDB/proiect-MDS/assets/69033915/45f379bb-4a82-4264-a6ed-95025ad58abe)
 
+Link catre demo offline:https://we.tl/t-OJJwNXp2zX
+
 
 
 
