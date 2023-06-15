@@ -96,6 +96,17 @@ void arcxy();
 void defsub();
 void strucsub();
 void transsub();
+void pd_intro();
+void pd_fib();
+void pd_kp();
+void pd_mp();
+void pd_prim();
+void pd_lcs();
+void pd_aplicatii();
+void pd_test();
+void pd_apk1();
+void pd_apk2();
+void pd_apk3();
 void tipsub();
 void avansub();
 void aplicsub();
@@ -4724,7 +4735,424 @@ void gre_test()
 
 
 void progdin(){
-    cout<<"...";
+    if(OK10==0){
+        OK10=1;
+        p++;
+    }
+    cout<<endl<<endl;
+    cout<<"                 0.Iesire"<<endl;
+    cout<<"                 1.Introducere in programarea dinamica"<<endl;
+    cout<<"                 2.Calcularea valorilor Fibonacci"<<endl;
+    cout<<"                 3.Problema rucsacului (Knapsack Problem)"<<endl;
+    cout<<"                 4.Matricea drumurilor minime (Minimum Path Matrix)"<<endl;
+    cout<<"                 5.Calcularea secventei de numere prim"<<endl;
+    cout<<"                 6.Problema celor mai lungi subsecvente comune (Longest Common Subsequence - LCS)"<<endl;
+    cout<<"                 7.Aplicatii"<<endl;
+    cout<<"                 8.Test"<<endl;
+    char x;
+    cin>>x;
+    system("cls");
+    if(x=='1')
+        pd_intro();
+    else if(x=='2')
+        pd_fib();
+    else if(x=='3')
+        pd_kp();
+    else if(x=='4')
+        pd_mp();
+    else if(x=='5')
+        pd_prim();
+    else if(x=='6')
+        pd_lcs();
+    else if(x=='7')
+        pd_aplicatii();
+    else if(x=='8')
+        pd_test();
+    else if(x=='0')
+        meniuprincipal();
+    else
+    {
+        progdin();
+    }
+}
+
+void pd_intro()
+{
+    cout<<endl<<endl;
+    cout<<"     Programarea dinamica este o tehnica de proiectare a algoritmilor care rezolva probleme complexe prin impartirea lor in subprobleme mai mici, rezolvarea si stocarea rezultatelor acestor subprobleme si utilizarea ulterioara a acestor rezultate pentru a obtine solutia finala. Este adesea utilizata pentru optimizarea performantei si reducerea timpului de executie al algoritmilor.\n";
+
+    cout<<"     Principalele beneficii ale programarii dinamice includ:Reducerea complexitatii, evitarea recalcularilor si eficienta imbunatatita\n\n";
+    cout<<"     Comparativ cu alte paradigme de programare, programarea dinamica se distinge prin abordarea sa bottom-up si construirea progresiva a solutiei optime. De asemenea, este important de mentionat diferenta dintre programarea dinamica si recursivitate: in timp ce recursivitatea se bazeaza pe solutia unui subproblema pentru a rezolva problema mare, programarea dinamica stocheaza rezultatele subproblemelor pentru a le utiliza mai eficient.\n";
+    system("PAUSE");
+    system("cls");
+    progdin();
+}
+
+void pd_fib()
+{
+    cout<<endl<<endl;
+    cout<<"     In acest capitol, vei explora problema secventei Fibonacci si modul in care programarea dinamica poate fi utilizata pentru a calcula valorile acestei secvente intr-un mod eficient.\n    Secventa Fibonacci este o secventa de numere in care fiecare numar este suma celor doua numere precedente. Incepe de obicei cu 0 si 1: 0, 1, 1, 2, 3, 5, 8, 13, 21, si asa mai departe.\n\n";
+    cout<<"     Inainte de a aborda programarea dinamica, este comun sa se rezolve problema Fibonacci utilizand o solutie recursiva. Cu toate acestea, aceasta solutie recursiva este ineficienta, deoarece recalculeaza aceleasi valori de Fibonacci de mai multe ori, generand o suprapunere a calculului.\n";
+    cout<<"     Prin aplicarea programarii dinamice, poti imbunatati semnificativ performanta algoritmului de calcul al valorilor Fibonacci. Ideea centrala este de a stoca rezultatele calculate anterior si de a le utiliza ulterior pentru a evita recalculările inutile.\n      Un mod comun de a implementa programarea dinamica pentru calculul valorilor Fibonacci este utilizarea unei tabele sau a unui vector pentru a stoca rezultatele partiale. In aceasta abordare, incepi cu valorile Fibonacci de baza (0 si 1) si le stochezi in tabela/vectorul respectiv. Apoi, utilizezi aceste valori stocate pentru a calcula valorile Fibonacci de la 2 in sus, evitand astfel recalcularea lor.\n\n";
+
+    cout<<"     Pentru a rezolva problema calcularii valorilor Fibonacci utilizand programarea dinamica in limbajul C++, urmareste urmatorii pasi:Definirea functiei care va calcula valorile Fibonacci,Initializarea valorilor Fibonacci de baza, Calculul valorilor Fibonacci utilizand programarea dinamica(Stabileste valoarea Fibonacci calculata pentru fibonacci(i) si stocheaz-o in vectorul/tabela valorilor Fibonacci.),Returnarea valorii Fibonacci cerute\n";
+    system("PAUSE");
+    system("cls");
+    progdin();
+
+}
+void pd_kp()
+{
+    cout<<endl<<endl;
+    cout<<"     In acest capitol, vei explora o alta problema clasica in programarea dinamica, si anume problema rucsacului 0/1. Vei invata cum sa rezolvi aceasta problema utilizand programarea dinamica si vei intelege cum sa gasesti solutii optime.\n\n";
+    cout<<"     Problema rucsacului 0/1 presupune ca ai un rucsac cu o capacitate limitata si o lista de obiecte, fiecare avand o valoare si o greutate asociata. Scopul tau este sa selectezi obiecte pentru a le pune in rucsac in asa fel incat sa maximizezi suma valorilor obiectelor selectate, respectand capacitatea maxima a rucsacului.\n";
+    cout<<"     Pentru a rezolva aceasta problema utilizand programarea dinamica, poti folosi o matrice sau o tabela pentru a stoca valorile optime intermediare. Matricea va avea dimensiunile (numarul de obiecte + 1) si (capacitatea rucsacului + 1), iar fiecare element al matricei va reprezenta valoarea maxima care poate fi obtinuta utilizand primele i obiecte si avand o capacitate maxima j.\n\n";
+
+    cout<<"     Pentru a calcula valorile matricei, poti utiliza o relatia de recurenta in care compari doua optiuni:\n";
+    cout<<"         1.Selectarea obiectului i pentru a fi inclus in rucsac:\n";
+    cout<<"              -Daca greutatea obiectului i este mai mica sau egala decat capacitatea curenta j, poti adauga valoarea obiectului i la valoarea optima a obiectelor anterioare si cu o capacitate j - greutatea obiectului i.\n";
+    cout<<"              -Astfel, valoarea matricei pentru pozitia (i, j) va fi suma dintre valoarea obiectului i si valoarea optima a obiectelor anterioare cu o capacitate j - greutatea obiectului i.\n\n";
+    cout<<"         2.Excluderea obiectului i din rucsac:\n";
+    cout<<"              -Valoarea matricei pentru pozitia (i, j) va fi valoarea optima a obiectelor anterioare cu aceeasi capacitate j.\n\n";
+
+    cout<<"     In cele din urma, valoarea optima a problemei rucsacului 0/1 va fi stocata in ultimul element al matricei, adica matrice[numarul de obiecte][capacitatea rucsacului].";
+
+    system("PAUSE");
+    system("cls");
+    progdin();
+
+
+}
+
+void pd_mp()
+{
+    cout<<endl<<endl;
+    cout<<"     Problema Matricei drumurilor minime presupune ca ai o matrice de dimensiune MxN, in care fiecare celula contine un cost asociat. Scopul tau este sa gasesti drumul de cost minim de la celula de start la celula de destinatie, deplasandu-te doar in sus, in jos, la stanga sau la dreapta.\n\n";
+
+    cout<<"     Pentru a rezolva aceasta problema utilizand programarea dinamica, poti crea o matrice auxiliara de aceeasi dimensiune ca matricea de intrare. Aceasta matrice va fi folosita pentru a stoca valorile minime ale drumurilor catre fiecare celula.\n   Pentru a calcula matricea drumurilor minime, poti utiliza o relatie de recurenta in care compari valorile drumurilor minime catre celulele vecine:\n";
+
+    cout<<"         1.Pentru celula de start, costul drumului minim catre aceasta va fi egal cu costul ei initial.\n";
+
+    cout<<"         2.Pentru celulele vecine, costul drumului minim catre fiecare dintre ele va fi minimul dintre costul drumului minim catre celula de start si costul celulei vecine, plus costul celulei vecine.\n\n";
+
+    cout<<"     Pentru a determina drumul minim intr-o matrice, poti urma caile cu cel mai mic cost, incepand de la celula de destinatie si deplasandu-te inapoi catre celula de start pe baza valorilor din matricea drumurilor minime.\n\n";
+    system("PAUSE");
+    system("cls");
+    progdin();
+
+}
+
+void pd_prim()
+{
+    cout<<endl<<endl;
+    cout<<"     Problema calcularii secventei de numere prim presupune gasirea tuturor numerelor prime pana la un anumit numar dat. Un numar prim este un numar natural mai mare decat 1, care are doar doi divizori: 1 si el insusi.\n";
+    cout<<"     Pentru a rezolva aceasta problema utilizand programarea dinamica, poti implementa un algoritm eficient care verifica daca un numar este prim sau nu. Poti utiliza o matrice sau un vector auxiliar pentru a marca numerele prime si non-prime.\n";
+    cout<<"     Pasul de baza este sa initializezi matricea sau vectorul cu toti indicii setati initial la 'prim' (adesea reprezentat cu valoarea 1) pentru a indica ca toate numerele sunt considerate prime la inceput.\n";
+
+    cout<<"     Apoi, incepand de la 2, parcurgi fiecare numar si verifici daca este marcat ca prim in matricea sau vectorul auxiliar. Daca este marcat ca prim, inseamna ca este un numar prim si marchezi toti multiplii sai ca non-prime in matricea sau vectorul auxiliar.\n";
+    cout<<"     La finalul procesului, vei obtine matricea sau vectorul actualizat in care fiecare element va indica daca numarul corespunzator este prim sau nu.\n\n";
+    cout<<"     Aceasta abordare utilizeaza programarea dinamica pentru a evita recalcularea primelor si non-primelor. De exemplu, daca un numar este marcat ca non-prim, nu va fi verificat in viitorul proces, ceea ce optimizeaza timpul de executie. \n\n";
+
+
+    system("PAUSE");
+    system("cls");
+    progdin();
+
+}
+
+
+void pd_lcs()
+{
+    cout<<endl<<endl;
+    cout<<"     Problema LCS presupune ca ai doua siruri de caractere, A si B, si trebuie sa gasesti cea mai lunga subsecventa comuna intre ele. O subsecventa comuna este o secventa de caractere obtinuta prin stergerea unor caractere din sirurile initiale, astfel incat ordinea caracterelor sa ramana neschimbata.:\n\n";
+    cout<<"     Pentru a rezolva aceasta problema utilizand programarea dinamica, poti crea o matrice auxiliara de dimensiune (m+1) x (n+1), unde m si n reprezinta lungimile celor doua siruri de caractere A si B. Aceasta matrice va fi folosita pentru a stoca rezultatele partiale ale subsecventelor comune.\n";
+
+    cout<<"     Pentru a calcula matricea LCS, poti utiliza o relatie de recurenta in care compari caracterele din sirurile A si B:\n";
+
+    cout<<"         1.Daca ultimul caracter al ambelor siruri este acelasi, atunci lungimea LCS va fi cu 1 mai mare decat lungimea LCS fara ultimul caracter al ambelor siruri.\n";
+    cout<<"         2.Daca ultimul caracter al ambelor siruri este diferit, atunci lungimea LCS va fi maximul dintre lungimea LCS fara ultimul caracter al sirului A si lungimea LCS fara ultimul caracter al sirului B.\n\n";
+
+    cout<<"     Prin parcurgerea matricei de la stanga sus spre dreapta jos si actualizarea valorilor in functie de relatie de recurenta, vei obtine matricea finala in care ultimul element va reprezenta lungimea LCS a intregelor siruri.\n\n";
+    cout<<"     Pentru a reconstrui subsecventa comuna, poti parcurge matricea de la dreapta jos spre stanga sus si adauga caracterele corespunzatoare in subsecventa pe baza relatiei de recurenta.\n";
+
+    system("PAUSE");
+    system("cls");
+    progdin();
+}
+
+
+void pd_aplicatii()
+{
+    cout<<endl<<endl;
+    cout<<"     1. Verifica daca un cuvant sau o fraza introdusa de utilizator este un palindrom (se citeste la fel in ambele sensuri)\n";
+    cout<<"     2. Generarea primelor n numere din sirul Fibonacci\n";
+    cout<<"     3. Rezolvarea problemei rucsacului (Knapsack problem)\n";
+    cout<<" Alegeti pentru ce problema ati dori sa vedeti rezolvarea. Pentru a va intoarce la meniul principal, apasati tasta 0\n";
+    int i;
+    cin>>i;
+    if (i==1)
+        pd_apk1();
+    else if (i==2)
+        pd_apk2();
+    else if (i==3) pd_apk3();
+    else {
+        system("cls");
+        progdin();
+    }
+
+}
+
+void pd_apk1()
+{
+    cout<<"     1. Verifica daca un cuvant sau o fraza introdusa de utilizator este un palindrom (se citeste la fel in ambele sensuri)\n";
+
+    cout << "#include<iostream>" << endl;
+    cout << "#include<string>" << endl;
+    cout << endl;
+
+    cout << "bool isPalindrome(const string& str) {" << endl;
+    cout << "    string reversedStr = str;" << endl;
+    cout << "    reverse(reversedStr.begin(), reversedStr.end());" << endl;
+    cout << endl;
+
+    cout << "    vector<vector<int>> lcsMatrix(str.length() + 1, vector<int>(str.length() + 1, 0));" << endl;
+    cout << endl;
+
+    cout << "    for (int i = 1; i <= str.length(); i++) {" << endl;
+    cout << "        for (int j = 1; j <= str.length(); j++) {" << endl;
+    cout << "            if (str[i - 1] == reversedStr[j - 1]) {" << endl;
+    cout << "                lcsMatrix[i][j] = lcsMatrix[i - 1][j - 1] + 1;" << endl;
+    cout << "            } else {" << endl;
+    cout << "                lcsMatrix[i][j] = max(lcsMatrix[i - 1][j], lcsMatrix[i][j - 1]);" << endl;
+    cout << "            }" << endl;
+    cout << "        }" << endl;
+    cout << "    }" << endl;
+    cout << endl;
+
+    cout << "    return lcsMatrix[str.length()][str.length()] == str.length();" << endl;
+    cout << "}" << endl;
+    cout << endl;
+
+    cout << "int main() {" << endl;
+    cout << "    string word;" << endl;
+    cout << "    cout << \"Introduceti un cuvant sau o fraza: \";" << endl;
+    cout << "    getline(cin, word);" << endl;
+    cout << endl;
+
+    cout << "    if (isPalindrome(word)) {" << endl;
+    cout << "        cout << \"Cuvantul/ Fraza este un palindrom.\" << endl;" << endl;
+    cout << "    } else {" << endl;
+    cout << "        cout << \"Cuvantul/ Fraza nu este un palindrom.\" << endl;" << endl;
+    cout << "    }" << endl;
+    cout << endl;
+
+    cout << "    return 0;" << endl;
+    cout << "}" << endl;
+    system("PAUSE");
+    system("cls");
+    pd_aplicatii();
+
+
+
+}
+
+void pd_apk2()
+
+{
+    cout<<"     2. Generarea primelor n numere din sirul Fibonacci\n";
+
+    cout << "#include<iostream>" << endl;
+    cout << endl;
+
+    cout << "void generateFibonacci(int n) {" << endl;
+    cout << "    int fib[n];" << endl;
+    cout << endl;
+
+    cout << "    fib[0] = 0;" << endl;
+    cout << "    fib[1] = 1;" << endl;
+    cout << endl;
+
+    cout << "    cout << \"Primele \" << n << \" numere din șirul Fibonacci:\" << endl;" << endl;
+    cout << endl;
+
+    cout << "    cout << fib[0] << \" \";" << endl;
+    cout << "    cout << fib[1] << \" \";" << endl;
+    cout << endl;
+
+    cout << "    for (int i = 2; i < n; i++) {" << endl;
+    cout << "        fib[i] = fib[i - 1] + fib[i - 2];" << endl;
+    cout << "        cout << fib[i] << \" \";" << endl;
+    cout << "    }" << endl;
+    cout << "}" << endl;
+    cout << endl;
+
+    cout << "int main() {" << endl;
+    cout << "    int n;" << endl;
+    cout << "    cout << \"Introduceti numarul de termeni din șirul Fibonacci: \";" << endl;
+    cout << "    cin >> n;" << endl;
+    cout << endl;
+
+    cout << "    generateFibonacci(n);" << endl;
+    cout << endl;
+
+    cout << "    return 0;" << endl;
+    cout << "}" << endl;
+    system("PAUSE");
+    system("cls");
+    pd_aplicatii();
+
+
+}
+void pd_apk3()
+
+{
+    cout<<"     3. Rezolvarea problemei rucsacului (Knapsack problem)\n";
+
+   cout << "#include<iostream>" << endl;
+    cout << endl;
+
+    cout << "using namespace std;" << endl;
+    cout << endl;
+
+    cout << "int max(int a, int b) {" << endl;
+    cout << "    return (a > b) ? a : b;" << endl;
+    cout << "}" << endl;
+    cout << endl;
+
+    cout << "int knapSack(int W, int wt[], int val[], int n) {" << endl;
+    cout << "    int K[n + 1][W + 1];" << endl;
+    cout << endl;
+
+    cout << "    for (int i = 0; i <= n; i++) {" << endl;
+    cout << "        for (int w = 0; w <= W; w++) {" << endl;
+    cout << "            if (i == 0 || w == 0)" << endl;
+    cout << "                K[i][w] = 0;" << endl;
+    cout << "            else if (wt[i - 1] <= w)" << endl;
+    cout << "                K[i][w] = max(val[i - 1] + K[i - 1][w - wt[i - 1]], K[i - 1][w]);" << endl;
+    cout << "            else" << endl;
+    cout << "                K[i][w] = K[i - 1][w];" << endl;
+    cout << "        }" << endl;
+    cout << "    }" << endl;
+    cout << endl;
+
+    cout << "    return K[n][W];" << endl;
+    cout << "}" << endl;
+    cout << endl;
+
+    cout << "int main() {" << endl;
+    cout << "    int val[] = {60, 100, 120};" << endl;
+    cout << "    int wt[] = {10, 20, 30};" << endl;
+    cout << "    int W = 50;" << endl;
+    cout << "    int n = sizeof(val) / sizeof(val[0]);" << endl;
+    cout << endl;
+
+    cout << "    cout << \"Valoarea maxima care poate fi obtinuta este: \" << knapSack(W, wt, val, n) << endl;" << endl;
+    cout << endl;
+
+    cout << "    return 0;" << endl;
+    cout << "}" << endl;
+    system("PAUSE");
+    system("cls");
+    pd_aplicatii();
+
+
+}
+
+void pd_test()
+{
+    nr++;
+    int score = 0;
+
+    // Intrebarea 1
+    cout << "1. Ce este programarea dinamica?\n";
+    cout << "   a) Un algoritm de sortare eficient.\n";
+    cout << "   b) O tehnica de optimizare care rezolva problemele prin impartirea acestora in subprobleme mai mici.\n";
+    cout << "   c) O metoda de programare utilizata pentru dezvoltarea aplicatiilor mobile.\n";
+    char raspuns1;
+    cin >> raspuns1;
+    if (raspuns1 == 'b') {
+        cout<<"   Raspuns corect!!!:)";
+        score++;
+    }
+    else
+        cout<<"   Raspuns gresit:(";
+
+    // Intrebarea 2
+    cout << "\n2. Care dintre urmatoarele este un exemplu potrivit pentru utilizarea programarii dinamice?\n";
+    cout << "   a) Cautarea unui element intr-un vector nesortat.\n";
+    cout << "   b) Calculul factorialului unui numar.\n";
+    cout << "   c) Determinarea celor mai lungi subsecvente comune a doua siruri.\n";
+    char raspuns2;
+    cin >> raspuns2;
+    if (raspuns2 == 'c') {
+       cout<<"   Raspuns corect!!!:)";
+       score++;
+    }
+    else
+        cout<<"   Raspuns gresit:(";
+
+    // Intrebarea 3
+    cout << "\n3. Care este ideea principala din spatele programarii dinamice?\n";
+    cout << "   a) Divizarea problemei in subprobleme mai mici si combinarea solutiilor acestora.\n";
+    cout << "   b) Utilizarea unui numar mare de bucle si conditii.\n";
+    cout << "   c) Utilizarea algoritmilor de sortare.\n";
+    char raspuns3;
+    cin >> raspuns3;
+    if (raspuns3 == 'a') {
+        cout<<"   Raspuns corect!!!:)";
+        score++;
+    }
+    else
+        cout<<"   Raspuns gresit:(";
+
+    // Intrebarea 4
+    cout << "\n4. Ce este un tablou bidimensional in contextul programarii dinamice?\n";
+    cout << "   a) Un tablou cu doua elemente.\n";
+    cout << "   b) Un tablou cu doua dimensiuni, reprezentand o structura de date in forma de matrice.\n";
+    cout << "   c) Un tablou cu doua variabile.\n";
+    char raspuns4;
+    cin >> raspuns4;
+    if (raspuns4 == 'b') {
+        cout<<"   Raspuns corect!!!:)";
+        score++;
+    }
+    else
+        cout<<"   Raspuns gresit:(";
+
+    // Intrebarea 5
+    cout << "\n5. Ce reprezinta memoizarea in programarea dinamica?\n";
+    cout << "   a) Procesul de stocare a valorilor calculate anterior pentru a le utiliza in timpul calculelor ulterioare.\n";
+    cout << "   b) Un tip de sortare a datelor.\n";
+    cout << "   c) Procesul de reamintire a formulelor matematice.\n";
+    char raspuns5;
+    cin >> raspuns5;
+    if (raspuns5 == 'a') {
+        cout<<"   Raspuns corect!!!:)";
+        score++;
+    }
+    else
+        cout<<"   Raspuns gresit:(";
+
+    // Intrebarea 6
+    cout << "\n6. Ce este o relatie de recurenta in programarea dinamica?\n";
+    cout << "   a) O relatie matematica care defineste o valoare in functie de alte valori precedente.\n";
+    cout << "   b) O relatie de inlocuire a variabilelor intr-o ecuatie.\n";
+    cout << "   c) O relatie intre doua programe.\n";
+    char raspuns6;
+    cin >> raspuns6;
+    if (raspuns6 == 'a') {
+        cout<<"   Raspuns corect!!!:)";
+        score++;
+    }
+    else
+        cout<<"   Raspuns gresit:(";
+
+    // Afisarea scorului final
+    cout << "\nScorul final: " << score << "/6\n";
+    scortotal=scortotal+score;
+    system("PAUSE");
+    system("cls");
+    progdin();
 }
 
 void facultati(){
