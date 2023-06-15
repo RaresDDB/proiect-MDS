@@ -11,7 +11,6 @@ Screenshot-uri care dovedesc folosirea unui tool AI pentru dezvoltarea software 
 
 Diagrama flow:
 
-[Diagrame.pdf](https://github.com/RaresDDB/proiect-MDS/files/11757920/Diagrame.pdf)
 
 
 
