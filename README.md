@@ -5,3 +5,6 @@ Screenshot-uri care dovedesc folosirea unui tool AI pentru dezvoltarea software 
 
 ![poza2TOOLAI](https://github.com/RaresDDB/proiect-MDS/assets/69033915/2192750d-4d05-4911-9e9e-8811081654d1)
 
+![poza3TOOLAI](https://github.com/RaresDDB/proiect-MDS/assets/69033915/9f59afed-96c9-4732-a76c-5b346f622651)
+
+
