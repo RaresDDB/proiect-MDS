@@ -9,5 +9,10 @@ Screenshot-uri care dovedesc folosirea unui tool AI pentru dezvoltarea software 
 
 ![poza4TOOLAI](https://github.com/RaresDDB/proiect-MDS/assets/69033915/a03dbe7f-1591-4cb6-864d-c92a92f9abf3)
 
+Diagrama flow:
+
+[Diagrame.pdf](https://github.com/RaresDDB/proiect-MDS/files/11757920/Diagrame.pdf)
+
+
 
 
